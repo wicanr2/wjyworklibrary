@@ -1,0 +1,32 @@
+<AdaptiveBandwidthRule 
+	Name=""
+	Category=""
+	Type="Stream"
+	Target="CaptureStream"
+	ResponseAction="ChangeProfile"
+	// ChangeMulticastTree
+	RangeMinKbps=
+	RangeMaxKbps=
+	ChangeProfileName="none"
+	ChangeMulticastTree
+	CallbackAction="fill the callback function name"
+/>
+
+The Communication Model
+
+Peers : A B C D E F G
+Exchange information between peers
+the available bandwidth records
+
+how to respresent the data structure of the peers information
+How to make the decision ?? 
+the BW is not symmatric, how to overcome the problem
+   A B C D E F G H I K
+A  
+B
+C
+D
+E
+F
+G
+H
