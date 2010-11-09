@@ -1,12 +1,5 @@
 .text:
-.globl _addtest, _addF, _loadIDTR2
-_loadIDTR2:
-	pushl %ebp
-	movl  %esp,%ebp
-	movl  8(%esp), %eax
-	sidt  (%eax)
-	popl  %ebp
-	ret
+.globl _addtest, _addF
 
 _addF:
 	pushl %ebp
