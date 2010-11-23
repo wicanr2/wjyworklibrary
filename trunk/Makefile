@@ -11,4 +11,4 @@ testasm:
 	$(CC) -Iasm asm/*.s asm/*.c -o testasm.exe
 
 clean:
-	$(RM) *.exe 
+	$(RM) *.exe *.o 
