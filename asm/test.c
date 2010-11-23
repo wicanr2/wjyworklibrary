@@ -17,5 +17,6 @@ int main(int argc, char* argv[]){
 	re = addtest(10,20);
 	printf("re = %d\n", re);
 	printf(" c = %f\n", addF(a,b) ) ;
+	system("PAUSE");
 	return 0;	
 }
