@@ -70,9 +70,9 @@ class MyImageView extends ImageView
 		{
 			for ( y = 0 ; y < sd.getHeight() ; y++ )
 			{
-				if ( replaceColor == bmp.getPixel( x, y ) )
+				if ( bmp.getPixel( x, y ) == replaceColor   )
 				{
-					bmp.setPixel( x, y, Color.TRANSPARENT );
+					bmp.setPixel( x, y, Color.argb(0,0,0,0) );
 				}
 			}
 		}
@@ -119,6 +119,10 @@ class MyImageView extends ImageView
 			destBitmap[i] =  this.__spirteBitmap ( holderBitmap, this._sl[i] , this._sd[i] );
 			this.fillTransparentColor( destBitmap[i], this._sd[i], Color.WHITE );
 		}
+		Log.d( debugName, debugName + " : "  + destBitmap[0] );
+		for ( int i = 0 ; i < 12 ; i ++ )
+			for ( int j = 0 ; j < 12 ; j++ )
+				Log.d( debugName, debugName + " ("+i+","+j+")"  + destBitmap[0].getPixel(i,j) );
 	}	
 	public MyImageView(Context context){
 		super(context);
@@ -172,7 +176,7 @@ class MyImageView extends ImageView
 		super.onDraw(canvas);
 		if ( this.destBitmap == null ) return;
 
-		canvas.drawColor( Color.TRANSPARENT ); 
+		canvas.drawColor( Color.BLACK ); 
 		if ( this.backgroundBitmap != null ) 
 		{
 			if ( this.scaleBackgroundBitmap == null )
@@ -182,20 +186,21 @@ class MyImageView extends ImageView
 				Log.d( debugName, debugName + " create scaled background" );
 			}	
 			if ( this.scaleBackgroundBitmap != null )
+			{
+				/*Paint paintBmp = new Paint( Paint.FILTER_BITMAP_FLAG );
+				AvoidXfermode axf = new AvoidXfermode(Color.TRANSPARENT, 255 ,AvoidXfermode.Mode.AVOID );   
+				paintBmp.setXfermode ( axf );*/
+				//canvas.drawBitmap( this.scaleBackgroundBitmap, 0, 0, paintBmp ); 
 				canvas.drawBitmap( this.scaleBackgroundBitmap, 0, 0, null ); 
+			}
 		}
-		Paint paint  = new Paint(Paint.LINEAR_TEXT_FLAG);
-        paint.setColor( this.textColor );
-        paint.setTextSize(20.0F);
-		this.CalculateNextTextDrawX();
-		canvas.drawText ( strHelloWorld, draw_text_x[0], 20, paint );
 
 		this.CalculateNextDrawX();
 		this.CalculateNextDrawY();
 		Paint paintBmp = new Paint( Paint.FILTER_BITMAP_FLAG );
-		paintBmp.setColor( Color.TRANSPARENT );
-		paintBmp.setAlpha( 255 );
-		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( Color.WHITE, PorterDuff.Mode.SRC_OUT);
+		//paintBmp.setColor( Color.TRANSPARENT );
+		//paintBmp.setAlpha( 200 );
+		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( Color.TRANSPARENT , PorterDuff.Mode.SRC_OUT);
 		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( Color.WHITE , PorterDuff.Mode.DST_OUT);
 
 		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( Color.BLACK , PorterDuff.Mode.DST_OUT);
@@ -204,17 +209,25 @@ class MyImageView extends ImageView
 		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( Color.TRANSPARENT, PorterDuff.Mode.SCREEN );
 		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( Color.TRANSPARENT, PorterDuff.Mode.DST_ATOP); // the background on top
 		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( 0xffff00 , PorterDuff.Mode.LIGHTEN );
-		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( 0xff8a2be2 , PorterDuff.Mode.MULTIPLY );
+		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( Color.TRANSPARENT , PorterDuff.Mode.MULTIPLY );
+		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( Color.BLACK , PorterDuff.Mode.XOR );
 		//paintBmp.setColorFilter( pdcf );
-		//AvoidXfermode axf = new AvoidXfermode(Color.TRANSPARENT, 255 ,AvoidXfermode.Mode.TARGET );   
-		//PixelXorXfermode pxx = new PixelXorXfermode ( Color.TRANSPARENT );
-		PixelXorXfermode pxx = new PixelXorXfermode ( 0xffffffff );
-		paintBmp.setXfermode ( pxx );
+		//AvoidXfermode axf = new AvoidXfermode(Color.TRANSPARENT , 255 ,AvoidXfermode.Mode.AVOID );   
+		//paintBmp.setXfermode ( axf );
+		//PixelXorXfermode pxx = new PixelXorXfermode ( Color.BLACK );
+		//PixelXorXfermode pxx = new PixelXorXfermode ( 0xffffffff );
+		//paintBmp.setXfermode ( pxx );
 		//paintBmp.setStyle( Paint.Style.STROKE ); 
 		canvas.drawBitmap(destBitmap[drawPtr], draw_x[0], 20+draw_y[0], paintBmp); 
 		//canvas.drawBitmap(destBitmap[drawPtr], draw_x[0], 20+draw_y[0], null ); 
 		drawPtr++;
 		drawPtr = drawPtr % destBitmap.length;
+
+		Paint paint  = new Paint(Paint.LINEAR_TEXT_FLAG);
+        paint.setColor( this.textColor );
+        paint.setTextSize(20.0F);
+		this.CalculateNextTextDrawX();
+		canvas.drawText ( strHelloWorld, draw_text_x[0], 20, paint );
 	}
 	@Override
 	public void setAdjustViewBounds(boolean adjustViewBounds) {

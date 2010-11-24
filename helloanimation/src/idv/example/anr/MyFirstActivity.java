@@ -34,6 +34,7 @@ public class MyFirstActivity extends MyApplicationLayout
 	private int testjpg_resId = R.drawable.testjpg;
 	private int mario_sprite_redId = R.drawable.mario_sprite;
 	private int mario_bg = R.drawable.mario_bg;
+	private int pacman   = R.drawable.pacman;
 	//-----------------------------------------------------------
 	// Activtiy Action
 	/* Called when the activity is first created. */
@@ -55,7 +56,7 @@ public class MyFirstActivity extends MyApplicationLayout
 
 		imageView03 = new MyImageView( this );
 		imageView03.setAdjustViewBounds(true);
-		this.InitSpriteToMyImageView02( imageView03 );
+		this.InitSpriteToMyImageView03( imageView03 );
 		this.AddShowView ( imageView03 );
 
 		this.FinalRendering();
@@ -120,6 +121,20 @@ public class MyFirstActivity extends MyApplicationLayout
 		miv.SetDisplayStr ( "Mario World!!!" );
 		miv.SetBackgroundBitmap( this.mario_bg );
 		miv.AddBitmap ( mario_sprite_redId, sl, sd );
+	}	
+	private void InitSpriteToMyImageView03(MyImageView miv) 
+	{
+		if ( miv == null ) return;
+		SpriteDescription[] sd = new SpriteDescription[1];
+		sd[0] = new SpriteDescription(12,12);
+		SpriteLocation [] sl = new SpriteLocation[1];
+		sl[0] = new SpriteLocation(4,4);
+
+		miv.SetBackground( Color.WHITE );
+		miv.SetTextColor ( Color.BLACK );
+		miv.SetDisplayStr ( "Eather World!!!" );
+		miv.SetBackgroundBitmap( this.mario_bg );
+		miv.AddBitmap ( pacman, sl, sd );
 	}	
 	//-----------------------------------------------------------------------
 	// handler
