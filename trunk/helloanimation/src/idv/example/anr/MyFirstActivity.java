@@ -49,10 +49,10 @@ public class MyFirstActivity extends MyApplicationLayout
 		this.InitSpriteToMyImageView02( imageView02 );
 		this.AddShowView ( imageView02 );
 
-		imageView01 = new MyImageView( this );
+		/*imageView01 = new MyImageView( this );
 		imageView01.setAdjustViewBounds(true);
 		this.InitSpriteToMyImageView( imageView01 );
-		this.AddShowView ( imageView01 );
+		this.AddShowView ( imageView01 );*/
 
 		imageView03 = new MyImageView( this );
 		imageView03.setAdjustViewBounds(true);

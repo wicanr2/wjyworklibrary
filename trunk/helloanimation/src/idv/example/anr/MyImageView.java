@@ -1,6 +1,6 @@
 package idv.example.anr;
 import idv.example.anr.utils.*;
-
+import java.util.Random;
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -50,6 +50,7 @@ class MyImageView extends ImageView
 	int textColor  = Color.WHITE;
 	SpriteLocation [] _sl = null;
 	int bottomPadding = 15;
+	Random generator = null;
 	//-------------------------------------------------------------
 	// preprocessor function
 	public static Bitmap __spirteBitmap(Bitmap src, SpriteLocation sl, SpriteDescription sd )
@@ -127,6 +128,7 @@ class MyImageView extends ImageView
 	public MyImageView(Context context){
 		super(context);
 		LocalContext = context;
+		generator = new Random();
 	}
 	//--------------------------------------------------------------------------------------------------
 	private int [] draw_x = { 0 } ;
@@ -140,12 +142,15 @@ class MyImageView extends ImageView
 	private void calculateNext(int[] prevV, int range, int len, INCREASE_DIRECTION[] dir )
 	{
 		int tmp = prevV[0];
+		int slice = (int)(range/60);
 		if ( dir[0] == INCREASE_DIRECTION.POSITIVE )
-			tmp += (int)( range/60 );
-
+		{
+			tmp = tmp + slice + generator.nextInt(slice*4);
+		}
 		if ( dir[0] == INCREASE_DIRECTION.NEGATIVE )
-			tmp -= (int)( range/60 );
-
+		{
+			tmp = tmp - slice - generator.nextInt(slice*4);
+		}
 		if ( tmp > range - len )
 			dir[0] = INCREASE_DIRECTION.NEGATIVE;
 
@@ -197,10 +202,17 @@ class MyImageView extends ImageView
 
 		this.CalculateNextDrawX();
 		this.CalculateNextDrawY();
+<<<<<<< .mine
+		//Paint paintBmp = new Paint( Paint.FILTER_BITMAP_FLAG );
+		//paintBmp.setColor( Color.TRANSPARENT );
+		//paintBmp.setAlpha( 255 );
+		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( Color.WHITE, PorterDuff.Mode.SRC_OUT);
+=======
 		Paint paintBmp = new Paint( Paint.FILTER_BITMAP_FLAG );
 		//paintBmp.setColor( Color.TRANSPARENT );
 		//paintBmp.setAlpha( 200 );
 		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( Color.TRANSPARENT , PorterDuff.Mode.SRC_OUT);
+>>>>>>> .r7
 		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( Color.WHITE , PorterDuff.Mode.DST_OUT);
 
 		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( Color.BLACK , PorterDuff.Mode.DST_OUT);
@@ -212,14 +224,21 @@ class MyImageView extends ImageView
 		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( Color.TRANSPARENT , PorterDuff.Mode.MULTIPLY );
 		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( Color.BLACK , PorterDuff.Mode.XOR );
 		//paintBmp.setColorFilter( pdcf );
+<<<<<<< .mine
+		//AvoidXfermode axf = new AvoidXfermode(Color.TRANSPARENT, 255 ,AvoidXfermode.Mode.TARGET );   
+		//PixelXorXfermode pxx = new PixelXorXfermode ( Color.TRANSPARENT );
+		//PixelXorXfermode pxx = new PixelXorXfermode ( 0xffffffff );
+		//paintBmp.setXfermode ( pxx );
+=======
 		//AvoidXfermode axf = new AvoidXfermode(Color.TRANSPARENT , 255 ,AvoidXfermode.Mode.AVOID );   
 		//paintBmp.setXfermode ( axf );
 		//PixelXorXfermode pxx = new PixelXorXfermode ( Color.BLACK );
 		//PixelXorXfermode pxx = new PixelXorXfermode ( 0xffffffff );
 		//paintBmp.setXfermode ( pxx );
+>>>>>>> .r7
 		//paintBmp.setStyle( Paint.Style.STROKE ); 
-		canvas.drawBitmap(destBitmap[drawPtr], draw_x[0], 20+draw_y[0], paintBmp); 
-		//canvas.drawBitmap(destBitmap[drawPtr], draw_x[0], 20+draw_y[0], null ); 
+		//canvas.drawBitmap(destBitmap[drawPtr], draw_x[0], 20+draw_y[0], paintBmp); 
+		canvas.drawBitmap(destBitmap[drawPtr], draw_x[0], 20+draw_y[0], null ); 
 		drawPtr++;
 		drawPtr = drawPtr % destBitmap.length;
 
@@ -255,9 +274,13 @@ class MyImageView extends ImageView
         } else {
 
 			findMaxSpriteDescription ( this._sd, this._maxWidthSd, this._maxHeightSd );
-            w = this._maxWidthSd[0].getWidth();
-            h = this._maxHeightSd[0].getHeight() + (this._maxHeightSd[0].getHeight()/4) + bottomPadding ;
-			
+			if ( this.backgroundBitmap == null ) {
+            	w = this._maxWidthSd[0].getWidth();
+            	h = this._maxHeightSd[0].getHeight() + (this._maxHeightSd[0].getHeight()/4) + bottomPadding ;
+			} else {
+				w = this.backgroundBitmap.getWidth();
+				h = this.backgroundBitmap.getHeight();
+			}
             if (w <= 0) w = 1;
             if (h <= 0) h = 1;
             
