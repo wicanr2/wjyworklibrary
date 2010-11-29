@@ -180,22 +180,16 @@ class MyImageView extends ImageView
 	protected void onDraw(Canvas canvas){
 		super.onDraw(canvas);
 		if ( this.destBitmap == null ) return;
-
 		canvas.drawColor( Color.BLACK ); 
-		if ( this.backgroundBitmap != null ) 
-		{
-			if ( this.scaleBackgroundBitmap == null )
-			{
+		if ( this.backgroundBitmap != null ) {
+			if ( this.scaleBackgroundBitmap == null ) {
 				this.scaleBackgroundBitmap = 
 					Bitmap.createScaledBitmap( this.backgroundBitmap, this.viewWidth, this.viewHeight, true );
 				Log.d( debugName, debugName + " create scaled background" );
 			}	
 			if ( this.scaleBackgroundBitmap != null )
-			{
 				canvas.drawBitmap( this.scaleBackgroundBitmap, 0, 0, null ); 
-			}
 		}
-
 		this.CalculateNextDrawX();
 		this.CalculateNextDrawY();
 		Paint paintBmp = new Paint( Paint.FILTER_BITMAP_FLAG );
