@@ -144,21 +144,14 @@ public class MyFirstActivity extends MyApplicationLayout
 		public static final int MSG_RedrawTheImageView01 = 0x1234;
 		public void handleMessage(Message msg) {  
 			//Log.d ( logName, "Message = " +  msg.what ) ;
-			switch ( msg.what )
-			{
+			switch ( msg.what ) {
 				case MSG_RedrawTheImageView01:
 					if ( MyFirstActivity.this.imageView01 != null )
-					{
 						MyFirstActivity.this.imageView01.invalidate();
-					}
 					if ( MyFirstActivity.this.imageView02 != null )
-					{
 						MyFirstActivity.this.imageView02.invalidate();
-					}
 					if ( MyFirstActivity.this.imageView03 != null )
-					{
 						MyFirstActivity.this.imageView03.invalidate();
-					}
 					break;	
 			}
             super.handleMessage(msg);  
