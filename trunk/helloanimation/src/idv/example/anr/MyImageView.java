@@ -192,10 +192,6 @@ class MyImageView extends ImageView
 			}	
 			if ( this.scaleBackgroundBitmap != null )
 			{
-				/*Paint paintBmp = new Paint( Paint.FILTER_BITMAP_FLAG );
-				AvoidXfermode axf = new AvoidXfermode(Color.TRANSPARENT, 255 ,AvoidXfermode.Mode.AVOID );   
-				paintBmp.setXfermode ( axf );*/
-				//canvas.drawBitmap( this.scaleBackgroundBitmap, 0, 0, paintBmp ); 
 				canvas.drawBitmap( this.scaleBackgroundBitmap, 0, 0, null ); 
 			}
 		}
