@@ -202,42 +202,7 @@ class MyImageView extends ImageView
 
 		this.CalculateNextDrawX();
 		this.CalculateNextDrawY();
-<<<<<<< .mine
-		//Paint paintBmp = new Paint( Paint.FILTER_BITMAP_FLAG );
-		//paintBmp.setColor( Color.TRANSPARENT );
-		//paintBmp.setAlpha( 255 );
-		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( Color.WHITE, PorterDuff.Mode.SRC_OUT);
-=======
 		Paint paintBmp = new Paint( Paint.FILTER_BITMAP_FLAG );
-		//paintBmp.setColor( Color.TRANSPARENT );
-		//paintBmp.setAlpha( 200 );
-		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( Color.TRANSPARENT , PorterDuff.Mode.SRC_OUT);
->>>>>>> .r7
-		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( Color.WHITE , PorterDuff.Mode.DST_OUT);
-
-		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( Color.BLACK , PorterDuff.Mode.DST_OUT);
-		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( backgroundColor, PorterDuff.Mode.DARKEN);
-		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( backgroundColor , PorterDuff.Mode.LIGHTEN);
-		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( Color.TRANSPARENT, PorterDuff.Mode.SCREEN );
-		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( Color.TRANSPARENT, PorterDuff.Mode.DST_ATOP); // the background on top
-		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( 0xffff00 , PorterDuff.Mode.LIGHTEN );
-		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( Color.TRANSPARENT , PorterDuff.Mode.MULTIPLY );
-		//PorterDuffColorFilter pdcf = new PorterDuffColorFilter( Color.BLACK , PorterDuff.Mode.XOR );
-		//paintBmp.setColorFilter( pdcf );
-<<<<<<< .mine
-		//AvoidXfermode axf = new AvoidXfermode(Color.TRANSPARENT, 255 ,AvoidXfermode.Mode.TARGET );   
-		//PixelXorXfermode pxx = new PixelXorXfermode ( Color.TRANSPARENT );
-		//PixelXorXfermode pxx = new PixelXorXfermode ( 0xffffffff );
-		//paintBmp.setXfermode ( pxx );
-=======
-		//AvoidXfermode axf = new AvoidXfermode(Color.TRANSPARENT , 255 ,AvoidXfermode.Mode.AVOID );   
-		//paintBmp.setXfermode ( axf );
-		//PixelXorXfermode pxx = new PixelXorXfermode ( Color.BLACK );
-		//PixelXorXfermode pxx = new PixelXorXfermode ( 0xffffffff );
-		//paintBmp.setXfermode ( pxx );
->>>>>>> .r7
-		//paintBmp.setStyle( Paint.Style.STROKE ); 
-		//canvas.drawBitmap(destBitmap[drawPtr], draw_x[0], 20+draw_y[0], paintBmp); 
 		canvas.drawBitmap(destBitmap[drawPtr], draw_x[0], 20+draw_y[0], null ); 
 		drawPtr++;
 		drawPtr = drawPtr % destBitmap.length;
