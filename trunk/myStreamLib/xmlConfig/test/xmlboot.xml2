@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<!DOCTYPE VideoCaptureProfile
+[
+<!ELEMENT VideoCaptureProfile (Video)>
+<!-- Video Element Definition -->
+<!ELEMENT Video (Camera,Scale,Device,Convey)>
+
+<!ELEMENT Camera (#PCDATA)>
+<!ATTLIST Camera width CDATA "640" >
+<!ATTLIST Camera height CDATA "480" >
+<!ATTLIST Camera framerate CDATA "15" >
+<!ATTLIST Camera queueSize CDATA "2" >
+<!ATTLIST Camera doTimestamp CDATA "FALSE" >
+<!ATTLIST Camera alwaysCopy CDATA "FALSE" >
+
+<!ELEMENT Scale (#PCDATA)>
+<!ATTLIST Scale width CDATA "320" >
+<!ATTLIST Scale height CDATA "240" >
+<!ATTLIST Scale framerate CDATA "15" >
+<!ATTLIST Scale divideBase CDATA "1" >
+<!--
+for 256k upload ,
+pre-session bandwidth = 5 KBytes/s
+all out-session bandwidth = 10 KBytes/s
+(y1 * 8) the rate is 136 Kbits/s 
+pre-session bandwidth = 45 Kbit/s
+all out-session bandwidth = 90 Kbit/s
+
+<!ELEMENT Scale (#PCDATA)>
+<!ATTLIST Scale width CDATA "176" >
+<!ATTLIST Scale height CDATA "144" >
+<!ATTLIST Scale framerate CDATA "2" > 
+-->
+<!ELEMENT Device (#PCDATA)>
+<!ATTLIST Device location CDATA "None" >
+
+<!ELEMENT Convey (#PCDATA)>
+<!ATTLIST Convey synchronize CDATA "FALSE" >
+<!ATTLIST Convey asynchronous CDATA "FALSE" >
+<!-- 
+	DROP PAKCET AFTER 0.05 SEC
+	Never Drop Packet in the demo room
+-->
+<!ATTLIST Convey maxLateness CDATA "-1" >
+<!ATTLIST Convey blocksize CDATA "8192" >
+<!ATTLIST Convey prerollQueueLen CDATA "0" >
+<!ATTLIST Convey debug CDATA "FALSE" >
+
+]>
+<VideoCaptureProfile>
+	<Video>
+	    <Camera />
+	    <Scale />
+        <Device />
+        <Convey />
+    </Video>
+    
+</VideoCaptureProfile>

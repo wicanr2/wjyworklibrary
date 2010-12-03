@@ -1,0 +1,5 @@
+#ifndef AUDIO_DEVICE_TYPE_HPP
+#define AUDIO_DEVICE_TYPE_HPP
+enum __DeviceType 	  {  _DT_UNDEFINED, _DT_AUDIO_INPUT, _DT_AUDIO_OUTPUT };
+enum __DeviceCategory {  _DC_UNDEFINED, __DC_USBHID , _DC_ALSA_PCI, _DC_ALSA_USB , _DC_BLUETOOTH, _DC_USBB2K };
+#endif

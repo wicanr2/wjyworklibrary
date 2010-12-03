@@ -1,0 +1,21 @@
+#define module name
+XML_CONFIGURATOR_MODULE      := xml_configurator_module
+XML_CONFIGURATOR_MODULE_OBJS :=
+MODULES_POOL                 += $(XML_CONFIGURATOR_MODULE)
+
+# XML Profile
+XML_PROFILE_PREFIX  := xmlConfig/profile
+XML_PROFILE_SRC     := $(wildcard $(XML_PROFILE_PREFIX)/*.c)
+XML_PROFILE_OBJ     := $(notdir $(patsubst %.c,%.o,$(XML_PROFILE_SRC)))
+XML_PROFILE_OBJ_OUT := $(addprefix $(OUT_DIRS)/,$(XML_PROFILE_OBJ))
+
+# XML Parser
+XML_PARSER_PREFIX  := xmlConfig/parser
+XML_PARSER_SRC_CPP := $(wildcard $(XML_PARSER_PREFIX)/*.cpp)
+XML_PARSER_OBJ_CPP := $(notdir $(patsubst %.cpp,%.o,$(XML_PARSER_SRC_CPP)))
+XML_PARSER_OBJ_CPP_OUT := $(addprefix $(OUT_DIRS)/,$(XML_PARSER_OBJ_CPP))
+
+XML_CONFIGURATOR_MODULE_OBJS += $(XML_PROFILE_OBJ_OUT)
+XML_CONFIGURATOR_MODULE_OBJS += $(XML_PARSER_OBJ_CPP_OUT)
+
+MODULES_OBJS += $(XML_CONFIGURATOR_MODULE_OBJS) 

@@ -11,7 +11,7 @@ typedef int (*fp1)(void *arg1);
 typedef int (*fp2)(void *arg1, void *arg2);
 typedef int (*fp3)(void *arg1, void *arg2, void *arg3);
 typedef int (*fp4)(void *arg1, void *arg2, void *arg3, void *arg4);
-
+typedef int (*fpN)(...);
 class testA {
 public:
 	testA() { }
@@ -74,9 +74,15 @@ int Test4(void *arg1, void *arg2, void *arg3)
 		printf( "Test 4 %d\n", *i);
 	return 0;
 }
+int Test5(int x, int y)
+{
+	int r = x + y;
+	return r;
+}
+
 int main(int argc, char *argv[])
 {
-	void *p = (void*)Test1;
+/*	void *p = (void*)Test1;
 	fp0 _fp0 = (fp0)p;
 	if ( _fp0 != 0 )(*_fp0)();
 	p = (void*)Test2;
@@ -90,17 +96,33 @@ int main(int argc, char *argv[])
 
 	p = (void*)Test4;
 	fp3 _fp3 = (fp3)p;
-	if ( _fp3 != 0 )(*_fp3)(&x,0,0);
+	if ( _fp3 != 0 )(*_fp3)(&x,0,0);*/
+	{
+		fpN _fpN = 0;
 
-	testB *a = new testB();
+		void *p = (void*)Test1;
+		_fpN = (fpN)p;
+		if ( _fpN != 0 )(*_fpN)(1,2,3,4,5,60,0,0,0);
 
-	callback cb = &testB::TestFP;
-	float y=99.0;
-	// the language sugar 
-	//
-	printf( "cb=%x\n", cb);	
+		p = (void*)Test2;
+		_fpN = (fpN)p;
+		int x = 10;
+		if ( _fpN != 0 )(*_fpN)(&x,&x,&x,0);
 
-	(a->*cb)((void*)&x, (void*)&y);
+		p = (void*)Test3;
+		_fpN = (fpN)p;
+		if ( _fpN != 0 )(*_fpN)(&x,&x,0,0);
+
+		p = (void*)Test4;
+		_fpN = (fpN)p;
+		if ( _fpN != 0 )(*_fpN)(&x,&x,&x,0,0);
+
+		p = (void*)Test5;
+		_fpN = (fpN)p;
+		if ( _fpN != 0 ) {
+			printf("5 + 100 = %d\n", (*_fpN)(5,100));
+		}
+	}	
 	return 0;
 }
 

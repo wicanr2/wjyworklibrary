@@ -1,0 +1,3934 @@
+
+test:     file format elf32-i386
+
+
+Disassembly of section .init:
+
+0804884c <_init>:
+ 804884c:	55                   	push   %ebp
+ 804884d:	89 e5                	mov    %esp,%ebp
+ 804884f:	53                   	push   %ebx
+ 8048850:	83 ec 04             	sub    $0x4,%esp
+ 8048853:	e8 00 00 00 00       	call   8048858 <_init+0xc>
+ 8048858:	5b                   	pop    %ebx
+ 8048859:	81 c3 9c 47 00 00    	add    $0x479c,%ebx
+ 804885f:	8b 93 fc ff ff ff    	mov    -0x4(%ebx),%edx
+ 8048865:	85 d2                	test   %edx,%edx
+ 8048867:	74 05                	je     804886e <_init+0x22>
+ 8048869:	e8 4e 01 00 00       	call   80489bc <__gmon_start__@plt>
+ 804886e:	e8 ed 01 00 00       	call   8048a60 <frame_dummy>
+ 8048873:	e8 48 1f 00 00       	call   804a7c0 <__do_global_ctors_aux>
+ 8048878:	58                   	pop    %eax
+ 8048879:	5b                   	pop    %ebx
+ 804887a:	c9                   	leave  
+ 804887b:	c3                   	ret    
+
+Disassembly of section .plt:
+
+0804887c <pthread_mutex_destroy@plt-0x10>:
+ 804887c:	ff 35 f8 cf 04 08    	pushl  0x804cff8
+ 8048882:	ff 25 fc cf 04 08    	jmp    *0x804cffc
+ 8048888:	00 00                	add    %al,(%eax)
+	...
+
+0804888c <pthread_mutex_destroy@plt>:
+ 804888c:	ff 25 00 d0 04 08    	jmp    *0x804d000
+ 8048892:	68 00 00 00 00       	push   $0x0
+ 8048897:	e9 e0 ff ff ff       	jmp    804887c <_init+0x30>
+
+0804889c <_Znwj@plt>:
+ 804889c:	ff 25 04 d0 04 08    	jmp    *0x804d004
+ 80488a2:	68 08 00 00 00       	push   $0x8
+ 80488a7:	e9 d0 ff ff ff       	jmp    804887c <_init+0x30>
+
+080488ac <__xstat@plt>:
+ 80488ac:	ff 25 08 d0 04 08    	jmp    *0x804d008
+ 80488b2:	68 10 00 00 00       	push   $0x10
+ 80488b7:	e9 c0 ff ff ff       	jmp    804887c <_init+0x30>
+
+080488bc <__cxa_atexit@plt>:
+ 80488bc:	ff 25 0c d0 04 08    	jmp    *0x804d00c
+ 80488c2:	68 18 00 00 00       	push   $0x18
+ 80488c7:	e9 b0 ff ff ff       	jmp    804887c <_init+0x30>
+
+080488cc <_Znaj@plt>:
+ 80488cc:	ff 25 10 d0 04 08    	jmp    *0x804d010
+ 80488d2:	68 20 00 00 00       	push   $0x20
+ 80488d7:	e9 a0 ff ff ff       	jmp    804887c <_init+0x30>
+
+080488dc <__errno_location@plt>:
+ 80488dc:	ff 25 14 d0 04 08    	jmp    *0x804d014
+ 80488e2:	68 28 00 00 00       	push   $0x28
+ 80488e7:	e9 90 ff ff ff       	jmp    804887c <_init+0x30>
+
+080488ec <strncpy@plt>:
+ 80488ec:	ff 25 18 d0 04 08    	jmp    *0x804d018
+ 80488f2:	68 30 00 00 00       	push   $0x30
+ 80488f7:	e9 80 ff ff ff       	jmp    804887c <_init+0x30>
+
+080488fc <_ZdlPv@plt>:
+ 80488fc:	ff 25 1c d0 04 08    	jmp    *0x804d01c
+ 8048902:	68 38 00 00 00       	push   $0x38
+ 8048907:	e9 70 ff ff ff       	jmp    804887c <_init+0x30>
+
+0804890c <__libc_start_main@plt>:
+ 804890c:	ff 25 20 d0 04 08    	jmp    *0x804d020
+ 8048912:	68 40 00 00 00       	push   $0x40
+ 8048917:	e9 60 ff ff ff       	jmp    804887c <_init+0x30>
+
+0804891c <pthread_mutex_unlock@plt>:
+ 804891c:	ff 25 24 d0 04 08    	jmp    *0x804d024
+ 8048922:	68 48 00 00 00       	push   $0x48
+ 8048927:	e9 50 ff ff ff       	jmp    804887c <_init+0x30>
+
+0804892c <pthread_mutex_init@plt>:
+ 804892c:	ff 25 28 d0 04 08    	jmp    *0x804d028
+ 8048932:	68 50 00 00 00       	push   $0x50
+ 8048937:	e9 40 ff ff ff       	jmp    804887c <_init+0x30>
+
+0804893c <__stack_chk_fail@plt>:
+ 804893c:	ff 25 2c d0 04 08    	jmp    *0x804d02c
+ 8048942:	68 58 00 00 00       	push   $0x58
+ 8048947:	e9 30 ff ff ff       	jmp    804887c <_init+0x30>
+
+0804894c <pthread_mutex_lock@plt>:
+ 804894c:	ff 25 30 d0 04 08    	jmp    *0x804d030
+ 8048952:	68 60 00 00 00       	push   $0x60
+ 8048957:	e9 20 ff ff ff       	jmp    804887c <_init+0x30>
+
+0804895c <_ZdaPv@plt>:
+ 804895c:	ff 25 34 d0 04 08    	jmp    *0x804d034
+ 8048962:	68 68 00 00 00       	push   $0x68
+ 8048967:	e9 10 ff ff ff       	jmp    804887c <_init+0x30>
+
+0804896c <printf@plt>:
+ 804896c:	ff 25 38 d0 04 08    	jmp    *0x804d038
+ 8048972:	68 70 00 00 00       	push   $0x70
+ 8048977:	e9 00 ff ff ff       	jmp    804887c <_init+0x30>
+
+0804897c <strerror@plt>:
+ 804897c:	ff 25 3c d0 04 08    	jmp    *0x804d03c
+ 8048982:	68 78 00 00 00       	push   $0x78
+ 8048987:	e9 f0 fe ff ff       	jmp    804887c <_init+0x30>
+
+0804898c <puts@plt>:
+ 804898c:	ff 25 40 d0 04 08    	jmp    *0x804d040
+ 8048992:	68 80 00 00 00       	push   $0x80
+ 8048997:	e9 e0 fe ff ff       	jmp    804887c <_init+0x30>
+
+0804899c <__gxx_personality_v0@plt>:
+ 804899c:	ff 25 44 d0 04 08    	jmp    *0x804d044
+ 80489a2:	68 88 00 00 00       	push   $0x88
+ 80489a7:	e9 d0 fe ff ff       	jmp    804887c <_init+0x30>
+
+080489ac <_Unwind_Resume@plt>:
+ 80489ac:	ff 25 48 d0 04 08    	jmp    *0x804d048
+ 80489b2:	68 90 00 00 00       	push   $0x90
+ 80489b7:	e9 c0 fe ff ff       	jmp    804887c <_init+0x30>
+
+080489bc <__gmon_start__@plt>:
+ 80489bc:	ff 25 4c d0 04 08    	jmp    *0x804d04c
+ 80489c2:	68 98 00 00 00       	push   $0x98
+ 80489c7:	e9 b0 fe ff ff       	jmp    804887c <_init+0x30>
+
+Disassembly of section .text:
+
+080489d0 <_start>:
+ 80489d0:	31 ed                	xor    %ebp,%ebp
+ 80489d2:	5e                   	pop    %esi
+ 80489d3:	89 e1                	mov    %esp,%ecx
+ 80489d5:	83 e4 f0             	and    $0xfffffff0,%esp
+ 80489d8:	50                   	push   %eax
+ 80489d9:	54                   	push   %esp
+ 80489da:	52                   	push   %edx
+ 80489db:	68 10 a7 04 08       	push   $0x804a710
+ 80489e0:	68 20 a7 04 08       	push   $0x804a720
+ 80489e5:	51                   	push   %ecx
+ 80489e6:	56                   	push   %esi
+ 80489e7:	68 3c a6 04 08       	push   $0x804a63c
+ 80489ec:	e8 1b ff ff ff       	call   804890c <__libc_start_main@plt>
+ 80489f1:	f4                   	hlt    
+ 80489f2:	90                   	nop
+ 80489f3:	90                   	nop
+ 80489f4:	90                   	nop
+ 80489f5:	90                   	nop
+ 80489f6:	90                   	nop
+ 80489f7:	90                   	nop
+ 80489f8:	90                   	nop
+ 80489f9:	90                   	nop
+ 80489fa:	90                   	nop
+ 80489fb:	90                   	nop
+ 80489fc:	90                   	nop
+ 80489fd:	90                   	nop
+ 80489fe:	90                   	nop
+ 80489ff:	90                   	nop
+
+08048a00 <__do_global_dtors_aux>:
+ 8048a00:	55                   	push   %ebp
+ 8048a01:	89 e5                	mov    %esp,%ebp
+ 8048a03:	53                   	push   %ebx
+ 8048a04:	83 ec 04             	sub    $0x4,%esp
+ 8048a07:	80 3d 60 d0 04 08 00 	cmpb   $0x0,0x804d060
+ 8048a0e:	75 3f                	jne    8048a4f <__do_global_dtors_aux+0x4f>
+ 8048a10:	a1 64 d0 04 08       	mov    0x804d064,%eax
+ 8048a15:	bb c0 ce 04 08       	mov    $0x804cec0,%ebx
+ 8048a1a:	81 eb bc ce 04 08    	sub    $0x804cebc,%ebx
+ 8048a20:	c1 fb 02             	sar    $0x2,%ebx
+ 8048a23:	83 eb 01             	sub    $0x1,%ebx
+ 8048a26:	39 d8                	cmp    %ebx,%eax
+ 8048a28:	73 1e                	jae    8048a48 <__do_global_dtors_aux+0x48>
+ 8048a2a:	8d b6 00 00 00 00    	lea    0x0(%esi),%esi
+ 8048a30:	83 c0 01             	add    $0x1,%eax
+ 8048a33:	a3 64 d0 04 08       	mov    %eax,0x804d064
+ 8048a38:	ff 14 85 bc ce 04 08 	call   *0x804cebc(,%eax,4)
+ 8048a3f:	a1 64 d0 04 08       	mov    0x804d064,%eax
+ 8048a44:	39 d8                	cmp    %ebx,%eax
+ 8048a46:	72 e8                	jb     8048a30 <__do_global_dtors_aux+0x30>
+ 8048a48:	c6 05 60 d0 04 08 01 	movb   $0x1,0x804d060
+ 8048a4f:	83 c4 04             	add    $0x4,%esp
+ 8048a52:	5b                   	pop    %ebx
+ 8048a53:	5d                   	pop    %ebp
+ 8048a54:	c3                   	ret    
+ 8048a55:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+ 8048a59:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+08048a60 <frame_dummy>:
+ 8048a60:	55                   	push   %ebp
+ 8048a61:	89 e5                	mov    %esp,%ebp
+ 8048a63:	83 ec 18             	sub    $0x18,%esp
+ 8048a66:	a1 c4 ce 04 08       	mov    0x804cec4,%eax
+ 8048a6b:	85 c0                	test   %eax,%eax
+ 8048a6d:	74 12                	je     8048a81 <frame_dummy+0x21>
+ 8048a6f:	b8 00 00 00 00       	mov    $0x0,%eax
+ 8048a74:	85 c0                	test   %eax,%eax
+ 8048a76:	74 09                	je     8048a81 <frame_dummy+0x21>
+ 8048a78:	c7 04 24 c4 ce 04 08 	movl   $0x804cec4,(%esp)
+ 8048a7f:	ff d0                	call   *%eax
+ 8048a81:	c9                   	leave  
+ 8048a82:	c3                   	ret    
+ 8048a83:	90                   	nop
+
+08048a84 <_ZN11mutexLockerC2Ev>:
+#include <utils/mutexLocker.hpp>
+
+mutexLocker::mutexLocker():
+ 8048a84:	55                   	push   %ebp
+ 8048a85:	89 e5                	mov    %esp,%ebp
+ 8048a87:	83 ec 18             	sub    $0x18,%esp
+	bCreated(true)
+ 8048a8a:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048a8d:	89 04 24             	mov    %eax,(%esp)
+ 8048a90:	e8 a7 05 00 00       	call   804903c <_ZN10debugClassC2Ev>
+ 8048a95:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048a98:	c6 40 1c 01          	movb   $0x1,0x1c(%eax)
+{
+	if ( pthread_mutex_init( &this->mutex, NULL ) != 0 ) {
+ 8048a9c:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048a9f:	83 c0 04             	add    $0x4,%eax
+ 8048aa2:	c7 44 24 04 00 00 00 	movl   $0x0,0x4(%esp)
+ 8048aa9:	00 
+ 8048aaa:	89 04 24             	mov    %eax,(%esp)
+ 8048aad:	e8 7a fe ff ff       	call   804892c <pthread_mutex_init@plt>
+ 8048ab2:	85 c0                	test   %eax,%eax
+ 8048ab4:	0f 95 c0             	setne  %al
+ 8048ab7:	84 c0                	test   %al,%al
+ 8048ab9:	74 07                	je     8048ac2 <_ZN11mutexLockerC2Ev+0x3e>
+		this->bCreated = false;
+ 8048abb:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048abe:	c6 40 1c 00          	movb   $0x0,0x1c(%eax)
+	} 
+}
+ 8048ac2:	c9                   	leave  
+ 8048ac3:	c3                   	ret    
+
+08048ac4 <_ZN11mutexLockerC1Ev>:
+#include <utils/mutexLocker.hpp>
+
+mutexLocker::mutexLocker():
+ 8048ac4:	55                   	push   %ebp
+ 8048ac5:	89 e5                	mov    %esp,%ebp
+ 8048ac7:	83 ec 18             	sub    $0x18,%esp
+	bCreated(true)
+ 8048aca:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048acd:	89 04 24             	mov    %eax,(%esp)
+ 8048ad0:	e8 67 05 00 00       	call   804903c <_ZN10debugClassC2Ev>
+ 8048ad5:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048ad8:	c6 40 1c 01          	movb   $0x1,0x1c(%eax)
+{
+	if ( pthread_mutex_init( &this->mutex, NULL ) != 0 ) {
+ 8048adc:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048adf:	83 c0 04             	add    $0x4,%eax
+ 8048ae2:	c7 44 24 04 00 00 00 	movl   $0x0,0x4(%esp)
+ 8048ae9:	00 
+ 8048aea:	89 04 24             	mov    %eax,(%esp)
+ 8048aed:	e8 3a fe ff ff       	call   804892c <pthread_mutex_init@plt>
+ 8048af2:	85 c0                	test   %eax,%eax
+ 8048af4:	0f 95 c0             	setne  %al
+ 8048af7:	84 c0                	test   %al,%al
+ 8048af9:	74 07                	je     8048b02 <_ZN11mutexLockerC1Ev+0x3e>
+		this->bCreated = false;
+ 8048afb:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048afe:	c6 40 1c 00          	movb   $0x0,0x1c(%eax)
+	} 
+}
+ 8048b02:	c9                   	leave  
+ 8048b03:	c3                   	ret    
+
+08048b04 <_ZN11mutexLockerD2Ev>:
+
+mutexLocker::~mutexLocker() {
+ 8048b04:	55                   	push   %ebp
+ 8048b05:	89 e5                	mov    %esp,%ebp
+ 8048b07:	56                   	push   %esi
+ 8048b08:	53                   	push   %ebx
+ 8048b09:	83 ec 10             	sub    $0x10,%esp
+	if ( this->GetDebugFlag() ) {
+ 8048b0c:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048b0f:	89 04 24             	mov    %eax,(%esp)
+ 8048b12:	e8 61 05 00 00       	call   8049078 <_ZN10debugClass12GetDebugFlagEv>
+ 8048b17:	84 c0                	test   %al,%al
+ 8048b19:	74 0c                	je     8048b27 <_ZN11mutexLockerD2Ev+0x23>
+		printf("Destory\tmutexLocker\n");
+ 8048b1b:	c7 04 24 10 a8 04 08 	movl   $0x804a810,(%esp)
+ 8048b22:	e8 65 fe ff ff       	call   804898c <puts@plt>
+	}
+	if ( this->bCreated ) 
+ 8048b27:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048b2a:	0f b6 40 1c          	movzbl 0x1c(%eax),%eax
+ 8048b2e:	84 c0                	test   %al,%al
+ 8048b30:	74 0e                	je     8048b40 <_ZN11mutexLockerD2Ev+0x3c>
+		pthread_mutex_destroy( &this->mutex );
+ 8048b32:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048b35:	83 c0 04             	add    $0x4,%eax
+ 8048b38:	89 04 24             	mov    %eax,(%esp)
+ 8048b3b:	e8 4c fd ff ff       	call   804888c <pthread_mutex_destroy@plt>
+}
+ 8048b40:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048b43:	89 04 24             	mov    %eax,(%esp)
+ 8048b46:	e8 09 05 00 00       	call   8049054 <_ZN10debugClassD2Ev>
+ 8048b4b:	83 c4 10             	add    $0x10,%esp
+ 8048b4e:	5b                   	pop    %ebx
+ 8048b4f:	5e                   	pop    %esi
+ 8048b50:	5d                   	pop    %ebp
+ 8048b51:	c3                   	ret    
+ 8048b52:	89 d3                	mov    %edx,%ebx
+ 8048b54:	89 c6                	mov    %eax,%esi
+ 8048b56:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048b59:	89 04 24             	mov    %eax,(%esp)
+ 8048b5c:	e8 f3 04 00 00       	call   8049054 <_ZN10debugClassD2Ev>
+ 8048b61:	89 f0                	mov    %esi,%eax
+ 8048b63:	89 da                	mov    %ebx,%edx
+ 8048b65:	89 04 24             	mov    %eax,(%esp)
+ 8048b68:	e8 3f fe ff ff       	call   80489ac <_Unwind_Resume@plt>
+ 8048b6d:	90                   	nop
+
+08048b6e <_ZN11mutexLockerD1Ev>:
+	if ( pthread_mutex_init( &this->mutex, NULL ) != 0 ) {
+		this->bCreated = false;
+	} 
+}
+
+mutexLocker::~mutexLocker() {
+ 8048b6e:	55                   	push   %ebp
+ 8048b6f:	89 e5                	mov    %esp,%ebp
+ 8048b71:	56                   	push   %esi
+ 8048b72:	53                   	push   %ebx
+ 8048b73:	83 ec 10             	sub    $0x10,%esp
+	if ( this->GetDebugFlag() ) {
+ 8048b76:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048b79:	89 04 24             	mov    %eax,(%esp)
+ 8048b7c:	e8 f7 04 00 00       	call   8049078 <_ZN10debugClass12GetDebugFlagEv>
+ 8048b81:	84 c0                	test   %al,%al
+ 8048b83:	74 0c                	je     8048b91 <_ZN11mutexLockerD1Ev+0x23>
+		printf("Destory\tmutexLocker\n");
+ 8048b85:	c7 04 24 10 a8 04 08 	movl   $0x804a810,(%esp)
+ 8048b8c:	e8 fb fd ff ff       	call   804898c <puts@plt>
+	}
+	if ( this->bCreated ) 
+ 8048b91:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048b94:	0f b6 40 1c          	movzbl 0x1c(%eax),%eax
+ 8048b98:	84 c0                	test   %al,%al
+ 8048b9a:	74 0e                	je     8048baa <_ZN11mutexLockerD1Ev+0x3c>
+		pthread_mutex_destroy( &this->mutex );
+ 8048b9c:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048b9f:	83 c0 04             	add    $0x4,%eax
+ 8048ba2:	89 04 24             	mov    %eax,(%esp)
+ 8048ba5:	e8 e2 fc ff ff       	call   804888c <pthread_mutex_destroy@plt>
+}
+ 8048baa:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048bad:	89 04 24             	mov    %eax,(%esp)
+ 8048bb0:	e8 9f 04 00 00       	call   8049054 <_ZN10debugClassD2Ev>
+ 8048bb5:	83 c4 10             	add    $0x10,%esp
+ 8048bb8:	5b                   	pop    %ebx
+ 8048bb9:	5e                   	pop    %esi
+ 8048bba:	5d                   	pop    %ebp
+ 8048bbb:	c3                   	ret    
+ 8048bbc:	89 d3                	mov    %edx,%ebx
+ 8048bbe:	89 c6                	mov    %eax,%esi
+ 8048bc0:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048bc3:	89 04 24             	mov    %eax,(%esp)
+ 8048bc6:	e8 89 04 00 00       	call   8049054 <_ZN10debugClassD2Ev>
+ 8048bcb:	89 f0                	mov    %esi,%eax
+ 8048bcd:	89 da                	mov    %ebx,%edx
+ 8048bcf:	89 04 24             	mov    %eax,(%esp)
+ 8048bd2:	e8 d5 fd ff ff       	call   80489ac <_Unwind_Resume@plt>
+ 8048bd7:	90                   	nop
+
+08048bd8 <_ZN11mutexLocker4LockEv>:
+
+void mutexLocker::Lock() {
+ 8048bd8:	55                   	push   %ebp
+ 8048bd9:	89 e5                	mov    %esp,%ebp
+ 8048bdb:	83 ec 18             	sub    $0x18,%esp
+	if ( this->bCreated )
+ 8048bde:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048be1:	0f b6 40 1c          	movzbl 0x1c(%eax),%eax
+ 8048be5:	84 c0                	test   %al,%al
+ 8048be7:	74 0e                	je     8048bf7 <_ZN11mutexLocker4LockEv+0x1f>
+		pthread_mutex_lock( &this->mutex );
+ 8048be9:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048bec:	83 c0 04             	add    $0x4,%eax
+ 8048bef:	89 04 24             	mov    %eax,(%esp)
+ 8048bf2:	e8 55 fd ff ff       	call   804894c <pthread_mutex_lock@plt>
+}
+ 8048bf7:	c9                   	leave  
+ 8048bf8:	c3                   	ret    
+ 8048bf9:	90                   	nop
+
+08048bfa <_ZN11mutexLocker6UnlockEv>:
+void mutexLocker::Unlock() {
+ 8048bfa:	55                   	push   %ebp
+ 8048bfb:	89 e5                	mov    %esp,%ebp
+ 8048bfd:	83 ec 18             	sub    $0x18,%esp
+	if ( this->bCreated )
+ 8048c00:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048c03:	0f b6 40 1c          	movzbl 0x1c(%eax),%eax
+ 8048c07:	84 c0                	test   %al,%al
+ 8048c09:	74 0e                	je     8048c19 <_ZN11mutexLocker6UnlockEv+0x1f>
+		pthread_mutex_unlock( &this->mutex );
+ 8048c0b:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048c0e:	83 c0 04             	add    $0x4,%eax
+ 8048c11:	89 04 24             	mov    %eax,(%esp)
+ 8048c14:	e8 03 fd ff ff       	call   804891c <pthread_mutex_unlock@plt>
+}
+ 8048c19:	c9                   	leave  
+ 8048c1a:	c3                   	ret    
+ 8048c1b:	90                   	nop
+
+08048c1c <_ZN17staticMutexLockerC2Ev>:
+#include <utils/staticMutexLocker.hpp>
+
+
+staticMutexLocker::staticMutexLocker():
+ 8048c1c:	55                   	push   %ebp
+ 8048c1d:	89 e5                	mov    %esp,%ebp
+ 8048c1f:	83 ec 18             	sub    $0x18,%esp
+	bCreated(true)
+ 8048c22:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048c25:	89 04 24             	mov    %eax,(%esp)
+ 8048c28:	e8 0f 04 00 00       	call   804903c <_ZN10debugClassC2Ev>
+ 8048c2d:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048c30:	c6 40 1c 01          	movb   $0x1,0x1c(%eax)
+{
+	if ( pthread_mutex_init( &this->mutex, NULL ) != 0 ) {
+ 8048c34:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048c37:	83 c0 04             	add    $0x4,%eax
+ 8048c3a:	c7 44 24 04 00 00 00 	movl   $0x0,0x4(%esp)
+ 8048c41:	00 
+ 8048c42:	89 04 24             	mov    %eax,(%esp)
+ 8048c45:	e8 e2 fc ff ff       	call   804892c <pthread_mutex_init@plt>
+ 8048c4a:	85 c0                	test   %eax,%eax
+ 8048c4c:	0f 95 c0             	setne  %al
+ 8048c4f:	84 c0                	test   %al,%al
+ 8048c51:	74 07                	je     8048c5a <_ZN17staticMutexLockerC2Ev+0x3e>
+		this->bCreated = false;
+ 8048c53:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048c56:	c6 40 1c 00          	movb   $0x0,0x1c(%eax)
+	} 
+}
+ 8048c5a:	c9                   	leave  
+ 8048c5b:	c3                   	ret    
+
+08048c5c <_ZN17staticMutexLockerC1Ev>:
+#include <utils/staticMutexLocker.hpp>
+
+
+staticMutexLocker::staticMutexLocker():
+ 8048c5c:	55                   	push   %ebp
+ 8048c5d:	89 e5                	mov    %esp,%ebp
+ 8048c5f:	83 ec 18             	sub    $0x18,%esp
+	bCreated(true)
+ 8048c62:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048c65:	89 04 24             	mov    %eax,(%esp)
+ 8048c68:	e8 cf 03 00 00       	call   804903c <_ZN10debugClassC2Ev>
+ 8048c6d:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048c70:	c6 40 1c 01          	movb   $0x1,0x1c(%eax)
+{
+	if ( pthread_mutex_init( &this->mutex, NULL ) != 0 ) {
+ 8048c74:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048c77:	83 c0 04             	add    $0x4,%eax
+ 8048c7a:	c7 44 24 04 00 00 00 	movl   $0x0,0x4(%esp)
+ 8048c81:	00 
+ 8048c82:	89 04 24             	mov    %eax,(%esp)
+ 8048c85:	e8 a2 fc ff ff       	call   804892c <pthread_mutex_init@plt>
+ 8048c8a:	85 c0                	test   %eax,%eax
+ 8048c8c:	0f 95 c0             	setne  %al
+ 8048c8f:	84 c0                	test   %al,%al
+ 8048c91:	74 07                	je     8048c9a <_ZN17staticMutexLockerC1Ev+0x3e>
+		this->bCreated = false;
+ 8048c93:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048c96:	c6 40 1c 00          	movb   $0x0,0x1c(%eax)
+	} 
+}
+ 8048c9a:	c9                   	leave  
+ 8048c9b:	c3                   	ret    
+
+08048c9c <_ZN17staticMutexLockerD2Ev>:
+
+staticMutexLocker::~staticMutexLocker() {
+ 8048c9c:	55                   	push   %ebp
+ 8048c9d:	89 e5                	mov    %esp,%ebp
+ 8048c9f:	56                   	push   %esi
+ 8048ca0:	53                   	push   %ebx
+ 8048ca1:	83 ec 10             	sub    $0x10,%esp
+	if ( this->GetDebugFlag() ) {
+ 8048ca4:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048ca7:	89 04 24             	mov    %eax,(%esp)
+ 8048caa:	e8 c9 03 00 00       	call   8049078 <_ZN10debugClass12GetDebugFlagEv>
+ 8048caf:	84 c0                	test   %al,%al
+ 8048cb1:	74 0c                	je     8048cbf <_ZN17staticMutexLockerD2Ev+0x23>
+		printf("Destory\tstaticMutexLocker\n");
+ 8048cb3:	c7 04 24 24 a8 04 08 	movl   $0x804a824,(%esp)
+ 8048cba:	e8 cd fc ff ff       	call   804898c <puts@plt>
+	}
+	if ( this->bCreated ) 
+ 8048cbf:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048cc2:	0f b6 40 1c          	movzbl 0x1c(%eax),%eax
+ 8048cc6:	84 c0                	test   %al,%al
+ 8048cc8:	74 0e                	je     8048cd8 <_ZN17staticMutexLockerD2Ev+0x3c>
+		pthread_mutex_destroy( &this->mutex );
+ 8048cca:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048ccd:	83 c0 04             	add    $0x4,%eax
+ 8048cd0:	89 04 24             	mov    %eax,(%esp)
+ 8048cd3:	e8 b4 fb ff ff       	call   804888c <pthread_mutex_destroy@plt>
+}
+ 8048cd8:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048cdb:	89 04 24             	mov    %eax,(%esp)
+ 8048cde:	e8 71 03 00 00       	call   8049054 <_ZN10debugClassD2Ev>
+ 8048ce3:	83 c4 10             	add    $0x10,%esp
+ 8048ce6:	5b                   	pop    %ebx
+ 8048ce7:	5e                   	pop    %esi
+ 8048ce8:	5d                   	pop    %ebp
+ 8048ce9:	c3                   	ret    
+ 8048cea:	89 d3                	mov    %edx,%ebx
+ 8048cec:	89 c6                	mov    %eax,%esi
+ 8048cee:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048cf1:	89 04 24             	mov    %eax,(%esp)
+ 8048cf4:	e8 5b 03 00 00       	call   8049054 <_ZN10debugClassD2Ev>
+ 8048cf9:	89 f0                	mov    %esi,%eax
+ 8048cfb:	89 da                	mov    %ebx,%edx
+ 8048cfd:	89 04 24             	mov    %eax,(%esp)
+ 8048d00:	e8 a7 fc ff ff       	call   80489ac <_Unwind_Resume@plt>
+ 8048d05:	90                   	nop
+
+08048d06 <_ZN17staticMutexLockerD1Ev>:
+	if ( pthread_mutex_init( &this->mutex, NULL ) != 0 ) {
+		this->bCreated = false;
+	} 
+}
+
+staticMutexLocker::~staticMutexLocker() {
+ 8048d06:	55                   	push   %ebp
+ 8048d07:	89 e5                	mov    %esp,%ebp
+ 8048d09:	56                   	push   %esi
+ 8048d0a:	53                   	push   %ebx
+ 8048d0b:	83 ec 10             	sub    $0x10,%esp
+	if ( this->GetDebugFlag() ) {
+ 8048d0e:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048d11:	89 04 24             	mov    %eax,(%esp)
+ 8048d14:	e8 5f 03 00 00       	call   8049078 <_ZN10debugClass12GetDebugFlagEv>
+ 8048d19:	84 c0                	test   %al,%al
+ 8048d1b:	74 0c                	je     8048d29 <_ZN17staticMutexLockerD1Ev+0x23>
+		printf("Destory\tstaticMutexLocker\n");
+ 8048d1d:	c7 04 24 24 a8 04 08 	movl   $0x804a824,(%esp)
+ 8048d24:	e8 63 fc ff ff       	call   804898c <puts@plt>
+	}
+	if ( this->bCreated ) 
+ 8048d29:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048d2c:	0f b6 40 1c          	movzbl 0x1c(%eax),%eax
+ 8048d30:	84 c0                	test   %al,%al
+ 8048d32:	74 0e                	je     8048d42 <_ZN17staticMutexLockerD1Ev+0x3c>
+		pthread_mutex_destroy( &this->mutex );
+ 8048d34:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048d37:	83 c0 04             	add    $0x4,%eax
+ 8048d3a:	89 04 24             	mov    %eax,(%esp)
+ 8048d3d:	e8 4a fb ff ff       	call   804888c <pthread_mutex_destroy@plt>
+}
+ 8048d42:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048d45:	89 04 24             	mov    %eax,(%esp)
+ 8048d48:	e8 07 03 00 00       	call   8049054 <_ZN10debugClassD2Ev>
+ 8048d4d:	83 c4 10             	add    $0x10,%esp
+ 8048d50:	5b                   	pop    %ebx
+ 8048d51:	5e                   	pop    %esi
+ 8048d52:	5d                   	pop    %ebp
+ 8048d53:	c3                   	ret    
+ 8048d54:	89 d3                	mov    %edx,%ebx
+ 8048d56:	89 c6                	mov    %eax,%esi
+ 8048d58:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048d5b:	89 04 24             	mov    %eax,(%esp)
+ 8048d5e:	e8 f1 02 00 00       	call   8049054 <_ZN10debugClassD2Ev>
+ 8048d63:	89 f0                	mov    %esi,%eax
+ 8048d65:	89 da                	mov    %ebx,%edx
+ 8048d67:	89 04 24             	mov    %eax,(%esp)
+ 8048d6a:	e8 3d fc ff ff       	call   80489ac <_Unwind_Resume@plt>
+ 8048d6f:	90                   	nop
+
+08048d70 <_ZN17staticMutexLocker4LockEPS_>:
+
+void staticMutexLocker::Lock(staticMutexLocker *sMutex) {
+ 8048d70:	55                   	push   %ebp
+ 8048d71:	89 e5                	mov    %esp,%ebp
+ 8048d73:	83 ec 18             	sub    $0x18,%esp
+	if ( sMutex->bCreated )
+ 8048d76:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048d79:	0f b6 40 1c          	movzbl 0x1c(%eax),%eax
+ 8048d7d:	84 c0                	test   %al,%al
+ 8048d7f:	74 0e                	je     8048d8f <_ZN17staticMutexLocker4LockEPS_+0x1f>
+		pthread_mutex_lock( &sMutex->mutex );
+ 8048d81:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048d84:	83 c0 04             	add    $0x4,%eax
+ 8048d87:	89 04 24             	mov    %eax,(%esp)
+ 8048d8a:	e8 bd fb ff ff       	call   804894c <pthread_mutex_lock@plt>
+}
+ 8048d8f:	c9                   	leave  
+ 8048d90:	c3                   	ret    
+ 8048d91:	90                   	nop
+
+08048d92 <_ZN17staticMutexLocker6UnlockEPS_>:
+void staticMutexLocker::Unlock(staticMutexLocker *sMutex) {
+ 8048d92:	55                   	push   %ebp
+ 8048d93:	89 e5                	mov    %esp,%ebp
+ 8048d95:	83 ec 18             	sub    $0x18,%esp
+	if ( sMutex->bCreated )
+ 8048d98:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048d9b:	0f b6 40 1c          	movzbl 0x1c(%eax),%eax
+ 8048d9f:	84 c0                	test   %al,%al
+ 8048da1:	74 0e                	je     8048db1 <_ZN17staticMutexLocker6UnlockEPS_+0x1f>
+		pthread_mutex_unlock( &sMutex->mutex );
+ 8048da3:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048da6:	83 c0 04             	add    $0x4,%eax
+ 8048da9:	89 04 24             	mov    %eax,(%esp)
+ 8048dac:	e8 6b fb ff ff       	call   804891c <pthread_mutex_unlock@plt>
+}
+ 8048db1:	c9                   	leave  
+ 8048db2:	c3                   	ret    
+ 8048db3:	90                   	nop
+
+08048db4 <_ZN11fileCheckerC2Ev>:
+fileChecker* fileChecker::instance = NULL;
+
+// for static mutex
+staticMutexLocker fileChecker::sMutex;
+
+fileChecker::fileChecker() {
+ 8048db4:	55                   	push   %ebp
+ 8048db5:	89 e5                	mov    %esp,%ebp
+ 8048db7:	83 ec 18             	sub    $0x18,%esp
+ 8048dba:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048dbd:	89 04 24             	mov    %eax,(%esp)
+ 8048dc0:	e8 77 02 00 00       	call   804903c <_ZN10debugClassC2Ev>
+}
+ 8048dc5:	c9                   	leave  
+ 8048dc6:	c3                   	ret    
+ 8048dc7:	90                   	nop
+
+08048dc8 <_ZN11fileCheckerC1Ev>:
+fileChecker* fileChecker::instance = NULL;
+
+// for static mutex
+staticMutexLocker fileChecker::sMutex;
+
+fileChecker::fileChecker() {
+ 8048dc8:	55                   	push   %ebp
+ 8048dc9:	89 e5                	mov    %esp,%ebp
+ 8048dcb:	83 ec 18             	sub    $0x18,%esp
+ 8048dce:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048dd1:	89 04 24             	mov    %eax,(%esp)
+ 8048dd4:	e8 63 02 00 00       	call   804903c <_ZN10debugClassC2Ev>
+}
+ 8048dd9:	c9                   	leave  
+ 8048dda:	c3                   	ret    
+ 8048ddb:	90                   	nop
+
+08048ddc <_ZN11fileCheckerD2Ev>:
+
+fileChecker::~fileChecker() {
+ 8048ddc:	55                   	push   %ebp
+ 8048ddd:	89 e5                	mov    %esp,%ebp
+ 8048ddf:	83 ec 18             	sub    $0x18,%esp
+}
+ 8048de2:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048de5:	89 04 24             	mov    %eax,(%esp)
+ 8048de8:	e8 67 02 00 00       	call   8049054 <_ZN10debugClassD2Ev>
+ 8048ded:	c9                   	leave  
+ 8048dee:	c3                   	ret    
+ 8048def:	90                   	nop
+
+08048df0 <_ZN11fileCheckerD1Ev>:
+staticMutexLocker fileChecker::sMutex;
+
+fileChecker::fileChecker() {
+}
+
+fileChecker::~fileChecker() {
+ 8048df0:	55                   	push   %ebp
+ 8048df1:	89 e5                	mov    %esp,%ebp
+ 8048df3:	83 ec 18             	sub    $0x18,%esp
+}
+ 8048df6:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048df9:	89 04 24             	mov    %eax,(%esp)
+ 8048dfc:	e8 53 02 00 00       	call   8049054 <_ZN10debugClassD2Ev>
+ 8048e01:	c9                   	leave  
+ 8048e02:	c3                   	ret    
+ 8048e03:	90                   	nop
+
+08048e04 <_ZN11fileChecker16CheckFileExistedEPc>:
+
+// check file exit or not
+int fileChecker::CheckFileExisted( char *file ) {
+ 8048e04:	55                   	push   %ebp
+ 8048e05:	89 e5                	mov    %esp,%ebp
+ 8048e07:	83 ec 78             	sub    $0x78,%esp
+	struct stat buf;
+	int e = 0;
+ 8048e0a:	c7 45 f4 00 00 00 00 	movl   $0x0,-0xc(%ebp)
+	if ( this->GetDebugFlag() )
+ 8048e11:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048e14:	89 04 24             	mov    %eax,(%esp)
+ 8048e17:	e8 5c 02 00 00       	call   8049078 <_ZN10debugClass12GetDebugFlagEv>
+ 8048e1c:	84 c0                	test   %al,%al
+ 8048e1e:	74 0c                	je     8048e2c <_ZN11fileChecker16CheckFileExistedEPc+0x28>
+	{
+		printf("Call \tfileChecker::CheckFileExisted()\n");
+ 8048e20:	c7 04 24 40 a8 04 08 	movl   $0x804a840,(%esp)
+ 8048e27:	e8 60 fb ff ff       	call   804898c <puts@plt>
+	}
+	if ( stat( file , &buf ) < 0 ) {
+ 8048e2c:	8d 45 9c             	lea    -0x64(%ebp),%eax
+ 8048e2f:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8048e33:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 8048e36:	89 04 24             	mov    %eax,(%esp)
+ 8048e39:	e8 42 19 00 00       	call   804a780 <__stat>
+ 8048e3e:	c1 e8 1f             	shr    $0x1f,%eax
+ 8048e41:	84 c0                	test   %al,%al
+ 8048e43:	74 4f                	je     8048e94 <_ZN11fileChecker16CheckFileExistedEPc+0x90>
+		e = errno;
+ 8048e45:	e8 92 fa ff ff       	call   80488dc <__errno_location@plt>
+ 8048e4a:	8b 00                	mov    (%eax),%eax
+ 8048e4c:	89 45 f4             	mov    %eax,-0xc(%ebp)
+		// print debug message
+		if ( this->GetDebugFlag() )
+ 8048e4f:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048e52:	89 04 24             	mov    %eax,(%esp)
+ 8048e55:	e8 1e 02 00 00       	call   8049078 <_ZN10debugClass12GetDebugFlagEv>
+ 8048e5a:	84 c0                	test   %al,%al
+ 8048e5c:	74 22                	je     8048e80 <_ZN11fileChecker16CheckFileExistedEPc+0x7c>
+			printf("\t--- \tFile: \"%s\" %s\t ---\n"
+				,file, strerror(e) );
+ 8048e5e:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8048e61:	89 04 24             	mov    %eax,(%esp)
+ 8048e64:	e8 13 fb ff ff       	call   804897c <strerror@plt>
+ 8048e69:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 8048e6d:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 8048e70:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8048e74:	c7 04 24 66 a8 04 08 	movl   $0x804a866,(%esp)
+ 8048e7b:	e8 ec fa ff ff       	call   804896c <printf@plt>
+			
+		if ( e == ENOENT ) {
+ 8048e80:	83 7d f4 02          	cmpl   $0x2,-0xc(%ebp)
+ 8048e84:	75 07                	jne    8048e8d <_ZN11fileChecker16CheckFileExistedEPc+0x89>
+			return -1;
+ 8048e86:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+ 8048e8b:	eb 2e                	jmp    8048ebb <_ZN11fileChecker16CheckFileExistedEPc+0xb7>
+		}
+		return -2;
+ 8048e8d:	b8 fe ff ff ff       	mov    $0xfffffffe,%eax
+ 8048e92:	eb 27                	jmp    8048ebb <_ZN11fileChecker16CheckFileExistedEPc+0xb7>
+	}
+	if ( this->GetDebugFlag() ) {
+ 8048e94:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048e97:	89 04 24             	mov    %eax,(%esp)
+ 8048e9a:	e8 d9 01 00 00       	call   8049078 <_ZN10debugClass12GetDebugFlagEv>
+ 8048e9f:	84 c0                	test   %al,%al
+ 8048ea1:	74 13                	je     8048eb6 <_ZN11fileChecker16CheckFileExistedEPc+0xb2>
+		printf("\t--- \tFile: \"%s\" is exited\t ---\n", file );
+ 8048ea3:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 8048ea6:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8048eaa:	c7 04 24 80 a8 04 08 	movl   $0x804a880,(%esp)
+ 8048eb1:	e8 b6 fa ff ff       	call   804896c <printf@plt>
+	}
+	return 0;
+ 8048eb6:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 8048ebb:	c9                   	leave  
+ 8048ebc:	c3                   	ret    
+ 8048ebd:	90                   	nop
+
+08048ebe <_ZN11fileChecker11getInstanceEv>:
+
+// get instance
+fileChecker* fileChecker::getInstance() {
+ 8048ebe:	55                   	push   %ebp
+ 8048ebf:	89 e5                	mov    %esp,%ebp
+ 8048ec1:	57                   	push   %edi
+ 8048ec2:	56                   	push   %esi
+ 8048ec3:	53                   	push   %ebx
+ 8048ec4:	83 ec 1c             	sub    $0x1c,%esp
+	staticMutexLocker::Lock( &fileChecker::sMutex );
+ 8048ec7:	c7 04 24 a0 d0 04 08 	movl   $0x804d0a0,(%esp)
+ 8048ece:	e8 9d fe ff ff       	call   8048d70 <_ZN17staticMutexLocker4LockEPS_>
+	if ( !_instance )
+	#else
+	if ( true )
+	#endif
+	{
+		if ( !instance ) {
+ 8048ed3:	a1 80 d0 04 08       	mov    0x804d080,%eax
+ 8048ed8:	85 c0                	test   %eax,%eax
+ 8048eda:	75 39                	jne    8048f15 <_ZN11fileChecker11getInstanceEv+0x57>
+			instance = new fileChecker();
+ 8048edc:	c7 04 24 01 00 00 00 	movl   $0x1,(%esp)
+ 8048ee3:	e8 b4 f9 ff ff       	call   804889c <_Znwj@plt>
+ 8048ee8:	89 c3                	mov    %eax,%ebx
+ 8048eea:	89 d8                	mov    %ebx,%eax
+ 8048eec:	89 04 24             	mov    %eax,(%esp)
+ 8048eef:	e8 d4 fe ff ff       	call   8048dc8 <_ZN11fileCheckerC1Ev>
+ 8048ef4:	89 d8                	mov    %ebx,%eax
+ 8048ef6:	a3 80 d0 04 08       	mov    %eax,0x804d080
+ 8048efb:	eb 18                	jmp    8048f15 <_ZN11fileChecker11getInstanceEv+0x57>
+ 8048efd:	89 d6                	mov    %edx,%esi
+ 8048eff:	89 c7                	mov    %eax,%edi
+ 8048f01:	89 1c 24             	mov    %ebx,(%esp)
+ 8048f04:	e8 f3 f9 ff ff       	call   80488fc <_ZdlPv@plt>
+ 8048f09:	89 f8                	mov    %edi,%eax
+ 8048f0b:	89 f2                	mov    %esi,%edx
+ 8048f0d:	89 04 24             	mov    %eax,(%esp)
+ 8048f10:	e8 97 fa ff ff       	call   80489ac <_Unwind_Resume@plt>
+		}
+	}
+	staticMutexLocker::Unlock( &fileChecker::sMutex );
+ 8048f15:	c7 04 24 a0 d0 04 08 	movl   $0x804d0a0,(%esp)
+ 8048f1c:	e8 71 fe ff ff       	call   8048d92 <_ZN17staticMutexLocker6UnlockEPS_>
+	return instance;
+ 8048f21:	a1 80 d0 04 08       	mov    0x804d080,%eax
+}
+ 8048f26:	83 c4 1c             	add    $0x1c,%esp
+ 8048f29:	5b                   	pop    %ebx
+ 8048f2a:	5e                   	pop    %esi
+ 8048f2b:	5f                   	pop    %edi
+ 8048f2c:	5d                   	pop    %ebp
+ 8048f2d:	c3                   	ret    
+
+08048f2e <_ZN11fileChecker11putInstanceEv>:
+
+// put instance
+void fileChecker::putInstance() {
+ 8048f2e:	55                   	push   %ebp
+ 8048f2f:	89 e5                	mov    %esp,%ebp
+ 8048f31:	53                   	push   %ebx
+ 8048f32:	83 ec 14             	sub    $0x14,%esp
+	staticMutexLocker::Lock( &fileChecker::sMutex );
+ 8048f35:	c7 04 24 a0 d0 04 08 	movl   $0x804d0a0,(%esp)
+ 8048f3c:	e8 2f fe ff ff       	call   8048d70 <_ZN17staticMutexLocker4LockEPS_>
+	if ( instance ) {
+ 8048f41:	a1 80 d0 04 08       	mov    0x804d080,%eax
+ 8048f46:	85 c0                	test   %eax,%eax
+ 8048f48:	74 24                	je     8048f6e <_ZN11fileChecker11putInstanceEv+0x40>
+		delete fileChecker::instance;
+ 8048f4a:	8b 1d 80 d0 04 08    	mov    0x804d080,%ebx
+ 8048f50:	85 db                	test   %ebx,%ebx
+ 8048f52:	74 10                	je     8048f64 <_ZN11fileChecker11putInstanceEv+0x36>
+ 8048f54:	89 1c 24             	mov    %ebx,(%esp)
+ 8048f57:	e8 94 fe ff ff       	call   8048df0 <_ZN11fileCheckerD1Ev>
+ 8048f5c:	89 1c 24             	mov    %ebx,(%esp)
+ 8048f5f:	e8 98 f9 ff ff       	call   80488fc <_ZdlPv@plt>
+		fileChecker::instance = NULL;
+ 8048f64:	c7 05 80 d0 04 08 00 	movl   $0x0,0x804d080
+ 8048f6b:	00 00 00 
+	}
+	staticMutexLocker::Unlock( &fileChecker::sMutex );
+ 8048f6e:	c7 04 24 a0 d0 04 08 	movl   $0x804d0a0,(%esp)
+ 8048f75:	e8 18 fe ff ff       	call   8048d92 <_ZN17staticMutexLocker6UnlockEPS_>
+}
+ 8048f7a:	83 c4 14             	add    $0x14,%esp
+ 8048f7d:	5b                   	pop    %ebx
+ 8048f7e:	5d                   	pop    %ebp
+ 8048f7f:	c3                   	ret    
+
+08048f80 <_Z41__static_initialization_and_destruction_0ii>:
+ 8048f80:	55                   	push   %ebp
+ 8048f81:	89 e5                	mov    %esp,%ebp
+ 8048f83:	83 ec 18             	sub    $0x18,%esp
+ 8048f86:	83 7d 08 01          	cmpl   $0x1,0x8(%ebp)
+ 8048f8a:	75 32                	jne    8048fbe <_Z41__static_initialization_and_destruction_0ii+0x3e>
+ 8048f8c:	81 7d 0c ff ff 00 00 	cmpl   $0xffff,0xc(%ebp)
+ 8048f93:	75 29                	jne    8048fbe <_Z41__static_initialization_and_destruction_0ii+0x3e>
+
+// for singleton instance
+fileChecker* fileChecker::instance = NULL;
+
+// for static mutex
+staticMutexLocker fileChecker::sMutex;
+ 8048f95:	c7 04 24 a0 d0 04 08 	movl   $0x804d0a0,(%esp)
+ 8048f9c:	e8 bb fc ff ff       	call   8048c5c <_ZN17staticMutexLockerC1Ev>
+ 8048fa1:	b8 06 8d 04 08       	mov    $0x8048d06,%eax
+ 8048fa6:	c7 44 24 08 54 d0 04 	movl   $0x804d054,0x8(%esp)
+ 8048fad:	08 
+ 8048fae:	c7 44 24 04 a0 d0 04 	movl   $0x804d0a0,0x4(%esp)
+ 8048fb5:	08 
+ 8048fb6:	89 04 24             	mov    %eax,(%esp)
+ 8048fb9:	e8 fe f8 ff ff       	call   80488bc <__cxa_atexit@plt>
+	if ( instance ) {
+		delete fileChecker::instance;
+		fileChecker::instance = NULL;
+	}
+	staticMutexLocker::Unlock( &fileChecker::sMutex );
+}
+ 8048fbe:	c9                   	leave  
+ 8048fbf:	c3                   	ret    
+
+08048fc0 <_GLOBAL__I__ZN11fileChecker8instanceE>:
+ 8048fc0:	55                   	push   %ebp
+ 8048fc1:	89 e5                	mov    %esp,%ebp
+ 8048fc3:	83 ec 18             	sub    $0x18,%esp
+ 8048fc6:	c7 44 24 04 ff ff 00 	movl   $0xffff,0x4(%esp)
+ 8048fcd:	00 
+ 8048fce:	c7 04 24 01 00 00 00 	movl   $0x1,(%esp)
+ 8048fd5:	e8 a6 ff ff ff       	call   8048f80 <_Z41__static_initialization_and_destruction_0ii>
+ 8048fda:	c9                   	leave  
+ 8048fdb:	c3                   	ret    
+
+08048fdc <FC_CheckFileExisted>:
+#include <utils/fileCheckerCAPI.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+int FC_CheckFileExisted( char* file ) {
+ 8048fdc:	55                   	push   %ebp
+ 8048fdd:	89 e5                	mov    %esp,%ebp
+ 8048fdf:	83 ec 28             	sub    $0x28,%esp
+	fileChecker *fc = fileChecker::getInstance();
+ 8048fe2:	e8 d7 fe ff ff       	call   8048ebe <_ZN11fileChecker11getInstanceEv>
+ 8048fe7:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( fc )
+ 8048fea:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 8048fee:	74 14                	je     8049004 <FC_CheckFileExisted+0x28>
+		return fc->CheckFileExisted( file );
+ 8048ff0:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8048ff3:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8048ff7:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8048ffa:	89 04 24             	mov    %eax,(%esp)
+ 8048ffd:	e8 02 fe ff ff       	call   8048e04 <_ZN11fileChecker16CheckFileExistedEPc>
+ 8049002:	eb 05                	jmp    8049009 <FC_CheckFileExisted+0x2d>
+	return -1;
+ 8049004:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+}
+ 8049009:	c9                   	leave  
+ 804900a:	c3                   	ret    
+
+0804900b <FC_EnableDebug>:
+void FC_EnableDebug() {
+ 804900b:	55                   	push   %ebp
+ 804900c:	89 e5                	mov    %esp,%ebp
+ 804900e:	83 ec 28             	sub    $0x28,%esp
+	fileChecker *fc = fileChecker::getInstance();
+ 8049011:	e8 a8 fe ff ff       	call   8048ebe <_ZN11fileChecker11getInstanceEv>
+ 8049016:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( fc )
+ 8049019:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 804901d:	74 0b                	je     804902a <FC_EnableDebug+0x1f>
+		fc->EnableDebug();
+ 804901f:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8049022:	89 04 24             	mov    %eax,(%esp)
+ 8049025:	e8 36 00 00 00       	call   8049060 <_ZN10debugClass11EnableDebugEv>
+	
+}
+ 804902a:	c9                   	leave  
+ 804902b:	c3                   	ret    
+
+0804902c <FC_Destory>:
+void FC_Destory() {
+ 804902c:	55                   	push   %ebp
+ 804902d:	89 e5                	mov    %esp,%ebp
+ 804902f:	83 ec 08             	sub    $0x8,%esp
+	fileChecker::putInstance();
+ 8049032:	e8 f7 fe ff ff       	call   8048f2e <_ZN11fileChecker11putInstanceEv>
+}
+ 8049037:	c9                   	leave  
+ 8049038:	c3                   	ret    
+ 8049039:	90                   	nop
+ 804903a:	90                   	nop
+ 804903b:	90                   	nop
+
+0804903c <_ZN10debugClassC2Ev>:
+#include <utils/debugClass.hpp>
+
+debugClass::debugClass():
+ 804903c:	55                   	push   %ebp
+ 804903d:	89 e5                	mov    %esp,%ebp
+	debugFlag(false) 
+ 804903f:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049042:	c6 00 00             	movb   $0x0,(%eax)
+{
+}
+ 8049045:	5d                   	pop    %ebp
+ 8049046:	c3                   	ret    
+ 8049047:	90                   	nop
+
+08049048 <_ZN10debugClassC1Ev>:
+#include <utils/debugClass.hpp>
+
+debugClass::debugClass():
+ 8049048:	55                   	push   %ebp
+ 8049049:	89 e5                	mov    %esp,%ebp
+	debugFlag(false) 
+ 804904b:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804904e:	c6 00 00             	movb   $0x0,(%eax)
+{
+}
+ 8049051:	5d                   	pop    %ebp
+ 8049052:	c3                   	ret    
+ 8049053:	90                   	nop
+
+08049054 <_ZN10debugClassD2Ev>:
+debugClass::~debugClass() {
+ 8049054:	55                   	push   %ebp
+ 8049055:	89 e5                	mov    %esp,%ebp
+}
+ 8049057:	5d                   	pop    %ebp
+ 8049058:	c3                   	ret    
+ 8049059:	90                   	nop
+
+0804905a <_ZN10debugClassD1Ev>:
+
+debugClass::debugClass():
+	debugFlag(false) 
+{
+}
+debugClass::~debugClass() {
+ 804905a:	55                   	push   %ebp
+ 804905b:	89 e5                	mov    %esp,%ebp
+}
+ 804905d:	5d                   	pop    %ebp
+ 804905e:	c3                   	ret    
+ 804905f:	90                   	nop
+
+08049060 <_ZN10debugClass11EnableDebugEv>:
+void debugClass::EnableDebug(){
+ 8049060:	55                   	push   %ebp
+ 8049061:	89 e5                	mov    %esp,%ebp
+	this->debugFlag = true;
+ 8049063:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049066:	c6 00 01             	movb   $0x1,(%eax)
+}
+ 8049069:	5d                   	pop    %ebp
+ 804906a:	c3                   	ret    
+ 804906b:	90                   	nop
+
+0804906c <_ZN10debugClass12DisableDebugEv>:
+void debugClass::DisableDebug() {
+ 804906c:	55                   	push   %ebp
+ 804906d:	89 e5                	mov    %esp,%ebp
+	this->debugFlag = false;
+ 804906f:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049072:	c6 00 00             	movb   $0x0,(%eax)
+}
+ 8049075:	5d                   	pop    %ebp
+ 8049076:	c3                   	ret    
+ 8049077:	90                   	nop
+
+08049078 <_ZN10debugClass12GetDebugFlagEv>:
+bool debugClass::GetDebugFlag() {
+ 8049078:	55                   	push   %ebp
+ 8049079:	89 e5                	mov    %esp,%ebp
+	return this->debugFlag;
+ 804907b:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804907e:	0f b6 00             	movzbl (%eax),%eax
+}
+ 8049081:	5d                   	pop    %ebp
+ 8049082:	c3                   	ret    
+ 8049083:	90                   	nop
+
+08049084 <_ZN8peerInfoC2Ev>:
+
+#include <peer/peer.hpp>
+
+#define _STRING_INIT "none"
+
+peerInfo::peerInfo() {
+ 8049084:	55                   	push   %ebp
+ 8049085:	89 e5                	mov    %esp,%ebp
+ 8049087:	83 ec 18             	sub    $0x18,%esp
+	this->Erase();
+ 804908a:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804908d:	89 04 24             	mov    %eax,(%esp)
+ 8049090:	e8 97 00 00 00       	call   804912c <_ZN8peerInfo5EraseEv>
+}
+ 8049095:	c9                   	leave  
+ 8049096:	c3                   	ret    
+ 8049097:	90                   	nop
+
+08049098 <_ZN8peerInfoC1Ev>:
+
+#include <peer/peer.hpp>
+
+#define _STRING_INIT "none"
+
+peerInfo::peerInfo() {
+ 8049098:	55                   	push   %ebp
+ 8049099:	89 e5                	mov    %esp,%ebp
+ 804909b:	83 ec 18             	sub    $0x18,%esp
+	this->Erase();
+ 804909e:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80490a1:	89 04 24             	mov    %eax,(%esp)
+ 80490a4:	e8 83 00 00 00       	call   804912c <_ZN8peerInfo5EraseEv>
+}
+ 80490a9:	c9                   	leave  
+ 80490aa:	c3                   	ret    
+ 80490ab:	90                   	nop
+
+080490ac <_ZN8peerInfoD2Ev>:
+
+peerInfo::~peerInfo() {
+ 80490ac:	55                   	push   %ebp
+ 80490ad:	89 e5                	mov    %esp,%ebp
+}
+ 80490af:	5d                   	pop    %ebp
+ 80490b0:	c3                   	ret    
+ 80490b1:	90                   	nop
+
+080490b2 <_ZN8peerInfoD1Ev>:
+
+peerInfo::peerInfo() {
+	this->Erase();
+}
+
+peerInfo::~peerInfo() {
+ 80490b2:	55                   	push   %ebp
+ 80490b3:	89 e5                	mov    %esp,%ebp
+}
+ 80490b5:	5d                   	pop    %ebp
+ 80490b6:	c3                   	ret    
+ 80490b7:	90                   	nop
+
+080490b8 <_ZN8peerInfo12SetInfoBasicEPcS0_S0_>:
+
+int peerInfo::SetInfoBasic ( char *ip, char *vPort, char *aPort ) {
+ 80490b8:	55                   	push   %ebp
+ 80490b9:	89 e5                	mov    %esp,%ebp
+ 80490bb:	83 ec 28             	sub    $0x28,%esp
+			
+	int r = 0;
+ 80490be:	c7 45 f4 00 00 00 00 	movl   $0x0,-0xc(%ebp)
+
+	r = this->SetIP( ip );
+ 80490c5:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 80490c8:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 80490cc:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80490cf:	89 04 24             	mov    %eax,(%esp)
+ 80490d2:	e8 95 02 00 00       	call   804936c <_ZN8peerInfo5SetIPEPc>
+ 80490d7:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( r < 0 ) return r;
+ 80490da:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 80490de:	79 05                	jns    80490e5 <_ZN8peerInfo12SetInfoBasicEPcS0_S0_+0x2d>
+ 80490e0:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 80490e3:	eb 45                	jmp    804912a <_ZN8peerInfo12SetInfoBasicEPcS0_S0_+0x72>
+	r = this->SetVideoPort( vPort );
+ 80490e5:	8b 45 10             	mov    0x10(%ebp),%eax
+ 80490e8:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 80490ec:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80490ef:	89 04 24             	mov    %eax,(%esp)
+ 80490f2:	e8 bd 02 00 00       	call   80493b4 <_ZN8peerInfo12SetVideoPortEPc>
+ 80490f7:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( r < 0 ) return r;
+ 80490fa:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 80490fe:	79 05                	jns    8049105 <_ZN8peerInfo12SetInfoBasicEPcS0_S0_+0x4d>
+ 8049100:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8049103:	eb 25                	jmp    804912a <_ZN8peerInfo12SetInfoBasicEPcS0_S0_+0x72>
+	r = this->SetAudioPort( aPort );
+ 8049105:	8b 45 14             	mov    0x14(%ebp),%eax
+ 8049108:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804910c:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804910f:	89 04 24             	mov    %eax,(%esp)
+ 8049112:	e8 e7 02 00 00       	call   80493fe <_ZN8peerInfo12SetAudioPortEPc>
+ 8049117:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( r < 0 ) return r;
+ 804911a:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 804911e:	79 05                	jns    8049125 <_ZN8peerInfo12SetInfoBasicEPcS0_S0_+0x6d>
+ 8049120:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8049123:	eb 05                	jmp    804912a <_ZN8peerInfo12SetInfoBasicEPcS0_S0_+0x72>
+	
+	return 0;
+ 8049125:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 804912a:	c9                   	leave  
+ 804912b:	c3                   	ret    
+
+0804912c <_ZN8peerInfo5EraseEv>:
+
+void peerInfo::Erase() {
+ 804912c:	55                   	push   %ebp
+ 804912d:	89 e5                	mov    %esp,%ebp
+ 804912f:	83 ec 28             	sub    $0x28,%esp
+	char msg[] = _STRING_INIT;
+ 8049132:	c7 45 f3 6e 6f 6e 65 	movl   $0x656e6f6e,-0xd(%ebp)
+ 8049139:	c6 45 f7 00          	movb   $0x0,-0x9(%ebp)
+	this->SetIP          ( msg );
+ 804913d:	8d 45 f3             	lea    -0xd(%ebp),%eax
+ 8049140:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8049144:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049147:	89 04 24             	mov    %eax,(%esp)
+ 804914a:	e8 1d 02 00 00       	call   804936c <_ZN8peerInfo5SetIPEPc>
+	this->SetVideoPort   ( msg );
+ 804914f:	8d 45 f3             	lea    -0xd(%ebp),%eax
+ 8049152:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8049156:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049159:	89 04 24             	mov    %eax,(%esp)
+ 804915c:	e8 53 02 00 00       	call   80493b4 <_ZN8peerInfo12SetVideoPortEPc>
+	this->SetAudioPort   ( msg );
+ 8049161:	8d 45 f3             	lea    -0xd(%ebp),%eax
+ 8049164:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8049168:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804916b:	89 04 24             	mov    %eax,(%esp)
+ 804916e:	e8 8b 02 00 00       	call   80493fe <_ZN8peerInfo12SetAudioPortEPc>
+	this->SetProbingPort ( msg );
+ 8049173:	8d 45 f3             	lea    -0xd(%ebp),%eax
+ 8049176:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804917a:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804917d:	89 04 24             	mov    %eax,(%esp)
+ 8049180:	e8 c3 02 00 00       	call   8049448 <_ZN8peerInfo14SetProbingPortEPc>
+	this->SetUUID        ( msg );
+ 8049185:	8d 45 f3             	lea    -0xd(%ebp),%eax
+ 8049188:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804918c:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804918f:	89 04 24             	mov    %eax,(%esp)
+ 8049192:	e8 fb 02 00 00       	call   8049492 <_ZN8peerInfo7SetUUIDEPc>
+	this->SetName        ( msg );
+ 8049197:	8d 45 f3             	lea    -0xd(%ebp),%eax
+ 804919a:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804919e:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80491a1:	89 04 24             	mov    %eax,(%esp)
+ 80491a4:	e8 33 03 00 00       	call   80494dc <_ZN8peerInfo7SetNameEPc>
+	this->SetCurAvaBW	 (0.0);
+ 80491a9:	b8 00 00 00 00       	mov    $0x0,%eax
+ 80491ae:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 80491b2:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80491b5:	89 04 24             	mov    %eax,(%esp)
+ 80491b8:	e8 6d 03 00 00       	call   804952a <_ZN8peerInfo11SetCurAvaBWEf>
+	this->SetIndex		 (-1);
+ 80491bd:	c7 44 24 04 ff ff ff 	movl   $0xffffffff,0x4(%esp)
+ 80491c4:	ff 
+ 80491c5:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80491c8:	89 04 24             	mov    %eax,(%esp)
+ 80491cb:	e8 86 03 00 00       	call   8049556 <_ZN8peerInfo8SetIndexEi>
+	this->SetUsed		 (0);
+ 80491d0:	c7 44 24 04 00 00 00 	movl   $0x0,0x4(%esp)
+ 80491d7:	00 
+ 80491d8:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80491db:	89 04 24             	mov    %eax,(%esp)
+ 80491de:	e8 89 03 00 00       	call   804956c <_ZN8peerInfo7SetUsedEi>
+	
+}
+ 80491e3:	c9                   	leave  
+ 80491e4:	c3                   	ret    
+ 80491e5:	90                   	nop
+ 80491e6:	90                   	nop
+ 80491e7:	90                   	nop
+
+080491e8 <_ZN8peerInfo4DumpEv>:
+
+#include "peer/peer.hpp"
+#include "vc_debug.h"
+
+
+void peerInfo::Dump() {
+ 80491e8:	55                   	push   %ebp
+ 80491e9:	89 e5                	mov    %esp,%ebp
+ 80491eb:	83 ec 18             	sub    $0x18,%esp
+	printf("\n\t- Peer %d -\n", this->GetIndex() );
+ 80491ee:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80491f1:	89 04 24             	mov    %eax,(%esp)
+ 80491f4:	e8 63 01 00 00       	call   804935c <_ZN8peerInfo8GetIndexEv>
+ 80491f9:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 80491fd:	c7 04 24 a1 a8 04 08 	movl   $0x804a8a1,(%esp)
+ 8049204:	e8 63 f7 ff ff       	call   804896c <printf@plt>
+	printf("UUID = %s\n" , this->GetUUID() );
+ 8049209:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804920c:	89 04 24             	mov    %eax,(%esp)
+ 804920f:	e8 00 01 00 00       	call   8049314 <_ZN8peerInfo7GetUUIDEv>
+ 8049214:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8049218:	c7 04 24 b0 a8 04 08 	movl   $0x804a8b0,(%esp)
+ 804921f:	e8 48 f7 ff ff       	call   804896c <printf@plt>
+	printf("Name = %s\n" , this->GetName() );
+ 8049224:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049227:	89 04 24             	mov    %eax,(%esp)
+ 804922a:	e8 f9 00 00 00       	call   8049328 <_ZN8peerInfo7GetNameEv>
+ 804922f:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8049233:	c7 04 24 bb a8 04 08 	movl   $0x804a8bb,(%esp)
+ 804923a:	e8 2d f7 ff ff       	call   804896c <printf@plt>
+	printf("IP   = %s\n" , this->GetIP()   );
+ 804923f:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049242:	89 04 24             	mov    %eax,(%esp)
+ 8049245:	e8 d6 00 00 00       	call   8049320 <_ZN8peerInfo5GetIPEv>
+ 804924a:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804924e:	c7 04 24 c6 a8 04 08 	movl   $0x804a8c6,(%esp)
+ 8049255:	e8 12 f7 ff ff       	call   804896c <printf@plt>
+	printf("Video   Port = %s\n", this->GetVideoPort()   );
+ 804925a:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804925d:	89 04 24             	mov    %eax,(%esp)
+ 8049260:	e8 8b 00 00 00       	call   80492f0 <_ZN8peerInfo12GetVideoPortEv>
+ 8049265:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8049269:	c7 04 24 d1 a8 04 08 	movl   $0x804a8d1,(%esp)
+ 8049270:	e8 f7 f6 ff ff       	call   804896c <printf@plt>
+	printf("Audio   Port = %s\n", this->GetAudioPort()   );
+ 8049275:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049278:	89 04 24             	mov    %eax,(%esp)
+ 804927b:	e8 7c 00 00 00       	call   80492fc <_ZN8peerInfo12GetAudioPortEv>
+ 8049280:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8049284:	c7 04 24 e4 a8 04 08 	movl   $0x804a8e4,(%esp)
+ 804928b:	e8 dc f6 ff ff       	call   804896c <printf@plt>
+	printf("Probing Port = %s\n", this->GetProbingPort() );
+ 8049290:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049293:	89 04 24             	mov    %eax,(%esp)
+ 8049296:	e8 6d 00 00 00       	call   8049308 <_ZN8peerInfo14GetProbingPortEv>
+ 804929b:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804929f:	c7 04 24 f7 a8 04 08 	movl   $0x804a8f7,(%esp)
+ 80492a6:	e8 c1 f6 ff ff       	call   804896c <printf@plt>
+	printf("used = %d\n", this->CheckUsed() );
+ 80492ab:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80492ae:	89 04 24             	mov    %eax,(%esp)
+ 80492b1:	e8 80 00 00 00       	call   8049336 <_ZN8peerInfo9CheckUsedEv>
+ 80492b6:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 80492ba:	c7 04 24 0a a9 04 08 	movl   $0x804a90a,(%esp)
+ 80492c1:	e8 a6 f6 ff ff       	call   804896c <printf@plt>
+	printf("bw   = %f\n", this->GetCurAvaBW() );
+ 80492c6:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80492c9:	89 04 24             	mov    %eax,(%esp)
+ 80492cc:	e8 73 00 00 00       	call   8049344 <_ZN8peerInfo11GetCurAvaBWEv>
+ 80492d1:	dd 5c 24 04          	fstpl  0x4(%esp)
+ 80492d5:	c7 04 24 15 a9 04 08 	movl   $0x804a915,(%esp)
+ 80492dc:	e8 8b f6 ff ff       	call   804896c <printf@plt>
+	printf("\t ------------ \n");
+ 80492e1:	c7 04 24 20 a9 04 08 	movl   $0x804a920,(%esp)
+ 80492e8:	e8 9f f6 ff ff       	call   804898c <puts@plt>
+}
+ 80492ed:	c9                   	leave  
+ 80492ee:	c3                   	ret    
+ 80492ef:	90                   	nop
+
+080492f0 <_ZN8peerInfo12GetVideoPortEv>:
+#include <cstring>
+
+#include "peer/peer.hpp"
+#include "vc_debug.h"
+
+char * peerInfo::GetVideoPort() {
+ 80492f0:	55                   	push   %ebp
+ 80492f1:	89 e5                	mov    %esp,%ebp
+	return this->videoPort;
+ 80492f3:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80492f6:	83 c0 28             	add    $0x28,%eax
+}
+ 80492f9:	5d                   	pop    %ebp
+ 80492fa:	c3                   	ret    
+ 80492fb:	90                   	nop
+
+080492fc <_ZN8peerInfo12GetAudioPortEv>:
+
+char * peerInfo::GetAudioPort() {
+ 80492fc:	55                   	push   %ebp
+ 80492fd:	89 e5                	mov    %esp,%ebp
+	return this->audioPort;
+ 80492ff:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049302:	83 c0 32             	add    $0x32,%eax
+}
+ 8049305:	5d                   	pop    %ebp
+ 8049306:	c3                   	ret    
+ 8049307:	90                   	nop
+
+08049308 <_ZN8peerInfo14GetProbingPortEv>:
+
+char * peerInfo::GetProbingPort() {
+ 8049308:	55                   	push   %ebp
+ 8049309:	89 e5                	mov    %esp,%ebp
+	return this->probingPort;
+ 804930b:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804930e:	83 c0 3c             	add    $0x3c,%eax
+}
+ 8049311:	5d                   	pop    %ebp
+ 8049312:	c3                   	ret    
+ 8049313:	90                   	nop
+
+08049314 <_ZN8peerInfo7GetUUIDEv>:
+
+char * peerInfo::GetUUID() {
+ 8049314:	55                   	push   %ebp
+ 8049315:	89 e5                	mov    %esp,%ebp
+	return this->UUID;
+ 8049317:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804931a:	83 c0 46             	add    $0x46,%eax
+}
+ 804931d:	5d                   	pop    %ebp
+ 804931e:	c3                   	ret    
+ 804931f:	90                   	nop
+
+08049320 <_ZN8peerInfo5GetIPEv>:
+
+char * peerInfo::GetIP() {
+ 8049320:	55                   	push   %ebp
+ 8049321:	89 e5                	mov    %esp,%ebp
+	return this->ip;
+ 8049323:	8b 45 08             	mov    0x8(%ebp),%eax
+}
+ 8049326:	5d                   	pop    %ebp
+ 8049327:	c3                   	ret    
+
+08049328 <_ZN8peerInfo7GetNameEv>:
+
+char * peerInfo::GetName() {
+ 8049328:	55                   	push   %ebp
+ 8049329:	89 e5                	mov    %esp,%ebp
+	return this->name;
+ 804932b:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804932e:	05 45 01 00 00       	add    $0x145,%eax
+}
+ 8049333:	5d                   	pop    %ebp
+ 8049334:	c3                   	ret    
+ 8049335:	90                   	nop
+
+08049336 <_ZN8peerInfo9CheckUsedEv>:
+
+int	 peerInfo::CheckUsed() {
+ 8049336:	55                   	push   %ebp
+ 8049337:	89 e5                	mov    %esp,%ebp
+	return this->used;
+ 8049339:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804933c:	8b 80 44 02 00 00    	mov    0x244(%eax),%eax
+}
+ 8049342:	5d                   	pop    %ebp
+ 8049343:	c3                   	ret    
+
+08049344 <_ZN8peerInfo11GetCurAvaBWEv>:
+
+float peerInfo::GetCurAvaBW() {
+ 8049344:	55                   	push   %ebp
+ 8049345:	89 e5                	mov    %esp,%ebp
+ 8049347:	83 ec 04             	sub    $0x4,%esp
+	return this->curAvailableBW;
+ 804934a:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804934d:	8b 80 4c 02 00 00    	mov    0x24c(%eax),%eax
+ 8049353:	89 45 fc             	mov    %eax,-0x4(%ebp)
+ 8049356:	d9 45 fc             	flds   -0x4(%ebp)
+}
+ 8049359:	c9                   	leave  
+ 804935a:	c3                   	ret    
+ 804935b:	90                   	nop
+
+0804935c <_ZN8peerInfo8GetIndexEv>:
+
+int peerInfo::GetIndex() {
+ 804935c:	55                   	push   %ebp
+ 804935d:	89 e5                	mov    %esp,%ebp
+	return this->index;
+ 804935f:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049362:	8b 80 48 02 00 00    	mov    0x248(%eax),%eax
+}
+ 8049368:	5d                   	pop    %ebp
+ 8049369:	c3                   	ret    
+ 804936a:	90                   	nop
+ 804936b:	90                   	nop
+
+0804936c <_ZN8peerInfo5SetIPEPc>:
+#include <cstring>
+
+#include "peer/peer.hpp"
+#include "vc_debug.h"
+
+int peerInfo::SetIP         ( char *ip   ) {
+ 804936c:	55                   	push   %ebp
+ 804936d:	89 e5                	mov    %esp,%ebp
+ 804936f:	83 ec 18             	sub    $0x18,%esp
+	if ( ip == 0 )
+ 8049372:	83 7d 0c 00          	cmpl   $0x0,0xc(%ebp)
+ 8049376:	75 07                	jne    804937f <_ZN8peerInfo5SetIPEPc+0x13>
+		return -1;
+ 8049378:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+ 804937d:	eb 32                	jmp    80493b1 <_ZN8peerInfo5SetIPEPc+0x45>
+	strncpy ( this->ip  , ip, _PEER_INFO_MAX_IP_STR_SIZE * sizeof(char) );
+ 804937f:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049382:	c7 44 24 08 28 00 00 	movl   $0x28,0x8(%esp)
+ 8049389:	00 
+ 804938a:	8b 55 0c             	mov    0xc(%ebp),%edx
+ 804938d:	89 54 24 04          	mov    %edx,0x4(%esp)
+ 8049391:	89 04 24             	mov    %eax,(%esp)
+ 8049394:	e8 53 f5 ff ff       	call   80488ec <strncpy@plt>
+	this->SetUsed(1);
+ 8049399:	c7 44 24 04 01 00 00 	movl   $0x1,0x4(%esp)
+ 80493a0:	00 
+ 80493a1:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80493a4:	89 04 24             	mov    %eax,(%esp)
+ 80493a7:	e8 c0 01 00 00       	call   804956c <_ZN8peerInfo7SetUsedEi>
+	return 0;
+ 80493ac:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 80493b1:	c9                   	leave  
+ 80493b2:	c3                   	ret    
+ 80493b3:	90                   	nop
+
+080493b4 <_ZN8peerInfo12SetVideoPortEPc>:
+
+int	peerInfo::SetVideoPort  ( char *port ) {
+ 80493b4:	55                   	push   %ebp
+ 80493b5:	89 e5                	mov    %esp,%ebp
+ 80493b7:	83 ec 18             	sub    $0x18,%esp
+	if ( port == 0 )
+ 80493ba:	83 7d 0c 00          	cmpl   $0x0,0xc(%ebp)
+ 80493be:	75 07                	jne    80493c7 <_ZN8peerInfo12SetVideoPortEPc+0x13>
+		return -1;
+ 80493c0:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+ 80493c5:	eb 35                	jmp    80493fc <_ZN8peerInfo12SetVideoPortEPc+0x48>
+
+	strncpy ( this->videoPort  , port, _PEER_INFO_MAX_PORT_STR_SIZE * sizeof(char) );
+ 80493c7:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80493ca:	8d 50 28             	lea    0x28(%eax),%edx
+ 80493cd:	c7 44 24 08 0a 00 00 	movl   $0xa,0x8(%esp)
+ 80493d4:	00 
+ 80493d5:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 80493d8:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 80493dc:	89 14 24             	mov    %edx,(%esp)
+ 80493df:	e8 08 f5 ff ff       	call   80488ec <strncpy@plt>
+	this->SetUsed(1);
+ 80493e4:	c7 44 24 04 01 00 00 	movl   $0x1,0x4(%esp)
+ 80493eb:	00 
+ 80493ec:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80493ef:	89 04 24             	mov    %eax,(%esp)
+ 80493f2:	e8 75 01 00 00       	call   804956c <_ZN8peerInfo7SetUsedEi>
+	return 0;
+ 80493f7:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 80493fc:	c9                   	leave  
+ 80493fd:	c3                   	ret    
+
+080493fe <_ZN8peerInfo12SetAudioPortEPc>:
+
+int peerInfo::SetAudioPort  ( char *port ) {
+ 80493fe:	55                   	push   %ebp
+ 80493ff:	89 e5                	mov    %esp,%ebp
+ 8049401:	83 ec 18             	sub    $0x18,%esp
+	if ( port == 0 )
+ 8049404:	83 7d 0c 00          	cmpl   $0x0,0xc(%ebp)
+ 8049408:	75 07                	jne    8049411 <_ZN8peerInfo12SetAudioPortEPc+0x13>
+		return -1;
+ 804940a:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+ 804940f:	eb 35                	jmp    8049446 <_ZN8peerInfo12SetAudioPortEPc+0x48>
+
+	strncpy ( this->audioPort  , port, _PEER_INFO_MAX_PORT_STR_SIZE * sizeof(char) );
+ 8049411:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049414:	8d 50 32             	lea    0x32(%eax),%edx
+ 8049417:	c7 44 24 08 0a 00 00 	movl   $0xa,0x8(%esp)
+ 804941e:	00 
+ 804941f:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 8049422:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8049426:	89 14 24             	mov    %edx,(%esp)
+ 8049429:	e8 be f4 ff ff       	call   80488ec <strncpy@plt>
+	this->SetUsed(1);
+ 804942e:	c7 44 24 04 01 00 00 	movl   $0x1,0x4(%esp)
+ 8049435:	00 
+ 8049436:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049439:	89 04 24             	mov    %eax,(%esp)
+ 804943c:	e8 2b 01 00 00       	call   804956c <_ZN8peerInfo7SetUsedEi>
+	return 0;
+ 8049441:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 8049446:	c9                   	leave  
+ 8049447:	c3                   	ret    
+
+08049448 <_ZN8peerInfo14SetProbingPortEPc>:
+
+int peerInfo::SetProbingPort( char *port ) {
+ 8049448:	55                   	push   %ebp
+ 8049449:	89 e5                	mov    %esp,%ebp
+ 804944b:	83 ec 18             	sub    $0x18,%esp
+	if ( port == 0 )
+ 804944e:	83 7d 0c 00          	cmpl   $0x0,0xc(%ebp)
+ 8049452:	75 07                	jne    804945b <_ZN8peerInfo14SetProbingPortEPc+0x13>
+		return -1;
+ 8049454:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+ 8049459:	eb 35                	jmp    8049490 <_ZN8peerInfo14SetProbingPortEPc+0x48>
+
+	strncpy ( this->probingPort, port, _PEER_INFO_MAX_PORT_STR_SIZE * sizeof(char) );
+ 804945b:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804945e:	8d 50 3c             	lea    0x3c(%eax),%edx
+ 8049461:	c7 44 24 08 0a 00 00 	movl   $0xa,0x8(%esp)
+ 8049468:	00 
+ 8049469:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804946c:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8049470:	89 14 24             	mov    %edx,(%esp)
+ 8049473:	e8 74 f4 ff ff       	call   80488ec <strncpy@plt>
+	this->SetUsed(1);
+ 8049478:	c7 44 24 04 01 00 00 	movl   $0x1,0x4(%esp)
+ 804947f:	00 
+ 8049480:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049483:	89 04 24             	mov    %eax,(%esp)
+ 8049486:	e8 e1 00 00 00       	call   804956c <_ZN8peerInfo7SetUsedEi>
+	return 0;
+ 804948b:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 8049490:	c9                   	leave  
+ 8049491:	c3                   	ret    
+
+08049492 <_ZN8peerInfo7SetUUIDEPc>:
+
+int peerInfo::SetUUID       ( char *uuid ) {
+ 8049492:	55                   	push   %ebp
+ 8049493:	89 e5                	mov    %esp,%ebp
+ 8049495:	83 ec 18             	sub    $0x18,%esp
+	if ( uuid == 0 )
+ 8049498:	83 7d 0c 00          	cmpl   $0x0,0xc(%ebp)
+ 804949c:	75 07                	jne    80494a5 <_ZN8peerInfo7SetUUIDEPc+0x13>
+		return -1;
+ 804949e:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+ 80494a3:	eb 35                	jmp    80494da <_ZN8peerInfo7SetUUIDEPc+0x48>
+
+	strncpy ( this->UUID       , uuid, _PEER_INFO_MAX_UUID_STR_SIZE * sizeof(char) );
+ 80494a5:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80494a8:	8d 50 46             	lea    0x46(%eax),%edx
+ 80494ab:	c7 44 24 08 ff 00 00 	movl   $0xff,0x8(%esp)
+ 80494b2:	00 
+ 80494b3:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 80494b6:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 80494ba:	89 14 24             	mov    %edx,(%esp)
+ 80494bd:	e8 2a f4 ff ff       	call   80488ec <strncpy@plt>
+	this->SetUsed(1);
+ 80494c2:	c7 44 24 04 01 00 00 	movl   $0x1,0x4(%esp)
+ 80494c9:	00 
+ 80494ca:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80494cd:	89 04 24             	mov    %eax,(%esp)
+ 80494d0:	e8 97 00 00 00       	call   804956c <_ZN8peerInfo7SetUsedEi>
+	return 0;
+ 80494d5:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 80494da:	c9                   	leave  
+ 80494db:	c3                   	ret    
+
+080494dc <_ZN8peerInfo7SetNameEPc>:
+
+int peerInfo::SetName		( char *name ) {
+ 80494dc:	55                   	push   %ebp
+ 80494dd:	89 e5                	mov    %esp,%ebp
+ 80494df:	83 ec 18             	sub    $0x18,%esp
+	if ( name == 0 )
+ 80494e2:	83 7d 0c 00          	cmpl   $0x0,0xc(%ebp)
+ 80494e6:	75 07                	jne    80494ef <_ZN8peerInfo7SetNameEPc+0x13>
+		return -1;
+ 80494e8:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+ 80494ed:	eb 38                	jmp    8049527 <_ZN8peerInfo7SetNameEPc+0x4b>
+
+	strncpy ( this->name       , name, _PEER_INFO_MAX_UUID_STR_SIZE * sizeof(char) );		
+ 80494ef:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80494f2:	8d 90 45 01 00 00    	lea    0x145(%eax),%edx
+ 80494f8:	c7 44 24 08 ff 00 00 	movl   $0xff,0x8(%esp)
+ 80494ff:	00 
+ 8049500:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 8049503:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8049507:	89 14 24             	mov    %edx,(%esp)
+ 804950a:	e8 dd f3 ff ff       	call   80488ec <strncpy@plt>
+	this->SetUsed(1);
+ 804950f:	c7 44 24 04 01 00 00 	movl   $0x1,0x4(%esp)
+ 8049516:	00 
+ 8049517:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804951a:	89 04 24             	mov    %eax,(%esp)
+ 804951d:	e8 4a 00 00 00       	call   804956c <_ZN8peerInfo7SetUsedEi>
+	return 0;
+ 8049522:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 8049527:	c9                   	leave  
+ 8049528:	c3                   	ret    
+ 8049529:	90                   	nop
+
+0804952a <_ZN8peerInfo11SetCurAvaBWEf>:
+
+int	peerInfo::SetCurAvaBW	  ( float bw   ) {
+ 804952a:	55                   	push   %ebp
+ 804952b:	89 e5                	mov    %esp,%ebp
+ 804952d:	83 ec 18             	sub    $0x18,%esp
+	this->curAvailableBW = bw;
+ 8049530:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049533:	8b 55 0c             	mov    0xc(%ebp),%edx
+ 8049536:	89 90 4c 02 00 00    	mov    %edx,0x24c(%eax)
+	this->SetUsed(1);
+ 804953c:	c7 44 24 04 01 00 00 	movl   $0x1,0x4(%esp)
+ 8049543:	00 
+ 8049544:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049547:	89 04 24             	mov    %eax,(%esp)
+ 804954a:	e8 1d 00 00 00       	call   804956c <_ZN8peerInfo7SetUsedEi>
+	return 0;
+ 804954f:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 8049554:	c9                   	leave  
+ 8049555:	c3                   	ret    
+
+08049556 <_ZN8peerInfo8SetIndexEi>:
+
+int peerInfo::SetIndex	( int i ) {
+ 8049556:	55                   	push   %ebp
+ 8049557:	89 e5                	mov    %esp,%ebp
+	this->index = i;
+ 8049559:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804955c:	8b 55 0c             	mov    0xc(%ebp),%edx
+ 804955f:	89 90 48 02 00 00    	mov    %edx,0x248(%eax)
+	return 0;
+ 8049565:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 804956a:	5d                   	pop    %ebp
+ 804956b:	c3                   	ret    
+
+0804956c <_ZN8peerInfo7SetUsedEi>:
+
+//private set function
+int peerInfo::SetUsed(int u) {
+ 804956c:	55                   	push   %ebp
+ 804956d:	89 e5                	mov    %esp,%ebp
+	this->used = u;
+ 804956f:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049572:	8b 55 0c             	mov    0xc(%ebp),%edx
+ 8049575:	89 90 44 02 00 00    	mov    %edx,0x244(%eax)
+}
+ 804957b:	5d                   	pop    %ebp
+ 804957c:	c3                   	ret    
+ 804957d:	90                   	nop
+ 804957e:	90                   	nop
+ 804957f:	90                   	nop
+
+08049580 <PI_AddPeer>:
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+// Add peer
+int PI_AddPeer(int i, char *ip, char *vport, char* aport) {
+ 8049580:	55                   	push   %ebp
+ 8049581:	89 e5                	mov    %esp,%ebp
+ 8049583:	83 ec 38             	sub    $0x38,%esp
+	peerVector *pv = peerVector::getInstance();
+ 8049586:	e8 83 08 00 00       	call   8049e0e <_ZN10peerVector11getInstanceEv>
+ 804958b:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( pv )
+ 804958e:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 8049592:	74 29                	je     80495bd <PI_AddPeer+0x3d>
+		return pv->Add( i, ip, vport, aport );
+ 8049594:	8b 45 14             	mov    0x14(%ebp),%eax
+ 8049597:	89 44 24 10          	mov    %eax,0x10(%esp)
+ 804959b:	8b 45 10             	mov    0x10(%ebp),%eax
+ 804959e:	89 44 24 0c          	mov    %eax,0xc(%esp)
+ 80495a2:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 80495a5:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 80495a9:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80495ac:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 80495b0:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 80495b3:	89 04 24             	mov    %eax,(%esp)
+ 80495b6:	e8 71 09 00 00       	call   8049f2c <_ZN10peerVector3AddEiPcS0_S0_>
+ 80495bb:	eb 05                	jmp    80495c2 <PI_AddPeer+0x42>
+	return -1;
+ 80495bd:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+}
+ 80495c2:	c9                   	leave  
+ 80495c3:	c3                   	ret    
+
+080495c4 <PI_AddPeerExt>:
+// AddExt2 peer
+int PI_AddPeerExt(int i, char *ip, char *vport, 
+				   char* aport, char *pport) 
+{
+ 80495c4:	55                   	push   %ebp
+ 80495c5:	89 e5                	mov    %esp,%ebp
+ 80495c7:	83 ec 38             	sub    $0x38,%esp
+	peerVector *pv = peerVector::getInstance();
+ 80495ca:	e8 3f 08 00 00       	call   8049e0e <_ZN10peerVector11getInstanceEv>
+ 80495cf:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( pv )
+ 80495d2:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 80495d6:	74 30                	je     8049608 <PI_AddPeerExt+0x44>
+		return pv->AddExt ( i, ip, vport, aport, pport );
+ 80495d8:	8b 45 18             	mov    0x18(%ebp),%eax
+ 80495db:	89 44 24 14          	mov    %eax,0x14(%esp)
+ 80495df:	8b 45 14             	mov    0x14(%ebp),%eax
+ 80495e2:	89 44 24 10          	mov    %eax,0x10(%esp)
+ 80495e6:	8b 45 10             	mov    0x10(%ebp),%eax
+ 80495e9:	89 44 24 0c          	mov    %eax,0xc(%esp)
+ 80495ed:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 80495f0:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 80495f4:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80495f7:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 80495fb:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 80495fe:	89 04 24             	mov    %eax,(%esp)
+ 8049601:	e8 8c 09 00 00       	call   8049f92 <_ZN10peerVector6AddExtEiPcS0_S0_S0_>
+ 8049606:	eb 05                	jmp    804960d <PI_AddPeerExt+0x49>
+	return -1;
+ 8049608:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+}
+ 804960d:	c9                   	leave  
+ 804960e:	c3                   	ret    
+
+0804960f <PI_AddPeerExt2>:
+// AddExt3 peer
+int PI_AddPeerExt2(int i, char *ip, char *vport, char* aport, 
+				 char *pport, char *uuid, char *name)
+{
+ 804960f:	55                   	push   %ebp
+ 8049610:	89 e5                	mov    %esp,%ebp
+ 8049612:	83 ec 38             	sub    $0x38,%esp
+	peerVector *pv = peerVector::getInstance();
+ 8049615:	e8 f4 07 00 00       	call   8049e0e <_ZN10peerVector11getInstanceEv>
+ 804961a:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( pv )
+ 804961d:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 8049621:	74 3e                	je     8049661 <PI_AddPeerExt2+0x52>
+		return pv->AddExt2( i, ip, vport, aport, pport, uuid, name );
+ 8049623:	8b 45 20             	mov    0x20(%ebp),%eax
+ 8049626:	89 44 24 1c          	mov    %eax,0x1c(%esp)
+ 804962a:	8b 45 1c             	mov    0x1c(%ebp),%eax
+ 804962d:	89 44 24 18          	mov    %eax,0x18(%esp)
+ 8049631:	8b 45 18             	mov    0x18(%ebp),%eax
+ 8049634:	89 44 24 14          	mov    %eax,0x14(%esp)
+ 8049638:	8b 45 14             	mov    0x14(%ebp),%eax
+ 804963b:	89 44 24 10          	mov    %eax,0x10(%esp)
+ 804963f:	8b 45 10             	mov    0x10(%ebp),%eax
+ 8049642:	89 44 24 0c          	mov    %eax,0xc(%esp)
+ 8049646:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 8049649:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 804964d:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049650:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8049654:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8049657:	89 04 24             	mov    %eax,(%esp)
+ 804965a:	e8 b5 09 00 00       	call   804a014 <_ZN10peerVector7AddExt2EiPcS0_S0_S0_S0_S0_>
+ 804965f:	eb 05                	jmp    8049666 <PI_AddPeerExt2+0x57>
+	return -1;
+ 8049661:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+}
+ 8049666:	c9                   	leave  
+ 8049667:	c3                   	ret    
+
+08049668 <PI_SetPeerIP>:
+
+// Individually Set, if failed return -1
+int	PI_SetPeerIP          ( int i, char *ip ) {
+ 8049668:	55                   	push   %ebp
+ 8049669:	89 e5                	mov    %esp,%ebp
+ 804966b:	83 ec 28             	sub    $0x28,%esp
+	peerVector *pv = peerVector::getInstance();
+ 804966e:	e8 9b 07 00 00       	call   8049e0e <_ZN10peerVector11getInstanceEv>
+ 8049673:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( pv )
+ 8049676:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 804967a:	74 1b                	je     8049697 <PI_SetPeerIP+0x2f>
+		return pv->SetPeerIP ( i, ip );
+ 804967c:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804967f:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 8049683:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049686:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804968a:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804968d:	89 04 24             	mov    %eax,(%esp)
+ 8049690:	e8 43 0d 00 00       	call   804a3d8 <_ZN10peerVector9SetPeerIPEiPc>
+ 8049695:	eb 05                	jmp    804969c <PI_SetPeerIP+0x34>
+	return -1;
+ 8049697:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+}
+ 804969c:	c9                   	leave  
+ 804969d:	c3                   	ret    
+
+0804969e <PI_SetPeerVideoPort>:
+int PI_SetPeerVideoPort   ( int i, char *port ) {
+ 804969e:	55                   	push   %ebp
+ 804969f:	89 e5                	mov    %esp,%ebp
+ 80496a1:	83 ec 28             	sub    $0x28,%esp
+	peerVector *pv = peerVector::getInstance();
+ 80496a4:	e8 65 07 00 00       	call   8049e0e <_ZN10peerVector11getInstanceEv>
+ 80496a9:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( pv )
+ 80496ac:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 80496b0:	74 1b                	je     80496cd <PI_SetPeerVideoPort+0x2f>
+		return pv->SetPeerVideoPort ( i, port );
+ 80496b2:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 80496b5:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 80496b9:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80496bc:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 80496c0:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 80496c3:	89 04 24             	mov    %eax,(%esp)
+ 80496c6:	e8 73 0d 00 00       	call   804a43e <_ZN10peerVector16SetPeerVideoPortEiPc>
+ 80496cb:	eb 05                	jmp    80496d2 <PI_SetPeerVideoPort+0x34>
+	return -1;
+ 80496cd:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+}
+ 80496d2:	c9                   	leave  
+ 80496d3:	c3                   	ret    
+
+080496d4 <PI_SetPeerAudioPort>:
+int PI_SetPeerAudioPort   ( int i, char *port ) {
+ 80496d4:	55                   	push   %ebp
+ 80496d5:	89 e5                	mov    %esp,%ebp
+ 80496d7:	83 ec 28             	sub    $0x28,%esp
+	peerVector *pv = peerVector::getInstance();
+ 80496da:	e8 2f 07 00 00       	call   8049e0e <_ZN10peerVector11getInstanceEv>
+ 80496df:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( pv )
+ 80496e2:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 80496e6:	74 1b                	je     8049703 <PI_SetPeerAudioPort+0x2f>
+		return pv->SetPeerAudioPort ( i, port );
+ 80496e8:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 80496eb:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 80496ef:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80496f2:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 80496f6:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 80496f9:	89 04 24             	mov    %eax,(%esp)
+ 80496fc:	e8 a3 0d 00 00       	call   804a4a4 <_ZN10peerVector16SetPeerAudioPortEiPc>
+ 8049701:	eb 05                	jmp    8049708 <PI_SetPeerAudioPort+0x34>
+	return -1;
+ 8049703:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+}
+ 8049708:	c9                   	leave  
+ 8049709:	c3                   	ret    
+
+0804970a <PI_SetPeerProbingPort>:
+int PI_SetPeerProbingPort ( int i, char *port ) {
+ 804970a:	55                   	push   %ebp
+ 804970b:	89 e5                	mov    %esp,%ebp
+ 804970d:	83 ec 28             	sub    $0x28,%esp
+	peerVector *pv = peerVector::getInstance();
+ 8049710:	e8 f9 06 00 00       	call   8049e0e <_ZN10peerVector11getInstanceEv>
+ 8049715:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( pv )
+ 8049718:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 804971c:	74 1b                	je     8049739 <PI_SetPeerProbingPort+0x2f>
+		return pv->SetPeerProbingPort ( i, port );
+ 804971e:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 8049721:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 8049725:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049728:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804972c:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804972f:	89 04 24             	mov    %eax,(%esp)
+ 8049732:	e8 d3 0d 00 00       	call   804a50a <_ZN10peerVector18SetPeerProbingPortEiPc>
+ 8049737:	eb 05                	jmp    804973e <PI_SetPeerProbingPort+0x34>
+	return -1;
+ 8049739:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+}
+ 804973e:	c9                   	leave  
+ 804973f:	c3                   	ret    
+
+08049740 <PI_SetPeerUUID>:
+int PI_SetPeerUUID        ( int i, char *uuid ) {
+ 8049740:	55                   	push   %ebp
+ 8049741:	89 e5                	mov    %esp,%ebp
+ 8049743:	83 ec 28             	sub    $0x28,%esp
+	peerVector *pv = peerVector::getInstance();
+ 8049746:	e8 c3 06 00 00       	call   8049e0e <_ZN10peerVector11getInstanceEv>
+ 804974b:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( pv )
+ 804974e:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 8049752:	74 1b                	je     804976f <PI_SetPeerUUID+0x2f>
+		return pv->SetPeerUUID ( i, uuid );
+ 8049754:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 8049757:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 804975b:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804975e:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8049762:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8049765:	89 04 24             	mov    %eax,(%esp)
+ 8049768:	e8 03 0e 00 00       	call   804a570 <_ZN10peerVector11SetPeerUUIDEiPc>
+ 804976d:	eb 05                	jmp    8049774 <PI_SetPeerUUID+0x34>
+	return -1;
+ 804976f:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+}
+ 8049774:	c9                   	leave  
+ 8049775:	c3                   	ret    
+
+08049776 <PI_SetPeerName>:
+int PI_SetPeerName	      ( int i, char *name ) {
+ 8049776:	55                   	push   %ebp
+ 8049777:	89 e5                	mov    %esp,%ebp
+ 8049779:	83 ec 28             	sub    $0x28,%esp
+	peerVector *pv = peerVector::getInstance();
+ 804977c:	e8 8d 06 00 00       	call   8049e0e <_ZN10peerVector11getInstanceEv>
+ 8049781:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( pv )
+ 8049784:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 8049788:	74 1b                	je     80497a5 <PI_SetPeerName+0x2f>
+		return pv->SetPeerName ( i, name );
+ 804978a:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804978d:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 8049791:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049794:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8049798:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804979b:	89 04 24             	mov    %eax,(%esp)
+ 804979e:	e8 33 0e 00 00       	call   804a5d6 <_ZN10peerVector11SetPeerNameEiPc>
+ 80497a3:	eb 05                	jmp    80497aa <PI_SetPeerName+0x34>
+	return -1;
+ 80497a5:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+}
+ 80497aa:	c9                   	leave  
+ 80497ab:	c3                   	ret    
+
+080497ac <PI_GetPeerIP>:
+
+// Individually Get, if failed return 0
+char * PI_GetPeerIP	          (int i) {
+ 80497ac:	55                   	push   %ebp
+ 80497ad:	89 e5                	mov    %esp,%ebp
+ 80497af:	83 ec 28             	sub    $0x28,%esp
+	peerVector *pv = peerVector::getInstance();
+ 80497b2:	e8 57 06 00 00       	call   8049e0e <_ZN10peerVector11getInstanceEv>
+ 80497b7:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( pv )
+ 80497ba:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 80497be:	74 14                	je     80497d4 <PI_GetPeerIP+0x28>
+		return pv->GetPeerIP(i);
+ 80497c0:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80497c3:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 80497c7:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 80497ca:	89 04 24             	mov    %eax,(%esp)
+ 80497cd:	e8 76 0a 00 00       	call   804a248 <_ZN10peerVector9GetPeerIPEi>
+ 80497d2:	eb 05                	jmp    80497d9 <PI_GetPeerIP+0x2d>
+	return 0;
+ 80497d4:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 80497d9:	c9                   	leave  
+ 80497da:	c3                   	ret    
+
+080497db <PI_GetPeerVideoPort>:
+char * PI_GetPeerVideoPort    (int i) {
+ 80497db:	55                   	push   %ebp
+ 80497dc:	89 e5                	mov    %esp,%ebp
+ 80497de:	83 ec 28             	sub    $0x28,%esp
+	peerVector *pv = peerVector::getInstance();
+ 80497e1:	e8 28 06 00 00       	call   8049e0e <_ZN10peerVector11getInstanceEv>
+ 80497e6:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( pv )
+ 80497e9:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 80497ed:	74 14                	je     8049803 <PI_GetPeerVideoPort+0x28>
+		return pv->GetPeerVideoPort(i);
+ 80497ef:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80497f2:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 80497f6:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 80497f9:	89 04 24             	mov    %eax,(%esp)
+ 80497fc:	e8 7f 0a 00 00       	call   804a280 <_ZN10peerVector16GetPeerVideoPortEi>
+ 8049801:	eb 05                	jmp    8049808 <PI_GetPeerVideoPort+0x2d>
+	return 0;
+ 8049803:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 8049808:	c9                   	leave  
+ 8049809:	c3                   	ret    
+
+0804980a <PI_GetPeerAudioPort>:
+char * PI_GetPeerAudioPort    (int i) {
+ 804980a:	55                   	push   %ebp
+ 804980b:	89 e5                	mov    %esp,%ebp
+ 804980d:	83 ec 28             	sub    $0x28,%esp
+	peerVector *pv = peerVector::getInstance();
+ 8049810:	e8 f9 05 00 00       	call   8049e0e <_ZN10peerVector11getInstanceEv>
+ 8049815:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( pv )
+ 8049818:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 804981c:	74 14                	je     8049832 <PI_GetPeerAudioPort+0x28>
+		return pv->GetPeerAudioPort(i);
+ 804981e:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049821:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8049825:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8049828:	89 04 24             	mov    %eax,(%esp)
+ 804982b:	e8 88 0a 00 00       	call   804a2b8 <_ZN10peerVector16GetPeerAudioPortEi>
+ 8049830:	eb 05                	jmp    8049837 <PI_GetPeerAudioPort+0x2d>
+	return 0;
+ 8049832:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 8049837:	c9                   	leave  
+ 8049838:	c3                   	ret    
+
+08049839 <PI_GetPeerProbingPort>:
+char * PI_GetPeerProbingPort  (int i) {
+ 8049839:	55                   	push   %ebp
+ 804983a:	89 e5                	mov    %esp,%ebp
+ 804983c:	83 ec 28             	sub    $0x28,%esp
+	peerVector *pv = peerVector::getInstance();
+ 804983f:	e8 ca 05 00 00       	call   8049e0e <_ZN10peerVector11getInstanceEv>
+ 8049844:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( pv )
+ 8049847:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 804984b:	74 14                	je     8049861 <PI_GetPeerProbingPort+0x28>
+		return pv->GetPeerProbingPort(i);
+ 804984d:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049850:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8049854:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8049857:	89 04 24             	mov    %eax,(%esp)
+ 804985a:	e8 91 0a 00 00       	call   804a2f0 <_ZN10peerVector18GetPeerProbingPortEi>
+ 804985f:	eb 05                	jmp    8049866 <PI_GetPeerProbingPort+0x2d>
+	return 0;
+ 8049861:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 8049866:	c9                   	leave  
+ 8049867:	c3                   	ret    
+
+08049868 <PI_GetPeerUUID>:
+char * PI_GetPeerUUID		  (int i) {
+ 8049868:	55                   	push   %ebp
+ 8049869:	89 e5                	mov    %esp,%ebp
+ 804986b:	83 ec 28             	sub    $0x28,%esp
+	peerVector *pv = peerVector::getInstance();
+ 804986e:	e8 9b 05 00 00       	call   8049e0e <_ZN10peerVector11getInstanceEv>
+ 8049873:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( pv )
+ 8049876:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 804987a:	74 14                	je     8049890 <PI_GetPeerUUID+0x28>
+		return pv->GetPeerUUID(i);
+ 804987c:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804987f:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8049883:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8049886:	89 04 24             	mov    %eax,(%esp)
+ 8049889:	e8 9a 0a 00 00       	call   804a328 <_ZN10peerVector11GetPeerUUIDEi>
+ 804988e:	eb 05                	jmp    8049895 <PI_GetPeerUUID+0x2d>
+	return 0;
+ 8049890:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 8049895:	c9                   	leave  
+ 8049896:	c3                   	ret    
+
+08049897 <PI_GetPeerName>:
+char * PI_GetPeerName		  (int i) {
+ 8049897:	55                   	push   %ebp
+ 8049898:	89 e5                	mov    %esp,%ebp
+ 804989a:	83 ec 28             	sub    $0x28,%esp
+	peerVector *pv = peerVector::getInstance();
+ 804989d:	e8 6c 05 00 00       	call   8049e0e <_ZN10peerVector11getInstanceEv>
+ 80498a2:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( pv )
+ 80498a5:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 80498a9:	74 14                	je     80498bf <PI_GetPeerName+0x28>
+		return pv->GetPeerName(i);
+ 80498ab:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80498ae:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 80498b2:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 80498b5:	89 04 24             	mov    %eax,(%esp)
+ 80498b8:	e8 a3 0a 00 00       	call   804a360 <_ZN10peerVector11GetPeerNameEi>
+ 80498bd:	eb 05                	jmp    80498c4 <PI_GetPeerName+0x2d>
+	return 0;
+ 80498bf:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 80498c4:	c9                   	leave  
+ 80498c5:	c3                   	ret    
+
+080498c6 <PI_GetMaxPeerNum>:
+
+// Get Current Number of peers
+int PI_GetMaxPeerNum() {
+ 80498c6:	55                   	push   %ebp
+ 80498c7:	89 e5                	mov    %esp,%ebp
+ 80498c9:	83 ec 28             	sub    $0x28,%esp
+	peerVector *pv = peerVector::getInstance();
+ 80498cc:	e8 3d 05 00 00       	call   8049e0e <_ZN10peerVector11getInstanceEv>
+ 80498d1:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( pv )
+ 80498d4:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 80498d8:	74 0d                	je     80498e7 <PI_GetMaxPeerNum+0x21>
+		return pv->GetMaxPeerNum();
+ 80498da:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 80498dd:	89 04 24             	mov    %eax,(%esp)
+ 80498e0:	e8 cd 0a 00 00       	call   804a3b2 <_ZN10peerVector13GetMaxPeerNumEv>
+ 80498e5:	eb 05                	jmp    80498ec <PI_GetMaxPeerNum+0x26>
+	return -1;
+ 80498e7:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+}
+ 80498ec:	c9                   	leave  
+ 80498ed:	c3                   	ret    
+
+080498ee <PI_GetPeerBitmap>:
+
+int* PI_GetPeerBitmap() {
+ 80498ee:	55                   	push   %ebp
+ 80498ef:	89 e5                	mov    %esp,%ebp
+ 80498f1:	83 ec 28             	sub    $0x28,%esp
+	peerVector *pv = peerVector::getInstance();
+ 80498f4:	e8 15 05 00 00       	call   8049e0e <_ZN10peerVector11getInstanceEv>
+ 80498f9:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( pv )
+ 80498fc:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 8049900:	74 0d                	je     804990f <PI_GetPeerBitmap+0x21>
+		return pv->GetPeerBitmap();
+ 8049902:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8049905:	89 04 24             	mov    %eax,(%esp)
+ 8049908:	e8 af 0a 00 00       	call   804a3bc <_ZN10peerVector13GetPeerBitmapEv>
+ 804990d:	eb 05                	jmp    8049914 <PI_GetPeerBitmap+0x26>
+	return 0;
+ 804990f:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 8049914:	c9                   	leave  
+ 8049915:	c3                   	ret    
+
+08049916 <PI_GetNumPeers>:
+
+int PI_GetNumPeers() {
+ 8049916:	55                   	push   %ebp
+ 8049917:	89 e5                	mov    %esp,%ebp
+ 8049919:	83 ec 28             	sub    $0x28,%esp
+	peerVector *pv = peerVector::getInstance();
+ 804991c:	e8 ed 04 00 00       	call   8049e0e <_ZN10peerVector11getInstanceEv>
+ 8049921:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( pv )
+ 8049924:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 8049928:	74 0d                	je     8049937 <PI_GetNumPeers+0x21>
+		return pv->GetPeerNum();
+ 804992a:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804992d:	89 04 24             	mov    %eax,(%esp)
+ 8049930:	e8 63 0a 00 00       	call   804a398 <_ZN10peerVector10GetPeerNumEv>
+ 8049935:	eb 05                	jmp    804993c <PI_GetNumPeers+0x26>
+	return -1;
+ 8049937:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+}
+ 804993c:	c9                   	leave  
+ 804993d:	c3                   	ret    
+
+0804993e <PI_ErasePeer>:
+
+// Erase peer
+void PI_ErasePeer(int i) {
+ 804993e:	55                   	push   %ebp
+ 804993f:	89 e5                	mov    %esp,%ebp
+ 8049941:	83 ec 28             	sub    $0x28,%esp
+	peerVector *pv = peerVector::getInstance();
+ 8049944:	e8 c5 04 00 00       	call   8049e0e <_ZN10peerVector11getInstanceEv>
+ 8049949:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( pv )
+ 804994c:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 8049950:	74 12                	je     8049964 <PI_ErasePeer+0x26>
+		pv->ErasePeer(i);
+ 8049952:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049955:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8049959:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804995c:	89 04 24             	mov    %eax,(%esp)
+ 804995f:	e8 78 08 00 00       	call   804a1dc <_ZN10peerVector9ErasePeerEi>
+}
+ 8049964:	c9                   	leave  
+ 8049965:	c3                   	ret    
+
+08049966 <PI_EraseAllPeer>:
+
+// Erase all
+void PI_EraseAllPeer() {
+ 8049966:	55                   	push   %ebp
+ 8049967:	89 e5                	mov    %esp,%ebp
+ 8049969:	83 ec 28             	sub    $0x28,%esp
+	peerVector *pv = peerVector::getInstance();
+ 804996c:	e8 9d 04 00 00       	call   8049e0e <_ZN10peerVector11getInstanceEv>
+ 8049971:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( pv )
+ 8049974:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 8049978:	74 0b                	je     8049985 <PI_EraseAllPeer+0x1f>
+		pv->EraseAll();
+ 804997a:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804997d:	89 04 24             	mov    %eax,(%esp)
+ 8049980:	e8 87 08 00 00       	call   804a20c <_ZN10peerVector8EraseAllEv>
+}
+ 8049985:	c9                   	leave  
+ 8049986:	c3                   	ret    
+
+08049987 <PI_Dump>:
+
+// Dump
+void PI_Dump() {
+ 8049987:	55                   	push   %ebp
+ 8049988:	89 e5                	mov    %esp,%ebp
+ 804998a:	83 ec 28             	sub    $0x28,%esp
+	peerVector *pv = peerVector::getInstance();
+ 804998d:	e8 7c 04 00 00       	call   8049e0e <_ZN10peerVector11getInstanceEv>
+ 8049992:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( pv )
+ 8049995:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 8049999:	74 0b                	je     80499a6 <PI_Dump+0x1f>
+		pv->Dump();
+ 804999b:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804999e:	89 04 24             	mov    %eax,(%esp)
+ 80499a1:	e8 2a 07 00 00       	call   804a0d0 <_ZN10peerVector4DumpEv>
+}
+ 80499a6:	c9                   	leave  
+ 80499a7:	c3                   	ret    
+
+080499a8 <PI_DumpI>:
+
+void PI_DumpI(int i) {
+ 80499a8:	55                   	push   %ebp
+ 80499a9:	89 e5                	mov    %esp,%ebp
+ 80499ab:	83 ec 28             	sub    $0x28,%esp
+	peerVector *pv = peerVector::getInstance();
+ 80499ae:	e8 5b 04 00 00       	call   8049e0e <_ZN10peerVector11getInstanceEv>
+ 80499b3:	89 45 f4             	mov    %eax,-0xc(%ebp)
+	if ( pv )
+ 80499b6:	83 7d f4 00          	cmpl   $0x0,-0xc(%ebp)
+ 80499ba:	74 12                	je     80499ce <PI_DumpI+0x26>
+		pv->DumpI(i);
+ 80499bc:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80499bf:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 80499c3:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 80499c6:	89 04 24             	mov    %eax,(%esp)
+ 80499c9:	e8 a8 07 00 00       	call   804a176 <_ZN10peerVector5DumpIEi>
+}
+ 80499ce:	c9                   	leave  
+ 80499cf:	c3                   	ret    
+
+080499d0 <PI_Destory>:
+
+// Destory
+void PI_Destory() {
+ 80499d0:	55                   	push   %ebp
+ 80499d1:	89 e5                	mov    %esp,%ebp
+ 80499d3:	83 ec 08             	sub    $0x8,%esp
+	peerVector::putInstance();
+ 80499d6:	e8 a3 04 00 00       	call   8049e7e <_ZN10peerVector11putInstanceEv>
+}
+ 80499db:	c9                   	leave  
+ 80499dc:	c3                   	ret    
+ 80499dd:	90                   	nop
+ 80499de:	90                   	nop
+ 80499df:	90                   	nop
+
+080499e0 <_ZN10peerVectorC2Ev>:
+#include "peer/peerVector.hpp"
+
+peerVector* peerVector::instance = NULL;
+staticMutexLocker peerVector::sMutex;
+
+peerVector::peerVector():peerCount(0) {
+ 80499e0:	55                   	push   %ebp
+ 80499e1:	89 e5                	mov    %esp,%ebp
+ 80499e3:	57                   	push   %edi
+ 80499e4:	56                   	push   %esi
+ 80499e5:	53                   	push   %ebx
+ 80499e6:	83 ec 2c             	sub    $0x2c,%esp
+ 80499e9:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80499ec:	83 c0 04             	add    $0x4,%eax
+ 80499ef:	89 04 24             	mov    %eax,(%esp)
+ 80499f2:	e8 cd f0 ff ff       	call   8048ac4 <_ZN11mutexLockerC1Ev>
+ 80499f7:	8b 45 08             	mov    0x8(%ebp),%eax
+ 80499fa:	c7 40 24 00 00 00 00 	movl   $0x0,0x24(%eax)
+	this->_pV = new peerInfo[ _PEER_VECTOR_MAX_PEER_SIZE ];
+ 8049a01:	c7 04 24 b4 4d 02 00 	movl   $0x24db4,(%esp)
+ 8049a08:	e8 bf ee ff ff       	call   80488cc <_Znaj@plt>
+ 8049a0d:	89 c3                	mov    %eax,%ebx
+ 8049a0f:	89 d8                	mov    %ebx,%eax
+ 8049a11:	c7 00 ff 00 00 00    	movl   $0xff,(%eax)
+ 8049a17:	89 d8                	mov    %ebx,%eax
+ 8049a19:	8d 78 04             	lea    0x4(%eax),%edi
+ 8049a1c:	89 7d dc             	mov    %edi,-0x24(%ebp)
+ 8049a1f:	be fe 00 00 00       	mov    $0xfe,%esi
+ 8049a24:	eb 15                	jmp    8049a3b <_ZN10peerVectorC2Ev+0x5b>
+ 8049a26:	8b 45 dc             	mov    -0x24(%ebp),%eax
+ 8049a29:	89 04 24             	mov    %eax,(%esp)
+ 8049a2c:	e8 67 f6 ff ff       	call   8049098 <_ZN8peerInfoC1Ev>
+ 8049a31:	81 45 dc 50 02 00 00 	addl   $0x250,-0x24(%ebp)
+ 8049a38:	83 ee 01             	sub    $0x1,%esi
+ 8049a3b:	83 fe ff             	cmp    $0xffffffff,%esi
+ 8049a3e:	0f 95 c0             	setne  %al
+ 8049a41:	84 c0                	test   %al,%al
+ 8049a43:	75 e1                	jne    8049a26 <_ZN10peerVectorC2Ev+0x46>
+ 8049a45:	89 d8                	mov    %ebx,%eax
+ 8049a47:	8d 50 04             	lea    0x4(%eax),%edx
+ 8049a4a:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049a4d:	89 10                	mov    %edx,(%eax)
+	this->RefreshCount();
+ 8049a4f:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049a52:	89 04 24             	mov    %eax,(%esp)
+ 8049a55:	e8 ee 02 00 00       	call   8049d48 <_ZN10peerVector12RefreshCountEv>
+ 8049a5a:	eb 46                	jmp    8049aa2 <_ZN10peerVectorC2Ev+0xc2>
+ 8049a5c:	89 55 e4             	mov    %edx,-0x1c(%ebp)
+ 8049a5f:	89 45 e0             	mov    %eax,-0x20(%ebp)
+
+peerVector* peerVector::instance = NULL;
+staticMutexLocker peerVector::sMutex;
+
+peerVector::peerVector():peerCount(0) {
+	this->_pV = new peerInfo[ _PEER_VECTOR_MAX_PEER_SIZE ];
+ 8049a62:	85 ff                	test   %edi,%edi
+ 8049a64:	74 24                	je     8049a8a <_ZN10peerVectorC2Ev+0xaa>
+ 8049a66:	b8 fe 00 00 00       	mov    $0xfe,%eax
+ 8049a6b:	29 f0                	sub    %esi,%eax
+ 8049a6d:	69 c0 50 02 00 00    	imul   $0x250,%eax,%eax
+ 8049a73:	8d 34 07             	lea    (%edi,%eax,1),%esi
+ 8049a76:	39 fe                	cmp    %edi,%esi
+ 8049a78:	74 10                	je     8049a8a <_ZN10peerVectorC2Ev+0xaa>
+ 8049a7a:	81 ee 50 02 00 00    	sub    $0x250,%esi
+ 8049a80:	89 34 24             	mov    %esi,(%esp)
+ 8049a83:	e8 2a f6 ff ff       	call   80490b2 <_ZN8peerInfoD1Ev>
+ 8049a88:	eb ec                	jmp    8049a76 <_ZN10peerVectorC2Ev+0x96>
+ 8049a8a:	8b 45 e0             	mov    -0x20(%ebp),%eax
+ 8049a8d:	8b 55 e4             	mov    -0x1c(%ebp),%edx
+ 8049a90:	89 d6                	mov    %edx,%esi
+ 8049a92:	89 c7                	mov    %eax,%edi
+ 8049a94:	89 1c 24             	mov    %ebx,(%esp)
+ 8049a97:	e8 c0 ee ff ff       	call   804895c <_ZdaPv@plt>
+ 8049a9c:	89 f8                	mov    %edi,%eax
+ 8049a9e:	89 f2                	mov    %esi,%edx
+ 8049aa0:	eb 27                	jmp    8049ac9 <_ZN10peerVectorC2Ev+0xe9>
+	this->RefreshCount();
+	this->IndexingPeer();
+ 8049aa2:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049aa5:	89 04 24             	mov    %eax,(%esp)
+ 8049aa8:	e8 17 03 00 00       	call   8049dc4 <_ZN10peerVector12IndexingPeerEv>
+	peerVector::sMutex.EnableDebug();
+ 8049aad:	c7 04 24 e0 d0 04 08 	movl   $0x804d0e0,(%esp)
+ 8049ab4:	e8 a7 f5 ff ff       	call   8049060 <_ZN10debugClass11EnableDebugEv>
+	this->ML.EnableDebug();
+ 8049ab9:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049abc:	83 c0 04             	add    $0x4,%eax
+ 8049abf:	89 04 24             	mov    %eax,(%esp)
+ 8049ac2:	e8 99 f5 ff ff       	call   8049060 <_ZN10debugClass11EnableDebugEv>
+}
+ 8049ac7:	eb 1e                	jmp    8049ae7 <_ZN10peerVectorC2Ev+0x107>
+ 8049ac9:	89 d3                	mov    %edx,%ebx
+ 8049acb:	89 c6                	mov    %eax,%esi
+ 8049acd:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049ad0:	83 c0 04             	add    $0x4,%eax
+ 8049ad3:	89 04 24             	mov    %eax,(%esp)
+ 8049ad6:	e8 93 f0 ff ff       	call   8048b6e <_ZN11mutexLockerD1Ev>
+ 8049adb:	89 f0                	mov    %esi,%eax
+ 8049add:	89 da                	mov    %ebx,%edx
+ 8049adf:	89 04 24             	mov    %eax,(%esp)
+ 8049ae2:	e8 c5 ee ff ff       	call   80489ac <_Unwind_Resume@plt>
+ 8049ae7:	83 c4 2c             	add    $0x2c,%esp
+ 8049aea:	5b                   	pop    %ebx
+ 8049aeb:	5e                   	pop    %esi
+ 8049aec:	5f                   	pop    %edi
+ 8049aed:	5d                   	pop    %ebp
+ 8049aee:	c3                   	ret    
+ 8049aef:	90                   	nop
+
+08049af0 <_ZN10peerVectorC1Ev>:
+#include "peer/peerVector.hpp"
+
+peerVector* peerVector::instance = NULL;
+staticMutexLocker peerVector::sMutex;
+
+peerVector::peerVector():peerCount(0) {
+ 8049af0:	55                   	push   %ebp
+ 8049af1:	89 e5                	mov    %esp,%ebp
+ 8049af3:	57                   	push   %edi
+ 8049af4:	56                   	push   %esi
+ 8049af5:	53                   	push   %ebx
+ 8049af6:	83 ec 2c             	sub    $0x2c,%esp
+ 8049af9:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049afc:	83 c0 04             	add    $0x4,%eax
+ 8049aff:	89 04 24             	mov    %eax,(%esp)
+ 8049b02:	e8 bd ef ff ff       	call   8048ac4 <_ZN11mutexLockerC1Ev>
+ 8049b07:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049b0a:	c7 40 24 00 00 00 00 	movl   $0x0,0x24(%eax)
+	this->_pV = new peerInfo[ _PEER_VECTOR_MAX_PEER_SIZE ];
+ 8049b11:	c7 04 24 b4 4d 02 00 	movl   $0x24db4,(%esp)
+ 8049b18:	e8 af ed ff ff       	call   80488cc <_Znaj@plt>
+ 8049b1d:	89 c3                	mov    %eax,%ebx
+ 8049b1f:	89 d8                	mov    %ebx,%eax
+ 8049b21:	c7 00 ff 00 00 00    	movl   $0xff,(%eax)
+ 8049b27:	89 d8                	mov    %ebx,%eax
+ 8049b29:	8d 78 04             	lea    0x4(%eax),%edi
+ 8049b2c:	89 7d dc             	mov    %edi,-0x24(%ebp)
+ 8049b2f:	be fe 00 00 00       	mov    $0xfe,%esi
+ 8049b34:	eb 15                	jmp    8049b4b <_ZN10peerVectorC1Ev+0x5b>
+ 8049b36:	8b 45 dc             	mov    -0x24(%ebp),%eax
+ 8049b39:	89 04 24             	mov    %eax,(%esp)
+ 8049b3c:	e8 57 f5 ff ff       	call   8049098 <_ZN8peerInfoC1Ev>
+ 8049b41:	81 45 dc 50 02 00 00 	addl   $0x250,-0x24(%ebp)
+ 8049b48:	83 ee 01             	sub    $0x1,%esi
+ 8049b4b:	83 fe ff             	cmp    $0xffffffff,%esi
+ 8049b4e:	0f 95 c0             	setne  %al
+ 8049b51:	84 c0                	test   %al,%al
+ 8049b53:	75 e1                	jne    8049b36 <_ZN10peerVectorC1Ev+0x46>
+ 8049b55:	89 d8                	mov    %ebx,%eax
+ 8049b57:	8d 50 04             	lea    0x4(%eax),%edx
+ 8049b5a:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049b5d:	89 10                	mov    %edx,(%eax)
+	this->RefreshCount();
+ 8049b5f:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049b62:	89 04 24             	mov    %eax,(%esp)
+ 8049b65:	e8 de 01 00 00       	call   8049d48 <_ZN10peerVector12RefreshCountEv>
+ 8049b6a:	eb 46                	jmp    8049bb2 <_ZN10peerVectorC1Ev+0xc2>
+ 8049b6c:	89 55 e4             	mov    %edx,-0x1c(%ebp)
+ 8049b6f:	89 45 e0             	mov    %eax,-0x20(%ebp)
+
+peerVector* peerVector::instance = NULL;
+staticMutexLocker peerVector::sMutex;
+
+peerVector::peerVector():peerCount(0) {
+	this->_pV = new peerInfo[ _PEER_VECTOR_MAX_PEER_SIZE ];
+ 8049b72:	85 ff                	test   %edi,%edi
+ 8049b74:	74 24                	je     8049b9a <_ZN10peerVectorC1Ev+0xaa>
+ 8049b76:	b8 fe 00 00 00       	mov    $0xfe,%eax
+ 8049b7b:	29 f0                	sub    %esi,%eax
+ 8049b7d:	69 c0 50 02 00 00    	imul   $0x250,%eax,%eax
+ 8049b83:	8d 34 07             	lea    (%edi,%eax,1),%esi
+ 8049b86:	39 fe                	cmp    %edi,%esi
+ 8049b88:	74 10                	je     8049b9a <_ZN10peerVectorC1Ev+0xaa>
+ 8049b8a:	81 ee 50 02 00 00    	sub    $0x250,%esi
+ 8049b90:	89 34 24             	mov    %esi,(%esp)
+ 8049b93:	e8 1a f5 ff ff       	call   80490b2 <_ZN8peerInfoD1Ev>
+ 8049b98:	eb ec                	jmp    8049b86 <_ZN10peerVectorC1Ev+0x96>
+ 8049b9a:	8b 45 e0             	mov    -0x20(%ebp),%eax
+ 8049b9d:	8b 55 e4             	mov    -0x1c(%ebp),%edx
+ 8049ba0:	89 d6                	mov    %edx,%esi
+ 8049ba2:	89 c7                	mov    %eax,%edi
+ 8049ba4:	89 1c 24             	mov    %ebx,(%esp)
+ 8049ba7:	e8 b0 ed ff ff       	call   804895c <_ZdaPv@plt>
+ 8049bac:	89 f8                	mov    %edi,%eax
+ 8049bae:	89 f2                	mov    %esi,%edx
+ 8049bb0:	eb 27                	jmp    8049bd9 <_ZN10peerVectorC1Ev+0xe9>
+	this->RefreshCount();
+	this->IndexingPeer();
+ 8049bb2:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049bb5:	89 04 24             	mov    %eax,(%esp)
+ 8049bb8:	e8 07 02 00 00       	call   8049dc4 <_ZN10peerVector12IndexingPeerEv>
+	peerVector::sMutex.EnableDebug();
+ 8049bbd:	c7 04 24 e0 d0 04 08 	movl   $0x804d0e0,(%esp)
+ 8049bc4:	e8 97 f4 ff ff       	call   8049060 <_ZN10debugClass11EnableDebugEv>
+	this->ML.EnableDebug();
+ 8049bc9:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049bcc:	83 c0 04             	add    $0x4,%eax
+ 8049bcf:	89 04 24             	mov    %eax,(%esp)
+ 8049bd2:	e8 89 f4 ff ff       	call   8049060 <_ZN10debugClass11EnableDebugEv>
+}
+ 8049bd7:	eb 1e                	jmp    8049bf7 <_ZN10peerVectorC1Ev+0x107>
+ 8049bd9:	89 d3                	mov    %edx,%ebx
+ 8049bdb:	89 c6                	mov    %eax,%esi
+ 8049bdd:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049be0:	83 c0 04             	add    $0x4,%eax
+ 8049be3:	89 04 24             	mov    %eax,(%esp)
+ 8049be6:	e8 83 ef ff ff       	call   8048b6e <_ZN11mutexLockerD1Ev>
+ 8049beb:	89 f0                	mov    %esi,%eax
+ 8049bed:	89 da                	mov    %ebx,%edx
+ 8049bef:	89 04 24             	mov    %eax,(%esp)
+ 8049bf2:	e8 b5 ed ff ff       	call   80489ac <_Unwind_Resume@plt>
+ 8049bf7:	83 c4 2c             	add    $0x2c,%esp
+ 8049bfa:	5b                   	pop    %ebx
+ 8049bfb:	5e                   	pop    %esi
+ 8049bfc:	5f                   	pop    %edi
+ 8049bfd:	5d                   	pop    %ebp
+ 8049bfe:	c3                   	ret    
+ 8049bff:	90                   	nop
+
+08049c00 <_ZN10peerVectorD2Ev>:
+
+peerVector::~peerVector() {
+ 8049c00:	55                   	push   %ebp
+ 8049c01:	89 e5                	mov    %esp,%ebp
+ 8049c03:	56                   	push   %esi
+ 8049c04:	53                   	push   %ebx
+ 8049c05:	83 ec 10             	sub    $0x10,%esp
+	delete [] _pV;
+ 8049c08:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049c0b:	8b 00                	mov    (%eax),%eax
+ 8049c0d:	85 c0                	test   %eax,%eax
+ 8049c0f:	74 41                	je     8049c52 <_ZN10peerVectorD2Ev+0x52>
+ 8049c11:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049c14:	8b 10                	mov    (%eax),%edx
+ 8049c16:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049c19:	8b 00                	mov    (%eax),%eax
+ 8049c1b:	83 e8 04             	sub    $0x4,%eax
+ 8049c1e:	8b 00                	mov    (%eax),%eax
+ 8049c20:	69 c0 50 02 00 00    	imul   $0x250,%eax,%eax
+ 8049c26:	8d 1c 02             	lea    (%edx,%eax,1),%ebx
+ 8049c29:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049c2c:	8b 00                	mov    (%eax),%eax
+ 8049c2e:	39 c3                	cmp    %eax,%ebx
+ 8049c30:	74 10                	je     8049c42 <_ZN10peerVectorD2Ev+0x42>
+ 8049c32:	81 eb 50 02 00 00    	sub    $0x250,%ebx
+ 8049c38:	89 1c 24             	mov    %ebx,(%esp)
+ 8049c3b:	e8 72 f4 ff ff       	call   80490b2 <_ZN8peerInfoD1Ev>
+ 8049c40:	eb e7                	jmp    8049c29 <_ZN10peerVectorD2Ev+0x29>
+ 8049c42:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049c45:	8b 00                	mov    (%eax),%eax
+ 8049c47:	83 e8 04             	sub    $0x4,%eax
+ 8049c4a:	89 04 24             	mov    %eax,(%esp)
+ 8049c4d:	e8 0a ed ff ff       	call   804895c <_ZdaPv@plt>
+}
+ 8049c52:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049c55:	83 c0 04             	add    $0x4,%eax
+ 8049c58:	89 04 24             	mov    %eax,(%esp)
+ 8049c5b:	e8 0e ef ff ff       	call   8048b6e <_ZN11mutexLockerD1Ev>
+ 8049c60:	83 c4 10             	add    $0x10,%esp
+ 8049c63:	5b                   	pop    %ebx
+ 8049c64:	5e                   	pop    %esi
+ 8049c65:	5d                   	pop    %ebp
+ 8049c66:	c3                   	ret    
+ 8049c67:	89 d3                	mov    %edx,%ebx
+ 8049c69:	89 c6                	mov    %eax,%esi
+ 8049c6b:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049c6e:	83 c0 04             	add    $0x4,%eax
+ 8049c71:	89 04 24             	mov    %eax,(%esp)
+ 8049c74:	e8 f5 ee ff ff       	call   8048b6e <_ZN11mutexLockerD1Ev>
+ 8049c79:	89 f0                	mov    %esi,%eax
+ 8049c7b:	89 da                	mov    %ebx,%edx
+ 8049c7d:	89 04 24             	mov    %eax,(%esp)
+ 8049c80:	e8 27 ed ff ff       	call   80489ac <_Unwind_Resume@plt>
+ 8049c85:	90                   	nop
+
+08049c86 <_ZN10peerVectorD1Ev>:
+	this->IndexingPeer();
+	peerVector::sMutex.EnableDebug();
+	this->ML.EnableDebug();
+}
+
+peerVector::~peerVector() {
+ 8049c86:	55                   	push   %ebp
+ 8049c87:	89 e5                	mov    %esp,%ebp
+ 8049c89:	56                   	push   %esi
+ 8049c8a:	53                   	push   %ebx
+ 8049c8b:	83 ec 10             	sub    $0x10,%esp
+	delete [] _pV;
+ 8049c8e:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049c91:	8b 00                	mov    (%eax),%eax
+ 8049c93:	85 c0                	test   %eax,%eax
+ 8049c95:	74 41                	je     8049cd8 <_ZN10peerVectorD1Ev+0x52>
+ 8049c97:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049c9a:	8b 10                	mov    (%eax),%edx
+ 8049c9c:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049c9f:	8b 00                	mov    (%eax),%eax
+ 8049ca1:	83 e8 04             	sub    $0x4,%eax
+ 8049ca4:	8b 00                	mov    (%eax),%eax
+ 8049ca6:	69 c0 50 02 00 00    	imul   $0x250,%eax,%eax
+ 8049cac:	8d 1c 02             	lea    (%edx,%eax,1),%ebx
+ 8049caf:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049cb2:	8b 00                	mov    (%eax),%eax
+ 8049cb4:	39 c3                	cmp    %eax,%ebx
+ 8049cb6:	74 10                	je     8049cc8 <_ZN10peerVectorD1Ev+0x42>
+ 8049cb8:	81 eb 50 02 00 00    	sub    $0x250,%ebx
+ 8049cbe:	89 1c 24             	mov    %ebx,(%esp)
+ 8049cc1:	e8 ec f3 ff ff       	call   80490b2 <_ZN8peerInfoD1Ev>
+ 8049cc6:	eb e7                	jmp    8049caf <_ZN10peerVectorD1Ev+0x29>
+ 8049cc8:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049ccb:	8b 00                	mov    (%eax),%eax
+ 8049ccd:	83 e8 04             	sub    $0x4,%eax
+ 8049cd0:	89 04 24             	mov    %eax,(%esp)
+ 8049cd3:	e8 84 ec ff ff       	call   804895c <_ZdaPv@plt>
+}
+ 8049cd8:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049cdb:	83 c0 04             	add    $0x4,%eax
+ 8049cde:	89 04 24             	mov    %eax,(%esp)
+ 8049ce1:	e8 88 ee ff ff       	call   8048b6e <_ZN11mutexLockerD1Ev>
+ 8049ce6:	83 c4 10             	add    $0x10,%esp
+ 8049ce9:	5b                   	pop    %ebx
+ 8049cea:	5e                   	pop    %esi
+ 8049ceb:	5d                   	pop    %ebp
+ 8049cec:	c3                   	ret    
+ 8049ced:	89 d3                	mov    %edx,%ebx
+ 8049cef:	89 c6                	mov    %eax,%esi
+ 8049cf1:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049cf4:	83 c0 04             	add    $0x4,%eax
+ 8049cf7:	89 04 24             	mov    %eax,(%esp)
+ 8049cfa:	e8 6f ee ff ff       	call   8048b6e <_ZN11mutexLockerD1Ev>
+ 8049cff:	89 f0                	mov    %esi,%eax
+ 8049d01:	89 da                	mov    %ebx,%edx
+ 8049d03:	89 04 24             	mov    %eax,(%esp)
+ 8049d06:	e8 a1 ec ff ff       	call   80489ac <_Unwind_Resume@plt>
+ 8049d0b:	90                   	nop
+
+08049d0c <_ZN10peerVector17ClearPeerBitArrayEv>:
+
+void peerVector::ClearPeerBitArray() {
+ 8049d0c:	55                   	push   %ebp
+ 8049d0d:	89 e5                	mov    %esp,%ebp
+ 8049d0f:	83 ec 10             	sub    $0x10,%esp
+	int i = 0;
+ 8049d12:	c7 45 fc 00 00 00 00 	movl   $0x0,-0x4(%ebp)
+	for ( i = 0 ; i < _PEER_VECTOR_MAX_PEER_SIZE ; i++ ) {
+ 8049d19:	c7 45 fc 00 00 00 00 	movl   $0x0,-0x4(%ebp)
+ 8049d20:	eb 15                	jmp    8049d37 <_ZN10peerVector17ClearPeerBitArrayEv+0x2b>
+		this->peerBitArray[i] = 0;
+ 8049d22:	8b 55 fc             	mov    -0x4(%ebp),%edx
+ 8049d25:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049d28:	83 c2 08             	add    $0x8,%edx
+ 8049d2b:	c7 44 90 08 00 00 00 	movl   $0x0,0x8(%eax,%edx,4)
+ 8049d32:	00 
+	delete [] _pV;
+}
+
+void peerVector::ClearPeerBitArray() {
+	int i = 0;
+	for ( i = 0 ; i < _PEER_VECTOR_MAX_PEER_SIZE ; i++ ) {
+ 8049d33:	83 45 fc 01          	addl   $0x1,-0x4(%ebp)
+ 8049d37:	81 7d fc fe 00 00 00 	cmpl   $0xfe,-0x4(%ebp)
+ 8049d3e:	0f 9e c0             	setle  %al
+ 8049d41:	84 c0                	test   %al,%al
+ 8049d43:	75 dd                	jne    8049d22 <_ZN10peerVector17ClearPeerBitArrayEv+0x16>
+		this->peerBitArray[i] = 0;
+	}
+}
+ 8049d45:	c9                   	leave  
+ 8049d46:	c3                   	ret    
+ 8049d47:	90                   	nop
+
+08049d48 <_ZN10peerVector12RefreshCountEv>:
+
+void peerVector::RefreshCount() {
+ 8049d48:	55                   	push   %ebp
+ 8049d49:	89 e5                	mov    %esp,%ebp
+ 8049d4b:	83 ec 28             	sub    $0x28,%esp
+	int i = 0, j = 0;
+ 8049d4e:	c7 45 f4 00 00 00 00 	movl   $0x0,-0xc(%ebp)
+ 8049d55:	c7 45 f0 00 00 00 00 	movl   $0x0,-0x10(%ebp)
+	this->ClearPeerBitArray();
+ 8049d5c:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049d5f:	89 04 24             	mov    %eax,(%esp)
+ 8049d62:	e8 a5 ff ff ff       	call   8049d0c <_ZN10peerVector17ClearPeerBitArrayEv>
+	for ( i = 0 ; i < _PEER_VECTOR_MAX_PEER_SIZE ; i++ ) {
+ 8049d67:	c7 45 f4 00 00 00 00 	movl   $0x0,-0xc(%ebp)
+ 8049d6e:	eb 3b                	jmp    8049dab <_ZN10peerVector12RefreshCountEv+0x63>
+		if ( this->_pV[i].CheckUsed() ) {
+ 8049d70:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049d73:	8b 10                	mov    (%eax),%edx
+ 8049d75:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8049d78:	69 c0 50 02 00 00    	imul   $0x250,%eax,%eax
+ 8049d7e:	8d 04 02             	lea    (%edx,%eax,1),%eax
+ 8049d81:	89 04 24             	mov    %eax,(%esp)
+ 8049d84:	e8 ad f5 ff ff       	call   8049336 <_ZN8peerInfo9CheckUsedEv>
+ 8049d89:	85 c0                	test   %eax,%eax
+ 8049d8b:	0f 95 c0             	setne  %al
+ 8049d8e:	84 c0                	test   %al,%al
+ 8049d90:	74 15                	je     8049da7 <_ZN10peerVector12RefreshCountEv+0x5f>
+			this->peerBitArray[i] = 1;
+ 8049d92:	8b 55 f4             	mov    -0xc(%ebp),%edx
+ 8049d95:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049d98:	83 c2 08             	add    $0x8,%edx
+ 8049d9b:	c7 44 90 08 01 00 00 	movl   $0x1,0x8(%eax,%edx,4)
+ 8049da2:	00 
+			j++;
+ 8049da3:	83 45 f0 01          	addl   $0x1,-0x10(%ebp)
+}
+
+void peerVector::RefreshCount() {
+	int i = 0, j = 0;
+	this->ClearPeerBitArray();
+	for ( i = 0 ; i < _PEER_VECTOR_MAX_PEER_SIZE ; i++ ) {
+ 8049da7:	83 45 f4 01          	addl   $0x1,-0xc(%ebp)
+ 8049dab:	81 7d f4 fe 00 00 00 	cmpl   $0xfe,-0xc(%ebp)
+ 8049db2:	0f 9e c0             	setle  %al
+ 8049db5:	84 c0                	test   %al,%al
+ 8049db7:	75 b7                	jne    8049d70 <_ZN10peerVector12RefreshCountEv+0x28>
+		if ( this->_pV[i].CheckUsed() ) {
+			this->peerBitArray[i] = 1;
+			j++;
+		}
+	}
+	this->peerCount = j;
+ 8049db9:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049dbc:	8b 55 f0             	mov    -0x10(%ebp),%edx
+ 8049dbf:	89 50 24             	mov    %edx,0x24(%eax)
+}
+ 8049dc2:	c9                   	leave  
+ 8049dc3:	c3                   	ret    
+
+08049dc4 <_ZN10peerVector12IndexingPeerEv>:
+
+void peerVector::IndexingPeer() {
+ 8049dc4:	55                   	push   %ebp
+ 8049dc5:	89 e5                	mov    %esp,%ebp
+ 8049dc7:	83 ec 28             	sub    $0x28,%esp
+	int i = 0;
+ 8049dca:	c7 45 f4 00 00 00 00 	movl   $0x0,-0xc(%ebp)
+	for ( i = 0 ; i< _PEER_VECTOR_MAX_PEER_SIZE ; i++ ) {
+ 8049dd1:	c7 45 f4 00 00 00 00 	movl   $0x0,-0xc(%ebp)
+ 8049dd8:	eb 23                	jmp    8049dfd <_ZN10peerVector12IndexingPeerEv+0x39>
+		this->_pV[i].SetIndex(i);
+ 8049dda:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049ddd:	8b 10                	mov    (%eax),%edx
+ 8049ddf:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8049de2:	69 c0 50 02 00 00    	imul   $0x250,%eax,%eax
+ 8049de8:	01 c2                	add    %eax,%edx
+ 8049dea:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 8049ded:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8049df1:	89 14 24             	mov    %edx,(%esp)
+ 8049df4:	e8 5d f7 ff ff       	call   8049556 <_ZN8peerInfo8SetIndexEi>
+	this->peerCount = j;
+}
+
+void peerVector::IndexingPeer() {
+	int i = 0;
+	for ( i = 0 ; i< _PEER_VECTOR_MAX_PEER_SIZE ; i++ ) {
+ 8049df9:	83 45 f4 01          	addl   $0x1,-0xc(%ebp)
+ 8049dfd:	81 7d f4 fe 00 00 00 	cmpl   $0xfe,-0xc(%ebp)
+ 8049e04:	0f 9e c0             	setle  %al
+ 8049e07:	84 c0                	test   %al,%al
+ 8049e09:	75 cf                	jne    8049dda <_ZN10peerVector12IndexingPeerEv+0x16>
+		this->_pV[i].SetIndex(i);
+	}
+}
+ 8049e0b:	c9                   	leave  
+ 8049e0c:	c3                   	ret    
+ 8049e0d:	90                   	nop
+
+08049e0e <_ZN10peerVector11getInstanceEv>:
+
+peerVector* peerVector::getInstance() {
+ 8049e0e:	55                   	push   %ebp
+ 8049e0f:	89 e5                	mov    %esp,%ebp
+ 8049e11:	57                   	push   %edi
+ 8049e12:	56                   	push   %esi
+ 8049e13:	53                   	push   %ebx
+ 8049e14:	83 ec 1c             	sub    $0x1c,%esp
+	
+	staticMutexLocker::Lock( &peerVector::sMutex );
+ 8049e17:	c7 04 24 e0 d0 04 08 	movl   $0x804d0e0,(%esp)
+ 8049e1e:	e8 4d ef ff ff       	call   8048d70 <_ZN17staticMutexLocker4LockEPS_>
+	if ( !_instance )
+	#else
+	if ( true )
+	#endif
+	{
+		if ( !instance ) {
+ 8049e23:	a1 c0 d0 04 08       	mov    0x804d0c0,%eax
+ 8049e28:	85 c0                	test   %eax,%eax
+ 8049e2a:	75 39                	jne    8049e65 <_ZN10peerVector11getInstanceEv+0x57>
+			instance = new peerVector();
+ 8049e2c:	c7 04 24 24 04 00 00 	movl   $0x424,(%esp)
+ 8049e33:	e8 64 ea ff ff       	call   804889c <_Znwj@plt>
+ 8049e38:	89 c3                	mov    %eax,%ebx
+ 8049e3a:	89 d8                	mov    %ebx,%eax
+ 8049e3c:	89 04 24             	mov    %eax,(%esp)
+ 8049e3f:	e8 ac fc ff ff       	call   8049af0 <_ZN10peerVectorC1Ev>
+ 8049e44:	89 d8                	mov    %ebx,%eax
+ 8049e46:	a3 c0 d0 04 08       	mov    %eax,0x804d0c0
+ 8049e4b:	eb 18                	jmp    8049e65 <_ZN10peerVector11getInstanceEv+0x57>
+ 8049e4d:	89 d6                	mov    %edx,%esi
+ 8049e4f:	89 c7                	mov    %eax,%edi
+ 8049e51:	89 1c 24             	mov    %ebx,(%esp)
+ 8049e54:	e8 a3 ea ff ff       	call   80488fc <_ZdlPv@plt>
+ 8049e59:	89 f8                	mov    %edi,%eax
+ 8049e5b:	89 f2                	mov    %esi,%edx
+ 8049e5d:	89 04 24             	mov    %eax,(%esp)
+ 8049e60:	e8 47 eb ff ff       	call   80489ac <_Unwind_Resume@plt>
+		}
+	}
+	staticMutexLocker::Unlock( &peerVector::sMutex );
+ 8049e65:	c7 04 24 e0 d0 04 08 	movl   $0x804d0e0,(%esp)
+ 8049e6c:	e8 21 ef ff ff       	call   8048d92 <_ZN17staticMutexLocker6UnlockEPS_>
+	return instance;
+ 8049e71:	a1 c0 d0 04 08       	mov    0x804d0c0,%eax
+}
+ 8049e76:	83 c4 1c             	add    $0x1c,%esp
+ 8049e79:	5b                   	pop    %ebx
+ 8049e7a:	5e                   	pop    %esi
+ 8049e7b:	5f                   	pop    %edi
+ 8049e7c:	5d                   	pop    %ebp
+ 8049e7d:	c3                   	ret    
+
+08049e7e <_ZN10peerVector11putInstanceEv>:
+void peerVector::putInstance() {
+ 8049e7e:	55                   	push   %ebp
+ 8049e7f:	89 e5                	mov    %esp,%ebp
+ 8049e81:	53                   	push   %ebx
+ 8049e82:	83 ec 14             	sub    $0x14,%esp
+	
+	staticMutexLocker::Lock( &peerVector::sMutex );
+ 8049e85:	c7 04 24 e0 d0 04 08 	movl   $0x804d0e0,(%esp)
+ 8049e8c:	e8 df ee ff ff       	call   8048d70 <_ZN17staticMutexLocker4LockEPS_>
+	if ( instance ) {
+ 8049e91:	a1 c0 d0 04 08       	mov    0x804d0c0,%eax
+ 8049e96:	85 c0                	test   %eax,%eax
+ 8049e98:	74 24                	je     8049ebe <_ZN10peerVector11putInstanceEv+0x40>
+		delete peerVector::instance;
+ 8049e9a:	8b 1d c0 d0 04 08    	mov    0x804d0c0,%ebx
+ 8049ea0:	85 db                	test   %ebx,%ebx
+ 8049ea2:	74 10                	je     8049eb4 <_ZN10peerVector11putInstanceEv+0x36>
+ 8049ea4:	89 1c 24             	mov    %ebx,(%esp)
+ 8049ea7:	e8 da fd ff ff       	call   8049c86 <_ZN10peerVectorD1Ev>
+ 8049eac:	89 1c 24             	mov    %ebx,(%esp)
+ 8049eaf:	e8 48 ea ff ff       	call   80488fc <_ZdlPv@plt>
+		peerVector::instance = NULL;
+ 8049eb4:	c7 05 c0 d0 04 08 00 	movl   $0x0,0x804d0c0
+ 8049ebb:	00 00 00 
+	}
+	staticMutexLocker::Unlock( &peerVector::sMutex );
+ 8049ebe:	c7 04 24 e0 d0 04 08 	movl   $0x804d0e0,(%esp)
+ 8049ec5:	e8 c8 ee ff ff       	call   8048d92 <_ZN17staticMutexLocker6UnlockEPS_>
+	
+}
+ 8049eca:	83 c4 14             	add    $0x14,%esp
+ 8049ecd:	5b                   	pop    %ebx
+ 8049ece:	5d                   	pop    %ebp
+ 8049ecf:	c3                   	ret    
+
+08049ed0 <_Z41__static_initialization_and_destruction_0ii>:
+ 8049ed0:	55                   	push   %ebp
+ 8049ed1:	89 e5                	mov    %esp,%ebp
+ 8049ed3:	83 ec 18             	sub    $0x18,%esp
+ 8049ed6:	83 7d 08 01          	cmpl   $0x1,0x8(%ebp)
+ 8049eda:	75 32                	jne    8049f0e <_Z41__static_initialization_and_destruction_0ii+0x3e>
+ 8049edc:	81 7d 0c ff ff 00 00 	cmpl   $0xffff,0xc(%ebp)
+ 8049ee3:	75 29                	jne    8049f0e <_Z41__static_initialization_and_destruction_0ii+0x3e>
+
+#include "peer/peer.hpp"
+#include "peer/peerVector.hpp"
+
+peerVector* peerVector::instance = NULL;
+staticMutexLocker peerVector::sMutex;
+ 8049ee5:	c7 04 24 e0 d0 04 08 	movl   $0x804d0e0,(%esp)
+ 8049eec:	e8 6b ed ff ff       	call   8048c5c <_ZN17staticMutexLockerC1Ev>
+ 8049ef1:	b8 06 8d 04 08       	mov    $0x8048d06,%eax
+ 8049ef6:	c7 44 24 08 54 d0 04 	movl   $0x804d054,0x8(%esp)
+ 8049efd:	08 
+ 8049efe:	c7 44 24 04 e0 d0 04 	movl   $0x804d0e0,0x4(%esp)
+ 8049f05:	08 
+ 8049f06:	89 04 24             	mov    %eax,(%esp)
+ 8049f09:	e8 ae e9 ff ff       	call   80488bc <__cxa_atexit@plt>
+		delete peerVector::instance;
+		peerVector::instance = NULL;
+	}
+	staticMutexLocker::Unlock( &peerVector::sMutex );
+	
+}
+ 8049f0e:	c9                   	leave  
+ 8049f0f:	c3                   	ret    
+
+08049f10 <_GLOBAL__I__ZN10peerVector8instanceE>:
+ 8049f10:	55                   	push   %ebp
+ 8049f11:	89 e5                	mov    %esp,%ebp
+ 8049f13:	83 ec 18             	sub    $0x18,%esp
+ 8049f16:	c7 44 24 04 ff ff 00 	movl   $0xffff,0x4(%esp)
+ 8049f1d:	00 
+ 8049f1e:	c7 04 24 01 00 00 00 	movl   $0x1,(%esp)
+ 8049f25:	e8 a6 ff ff ff       	call   8049ed0 <_Z41__static_initialization_and_destruction_0ii>
+ 8049f2a:	c9                   	leave  
+ 8049f2b:	c3                   	ret    
+
+08049f2c <_ZN10peerVector3AddEiPcS0_S0_>:
+#include <pthread.h>
+#include "peer/peer.hpp"
+#include "peer/peerVector.hpp"
+
+
+int peerVector::Add    ( int i, char *ip, char *vport, char* aport ) {
+ 8049f2c:	55                   	push   %ebp
+ 8049f2d:	89 e5                	mov    %esp,%ebp
+ 8049f2f:	83 ec 28             	sub    $0x28,%esp
+	int r = 0;
+ 8049f32:	c7 45 f4 00 00 00 00 	movl   $0x0,-0xc(%ebp)
+	r += this->SetPeerIP ( i, ip );
+ 8049f39:	8b 45 10             	mov    0x10(%ebp),%eax
+ 8049f3c:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 8049f40:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 8049f43:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8049f47:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049f4a:	89 04 24             	mov    %eax,(%esp)
+ 8049f4d:	e8 86 04 00 00       	call   804a3d8 <_ZN10peerVector9SetPeerIPEiPc>
+ 8049f52:	01 45 f4             	add    %eax,-0xc(%ebp)
+	r += this->SetPeerVideoPort( i, vport );
+ 8049f55:	8b 45 14             	mov    0x14(%ebp),%eax
+ 8049f58:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 8049f5c:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 8049f5f:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8049f63:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049f66:	89 04 24             	mov    %eax,(%esp)
+ 8049f69:	e8 d0 04 00 00       	call   804a43e <_ZN10peerVector16SetPeerVideoPortEiPc>
+ 8049f6e:	01 45 f4             	add    %eax,-0xc(%ebp)
+	r += this->SetPeerAudioPort( i, aport );
+ 8049f71:	8b 45 18             	mov    0x18(%ebp),%eax
+ 8049f74:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 8049f78:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 8049f7b:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8049f7f:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049f82:	89 04 24             	mov    %eax,(%esp)
+ 8049f85:	e8 1a 05 00 00       	call   804a4a4 <_ZN10peerVector16SetPeerAudioPortEiPc>
+ 8049f8a:	01 45 f4             	add    %eax,-0xc(%ebp)
+	return r;
+ 8049f8d:	8b 45 f4             	mov    -0xc(%ebp),%eax
+}
+ 8049f90:	c9                   	leave  
+ 8049f91:	c3                   	ret    
+
+08049f92 <_ZN10peerVector6AddExtEiPcS0_S0_S0_>:
+int peerVector::AddExt 
+	( int i, char *ip, char *vport, char* aport, char *pport ) 
+{
+ 8049f92:	55                   	push   %ebp
+ 8049f93:	89 e5                	mov    %esp,%ebp
+ 8049f95:	83 ec 28             	sub    $0x28,%esp
+	int r = 0;
+ 8049f98:	c7 45 f4 00 00 00 00 	movl   $0x0,-0xc(%ebp)
+	
+	r += this->SetPeerIP ( i, ip );
+ 8049f9f:	8b 45 10             	mov    0x10(%ebp),%eax
+ 8049fa2:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 8049fa6:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 8049fa9:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8049fad:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049fb0:	89 04 24             	mov    %eax,(%esp)
+ 8049fb3:	e8 20 04 00 00       	call   804a3d8 <_ZN10peerVector9SetPeerIPEiPc>
+ 8049fb8:	01 45 f4             	add    %eax,-0xc(%ebp)
+	r += this->SetPeerVideoPort( i, vport );
+ 8049fbb:	8b 45 14             	mov    0x14(%ebp),%eax
+ 8049fbe:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 8049fc2:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 8049fc5:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8049fc9:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049fcc:	89 04 24             	mov    %eax,(%esp)
+ 8049fcf:	e8 6a 04 00 00       	call   804a43e <_ZN10peerVector16SetPeerVideoPortEiPc>
+ 8049fd4:	01 45 f4             	add    %eax,-0xc(%ebp)
+	r += this->SetPeerAudioPort( i, aport );
+ 8049fd7:	8b 45 18             	mov    0x18(%ebp),%eax
+ 8049fda:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 8049fde:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 8049fe1:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 8049fe5:	8b 45 08             	mov    0x8(%ebp),%eax
+ 8049fe8:	89 04 24             	mov    %eax,(%esp)
+ 8049feb:	e8 b4 04 00 00       	call   804a4a4 <_ZN10peerVector16SetPeerAudioPortEiPc>
+ 8049ff0:	01 45 f4             	add    %eax,-0xc(%ebp)
+	r += this->SetPeerProbingPort ( i, pport );
+ 8049ff3:	8b 45 1c             	mov    0x1c(%ebp),%eax
+ 8049ff6:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 8049ffa:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 8049ffd:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804a001:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a004:	89 04 24             	mov    %eax,(%esp)
+ 804a007:	e8 fe 04 00 00       	call   804a50a <_ZN10peerVector18SetPeerProbingPortEiPc>
+ 804a00c:	01 45 f4             	add    %eax,-0xc(%ebp)
+	
+	return r;
+ 804a00f:	8b 45 f4             	mov    -0xc(%ebp),%eax
+}
+ 804a012:	c9                   	leave  
+ 804a013:	c3                   	ret    
+
+0804a014 <_ZN10peerVector7AddExt2EiPcS0_S0_S0_S0_S0_>:
+int peerVector::AddExt2
+	( int i, char *ip, char *vport, char* aport, 
+			 char *pport, char *uuid, char *name )
+{
+ 804a014:	55                   	push   %ebp
+ 804a015:	89 e5                	mov    %esp,%ebp
+ 804a017:	83 ec 28             	sub    $0x28,%esp
+	int r = 0;
+ 804a01a:	c7 45 f4 00 00 00 00 	movl   $0x0,-0xc(%ebp)
+	
+	r += this->SetPeerIP ( i, ip );
+ 804a021:	8b 45 10             	mov    0x10(%ebp),%eax
+ 804a024:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 804a028:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a02b:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804a02f:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a032:	89 04 24             	mov    %eax,(%esp)
+ 804a035:	e8 9e 03 00 00       	call   804a3d8 <_ZN10peerVector9SetPeerIPEiPc>
+ 804a03a:	01 45 f4             	add    %eax,-0xc(%ebp)
+	r += this->SetPeerVideoPort( i, vport );
+ 804a03d:	8b 45 14             	mov    0x14(%ebp),%eax
+ 804a040:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 804a044:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a047:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804a04b:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a04e:	89 04 24             	mov    %eax,(%esp)
+ 804a051:	e8 e8 03 00 00       	call   804a43e <_ZN10peerVector16SetPeerVideoPortEiPc>
+ 804a056:	01 45 f4             	add    %eax,-0xc(%ebp)
+	r += this->SetPeerAudioPort( i, aport );
+ 804a059:	8b 45 18             	mov    0x18(%ebp),%eax
+ 804a05c:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 804a060:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a063:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804a067:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a06a:	89 04 24             	mov    %eax,(%esp)
+ 804a06d:	e8 32 04 00 00       	call   804a4a4 <_ZN10peerVector16SetPeerAudioPortEiPc>
+ 804a072:	01 45 f4             	add    %eax,-0xc(%ebp)
+	r += this->SetPeerProbingPort ( i, pport );
+ 804a075:	8b 45 1c             	mov    0x1c(%ebp),%eax
+ 804a078:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 804a07c:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a07f:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804a083:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a086:	89 04 24             	mov    %eax,(%esp)
+ 804a089:	e8 7c 04 00 00       	call   804a50a <_ZN10peerVector18SetPeerProbingPortEiPc>
+ 804a08e:	01 45 f4             	add    %eax,-0xc(%ebp)
+	r += this->SetPeerUUID ( i, uuid );
+ 804a091:	8b 45 20             	mov    0x20(%ebp),%eax
+ 804a094:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 804a098:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a09b:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804a09f:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a0a2:	89 04 24             	mov    %eax,(%esp)
+ 804a0a5:	e8 c6 04 00 00       	call   804a570 <_ZN10peerVector11SetPeerUUIDEiPc>
+ 804a0aa:	01 45 f4             	add    %eax,-0xc(%ebp)
+	r += this->SetPeerName ( i, name );
+ 804a0ad:	8b 45 24             	mov    0x24(%ebp),%eax
+ 804a0b0:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 804a0b4:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a0b7:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804a0bb:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a0be:	89 04 24             	mov    %eax,(%esp)
+ 804a0c1:	e8 10 05 00 00       	call   804a5d6 <_ZN10peerVector11SetPeerNameEiPc>
+ 804a0c6:	01 45 f4             	add    %eax,-0xc(%ebp)
+	
+	return r;
+ 804a0c9:	8b 45 f4             	mov    -0xc(%ebp),%eax
+}
+ 804a0cc:	c9                   	leave  
+ 804a0cd:	c3                   	ret    
+ 804a0ce:	90                   	nop
+ 804a0cf:	90                   	nop
+
+0804a0d0 <_ZN10peerVector4DumpEv>:
+#include <cstring>
+
+#include "peer/peer.hpp"
+#include "peer/peerVector.hpp"
+
+void peerVector::Dump() {
+ 804a0d0:	55                   	push   %ebp
+ 804a0d1:	89 e5                	mov    %esp,%ebp
+ 804a0d3:	83 ec 28             	sub    $0x28,%esp
+	
+	printf("\n\t- Peer Vector Dump -\n");
+ 804a0d6:	c7 04 24 30 a9 04 08 	movl   $0x804a930,(%esp)
+ 804a0dd:	e8 aa e8 ff ff       	call   804898c <puts@plt>
+	printf("peer vector size = %d\n", _PEER_VECTOR_MAX_PEER_SIZE );
+ 804a0e2:	c7 44 24 04 ff 00 00 	movl   $0xff,0x4(%esp)
+ 804a0e9:	00 
+ 804a0ea:	c7 04 24 47 a9 04 08 	movl   $0x804a947,(%esp)
+ 804a0f1:	e8 76 e8 ff ff       	call   804896c <printf@plt>
+	printf("peer used size = %d\n", this->GetPeerNum() );
+ 804a0f6:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a0f9:	89 04 24             	mov    %eax,(%esp)
+ 804a0fc:	e8 97 02 00 00       	call   804a398 <_ZN10peerVector10GetPeerNumEv>
+ 804a101:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804a105:	c7 04 24 5e a9 04 08 	movl   $0x804a95e,(%esp)
+ 804a10c:	e8 5b e8 ff ff       	call   804896c <printf@plt>
+
+	printf("\n\t- Peer Data -\n");
+ 804a111:	c7 04 24 73 a9 04 08 	movl   $0x804a973,(%esp)
+ 804a118:	e8 6f e8 ff ff       	call   804898c <puts@plt>
+	for ( int i = 0 ; i < _PEER_VECTOR_MAX_PEER_SIZE ; i++ ) {
+ 804a11d:	c7 45 f4 00 00 00 00 	movl   $0x0,-0xc(%ebp)
+ 804a124:	eb 3f                	jmp    804a165 <_ZN10peerVector4DumpEv+0x95>
+		if ( this->_pV[i].CheckUsed() ) {
+ 804a126:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a129:	8b 10                	mov    (%eax),%edx
+ 804a12b:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804a12e:	69 c0 50 02 00 00    	imul   $0x250,%eax,%eax
+ 804a134:	8d 04 02             	lea    (%edx,%eax,1),%eax
+ 804a137:	89 04 24             	mov    %eax,(%esp)
+ 804a13a:	e8 f7 f1 ff ff       	call   8049336 <_ZN8peerInfo9CheckUsedEv>
+ 804a13f:	85 c0                	test   %eax,%eax
+ 804a141:	0f 95 c0             	setne  %al
+ 804a144:	84 c0                	test   %al,%al
+ 804a146:	74 19                	je     804a161 <_ZN10peerVector4DumpEv+0x91>
+			this->_pV[i].Dump();
+ 804a148:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a14b:	8b 10                	mov    (%eax),%edx
+ 804a14d:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804a150:	69 c0 50 02 00 00    	imul   $0x250,%eax,%eax
+ 804a156:	8d 04 02             	lea    (%edx,%eax,1),%eax
+ 804a159:	89 04 24             	mov    %eax,(%esp)
+ 804a15c:	e8 87 f0 ff ff       	call   80491e8 <_ZN8peerInfo4DumpEv>
+	printf("\n\t- Peer Vector Dump -\n");
+	printf("peer vector size = %d\n", _PEER_VECTOR_MAX_PEER_SIZE );
+	printf("peer used size = %d\n", this->GetPeerNum() );
+
+	printf("\n\t- Peer Data -\n");
+	for ( int i = 0 ; i < _PEER_VECTOR_MAX_PEER_SIZE ; i++ ) {
+ 804a161:	83 45 f4 01          	addl   $0x1,-0xc(%ebp)
+ 804a165:	81 7d f4 fe 00 00 00 	cmpl   $0xfe,-0xc(%ebp)
+ 804a16c:	0f 9e c0             	setle  %al
+ 804a16f:	84 c0                	test   %al,%al
+ 804a171:	75 b3                	jne    804a126 <_ZN10peerVector4DumpEv+0x56>
+		if ( this->_pV[i].CheckUsed() ) {
+			this->_pV[i].Dump();
+		}
+	}
+}
+ 804a173:	c9                   	leave  
+ 804a174:	c3                   	ret    
+ 804a175:	90                   	nop
+
+0804a176 <_ZN10peerVector5DumpIEi>:
+
+void peerVector::DumpI(int i) {
+ 804a176:	55                   	push   %ebp
+ 804a177:	89 e5                	mov    %esp,%ebp
+ 804a179:	83 ec 18             	sub    $0x18,%esp
+	
+	printf("\n\t- Dump %d -\n",i);
+ 804a17c:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a17f:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804a183:	c7 04 24 83 a9 04 08 	movl   $0x804a983,(%esp)
+ 804a18a:	e8 dd e7 ff ff       	call   804896c <printf@plt>
+	if ( i >= 0 && i < _PEER_VECTOR_MAX_PEER_SIZE ) {
+ 804a18f:	83 7d 0c 00          	cmpl   $0x0,0xc(%ebp)
+ 804a193:	78 44                	js     804a1d9 <_ZN10peerVector5DumpIEi+0x63>
+ 804a195:	81 7d 0c fe 00 00 00 	cmpl   $0xfe,0xc(%ebp)
+ 804a19c:	7f 3b                	jg     804a1d9 <_ZN10peerVector5DumpIEi+0x63>
+		if( this->_pV[i].CheckUsed() ) {
+ 804a19e:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a1a1:	8b 10                	mov    (%eax),%edx
+ 804a1a3:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a1a6:	69 c0 50 02 00 00    	imul   $0x250,%eax,%eax
+ 804a1ac:	8d 04 02             	lea    (%edx,%eax,1),%eax
+ 804a1af:	89 04 24             	mov    %eax,(%esp)
+ 804a1b2:	e8 7f f1 ff ff       	call   8049336 <_ZN8peerInfo9CheckUsedEv>
+ 804a1b7:	85 c0                	test   %eax,%eax
+ 804a1b9:	0f 95 c0             	setne  %al
+ 804a1bc:	84 c0                	test   %al,%al
+ 804a1be:	74 19                	je     804a1d9 <_ZN10peerVector5DumpIEi+0x63>
+			this->_pV[i].Dump();
+ 804a1c0:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a1c3:	8b 10                	mov    (%eax),%edx
+ 804a1c5:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a1c8:	69 c0 50 02 00 00    	imul   $0x250,%eax,%eax
+ 804a1ce:	8d 04 02             	lea    (%edx,%eax,1),%eax
+ 804a1d1:	89 04 24             	mov    %eax,(%esp)
+ 804a1d4:	e8 0f f0 ff ff       	call   80491e8 <_ZN8peerInfo4DumpEv>
+		}
+	}
+}
+ 804a1d9:	c9                   	leave  
+ 804a1da:	c3                   	ret    
+ 804a1db:	90                   	nop
+
+0804a1dc <_ZN10peerVector9ErasePeerEi>:
+
+#include "peer/peer.hpp"
+#include "peer/peerVector.hpp"
+
+//erase all
+void peerVector::ErasePeer(int i) {
+ 804a1dc:	55                   	push   %ebp
+ 804a1dd:	89 e5                	mov    %esp,%ebp
+ 804a1df:	83 ec 18             	sub    $0x18,%esp
+	if ( i >=0 && i < _PEER_VECTOR_MAX_PEER_SIZE ) {
+ 804a1e2:	83 7d 0c 00          	cmpl   $0x0,0xc(%ebp)
+ 804a1e6:	78 22                	js     804a20a <_ZN10peerVector9ErasePeerEi+0x2e>
+ 804a1e8:	81 7d 0c fe 00 00 00 	cmpl   $0xfe,0xc(%ebp)
+ 804a1ef:	7f 19                	jg     804a20a <_ZN10peerVector9ErasePeerEi+0x2e>
+		this->_pV[i].Erase();
+ 804a1f1:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a1f4:	8b 10                	mov    (%eax),%edx
+ 804a1f6:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a1f9:	69 c0 50 02 00 00    	imul   $0x250,%eax,%eax
+ 804a1ff:	8d 04 02             	lea    (%edx,%eax,1),%eax
+ 804a202:	89 04 24             	mov    %eax,(%esp)
+ 804a205:	e8 22 ef ff ff       	call   804912c <_ZN8peerInfo5EraseEv>
+	}
+}
+ 804a20a:	c9                   	leave  
+ 804a20b:	c3                   	ret    
+
+0804a20c <_ZN10peerVector8EraseAllEv>:
+void peerVector::EraseAll() {
+ 804a20c:	55                   	push   %ebp
+ 804a20d:	89 e5                	mov    %esp,%ebp
+ 804a20f:	83 ec 28             	sub    $0x28,%esp
+	for ( int i = 0 ; i < _PEER_VECTOR_MAX_PEER_SIZE ; i++ ) {
+ 804a212:	c7 45 f4 00 00 00 00 	movl   $0x0,-0xc(%ebp)
+ 804a219:	eb 1d                	jmp    804a238 <_ZN10peerVector8EraseAllEv+0x2c>
+		this->_pV[i].Erase();
+ 804a21b:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a21e:	8b 10                	mov    (%eax),%edx
+ 804a220:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804a223:	69 c0 50 02 00 00    	imul   $0x250,%eax,%eax
+ 804a229:	8d 04 02             	lea    (%edx,%eax,1),%eax
+ 804a22c:	89 04 24             	mov    %eax,(%esp)
+ 804a22f:	e8 f8 ee ff ff       	call   804912c <_ZN8peerInfo5EraseEv>
+	if ( i >=0 && i < _PEER_VECTOR_MAX_PEER_SIZE ) {
+		this->_pV[i].Erase();
+	}
+}
+void peerVector::EraseAll() {
+	for ( int i = 0 ; i < _PEER_VECTOR_MAX_PEER_SIZE ; i++ ) {
+ 804a234:	83 45 f4 01          	addl   $0x1,-0xc(%ebp)
+ 804a238:	81 7d f4 fe 00 00 00 	cmpl   $0xfe,-0xc(%ebp)
+ 804a23f:	0f 9e c0             	setle  %al
+ 804a242:	84 c0                	test   %al,%al
+ 804a244:	75 d5                	jne    804a21b <_ZN10peerVector8EraseAllEv+0xf>
+		this->_pV[i].Erase();
+	}
+}
+ 804a246:	c9                   	leave  
+ 804a247:	c3                   	ret    
+
+0804a248 <_ZN10peerVector9GetPeerIPEi>:
+
+#include "peer/peer.hpp"
+#include "peer/peerVector.hpp"
+
+
+char * peerVector::GetPeerIP	      (int i) {
+ 804a248:	55                   	push   %ebp
+ 804a249:	89 e5                	mov    %esp,%ebp
+ 804a24b:	83 ec 18             	sub    $0x18,%esp
+	if ( i >=0 && i < _PEER_VECTOR_MAX_PEER_SIZE ) {
+ 804a24e:	83 7d 0c 00          	cmpl   $0x0,0xc(%ebp)
+ 804a252:	78 24                	js     804a278 <_ZN10peerVector9GetPeerIPEi+0x30>
+ 804a254:	81 7d 0c fe 00 00 00 	cmpl   $0xfe,0xc(%ebp)
+ 804a25b:	7f 1b                	jg     804a278 <_ZN10peerVector9GetPeerIPEi+0x30>
+		return this->_pV[i].GetIP();
+ 804a25d:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a260:	8b 10                	mov    (%eax),%edx
+ 804a262:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a265:	69 c0 50 02 00 00    	imul   $0x250,%eax,%eax
+ 804a26b:	8d 04 02             	lea    (%edx,%eax,1),%eax
+ 804a26e:	89 04 24             	mov    %eax,(%esp)
+ 804a271:	e8 aa f0 ff ff       	call   8049320 <_ZN8peerInfo5GetIPEv>
+ 804a276:	eb 05                	jmp    804a27d <_ZN10peerVector9GetPeerIPEi+0x35>
+	}
+	return 0;
+ 804a278:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 804a27d:	c9                   	leave  
+ 804a27e:	c3                   	ret    
+ 804a27f:	90                   	nop
+
+0804a280 <_ZN10peerVector16GetPeerVideoPortEi>:
+char * peerVector::GetPeerVideoPort   (int i) {
+ 804a280:	55                   	push   %ebp
+ 804a281:	89 e5                	mov    %esp,%ebp
+ 804a283:	83 ec 18             	sub    $0x18,%esp
+	if ( i >=0 && i < _PEER_VECTOR_MAX_PEER_SIZE ) {
+ 804a286:	83 7d 0c 00          	cmpl   $0x0,0xc(%ebp)
+ 804a28a:	78 24                	js     804a2b0 <_ZN10peerVector16GetPeerVideoPortEi+0x30>
+ 804a28c:	81 7d 0c fe 00 00 00 	cmpl   $0xfe,0xc(%ebp)
+ 804a293:	7f 1b                	jg     804a2b0 <_ZN10peerVector16GetPeerVideoPortEi+0x30>
+		return this->_pV[i].GetVideoPort();
+ 804a295:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a298:	8b 10                	mov    (%eax),%edx
+ 804a29a:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a29d:	69 c0 50 02 00 00    	imul   $0x250,%eax,%eax
+ 804a2a3:	8d 04 02             	lea    (%edx,%eax,1),%eax
+ 804a2a6:	89 04 24             	mov    %eax,(%esp)
+ 804a2a9:	e8 42 f0 ff ff       	call   80492f0 <_ZN8peerInfo12GetVideoPortEv>
+ 804a2ae:	eb 05                	jmp    804a2b5 <_ZN10peerVector16GetPeerVideoPortEi+0x35>
+	}
+	return 0;
+ 804a2b0:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 804a2b5:	c9                   	leave  
+ 804a2b6:	c3                   	ret    
+ 804a2b7:	90                   	nop
+
+0804a2b8 <_ZN10peerVector16GetPeerAudioPortEi>:
+char * peerVector::GetPeerAudioPort   (int i) {
+ 804a2b8:	55                   	push   %ebp
+ 804a2b9:	89 e5                	mov    %esp,%ebp
+ 804a2bb:	83 ec 18             	sub    $0x18,%esp
+	if ( i >=0 && i < _PEER_VECTOR_MAX_PEER_SIZE ) {
+ 804a2be:	83 7d 0c 00          	cmpl   $0x0,0xc(%ebp)
+ 804a2c2:	78 24                	js     804a2e8 <_ZN10peerVector16GetPeerAudioPortEi+0x30>
+ 804a2c4:	81 7d 0c fe 00 00 00 	cmpl   $0xfe,0xc(%ebp)
+ 804a2cb:	7f 1b                	jg     804a2e8 <_ZN10peerVector16GetPeerAudioPortEi+0x30>
+		return this->_pV[i].GetAudioPort();
+ 804a2cd:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a2d0:	8b 10                	mov    (%eax),%edx
+ 804a2d2:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a2d5:	69 c0 50 02 00 00    	imul   $0x250,%eax,%eax
+ 804a2db:	8d 04 02             	lea    (%edx,%eax,1),%eax
+ 804a2de:	89 04 24             	mov    %eax,(%esp)
+ 804a2e1:	e8 16 f0 ff ff       	call   80492fc <_ZN8peerInfo12GetAudioPortEv>
+ 804a2e6:	eb 05                	jmp    804a2ed <_ZN10peerVector16GetPeerAudioPortEi+0x35>
+	}
+	return 0;
+ 804a2e8:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 804a2ed:	c9                   	leave  
+ 804a2ee:	c3                   	ret    
+ 804a2ef:	90                   	nop
+
+0804a2f0 <_ZN10peerVector18GetPeerProbingPortEi>:
+char * peerVector::GetPeerProbingPort (int i) {
+ 804a2f0:	55                   	push   %ebp
+ 804a2f1:	89 e5                	mov    %esp,%ebp
+ 804a2f3:	83 ec 18             	sub    $0x18,%esp
+	if ( i >=0 && i < _PEER_VECTOR_MAX_PEER_SIZE ) {
+ 804a2f6:	83 7d 0c 00          	cmpl   $0x0,0xc(%ebp)
+ 804a2fa:	78 24                	js     804a320 <_ZN10peerVector18GetPeerProbingPortEi+0x30>
+ 804a2fc:	81 7d 0c fe 00 00 00 	cmpl   $0xfe,0xc(%ebp)
+ 804a303:	7f 1b                	jg     804a320 <_ZN10peerVector18GetPeerProbingPortEi+0x30>
+		return this->_pV[i].GetProbingPort();
+ 804a305:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a308:	8b 10                	mov    (%eax),%edx
+ 804a30a:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a30d:	69 c0 50 02 00 00    	imul   $0x250,%eax,%eax
+ 804a313:	8d 04 02             	lea    (%edx,%eax,1),%eax
+ 804a316:	89 04 24             	mov    %eax,(%esp)
+ 804a319:	e8 ea ef ff ff       	call   8049308 <_ZN8peerInfo14GetProbingPortEv>
+ 804a31e:	eb 05                	jmp    804a325 <_ZN10peerVector18GetPeerProbingPortEi+0x35>
+	}
+	return 0;
+ 804a320:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 804a325:	c9                   	leave  
+ 804a326:	c3                   	ret    
+ 804a327:	90                   	nop
+
+0804a328 <_ZN10peerVector11GetPeerUUIDEi>:
+char * peerVector::GetPeerUUID		  (int i) {
+ 804a328:	55                   	push   %ebp
+ 804a329:	89 e5                	mov    %esp,%ebp
+ 804a32b:	83 ec 18             	sub    $0x18,%esp
+	if ( i >=0 && i < _PEER_VECTOR_MAX_PEER_SIZE ) {
+ 804a32e:	83 7d 0c 00          	cmpl   $0x0,0xc(%ebp)
+ 804a332:	78 24                	js     804a358 <_ZN10peerVector11GetPeerUUIDEi+0x30>
+ 804a334:	81 7d 0c fe 00 00 00 	cmpl   $0xfe,0xc(%ebp)
+ 804a33b:	7f 1b                	jg     804a358 <_ZN10peerVector11GetPeerUUIDEi+0x30>
+		return this->_pV[i].GetUUID();
+ 804a33d:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a340:	8b 10                	mov    (%eax),%edx
+ 804a342:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a345:	69 c0 50 02 00 00    	imul   $0x250,%eax,%eax
+ 804a34b:	8d 04 02             	lea    (%edx,%eax,1),%eax
+ 804a34e:	89 04 24             	mov    %eax,(%esp)
+ 804a351:	e8 be ef ff ff       	call   8049314 <_ZN8peerInfo7GetUUIDEv>
+ 804a356:	eb 05                	jmp    804a35d <_ZN10peerVector11GetPeerUUIDEi+0x35>
+	}
+	return 0;
+ 804a358:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 804a35d:	c9                   	leave  
+ 804a35e:	c3                   	ret    
+ 804a35f:	90                   	nop
+
+0804a360 <_ZN10peerVector11GetPeerNameEi>:
+char * peerVector::GetPeerName		  (int i) {
+ 804a360:	55                   	push   %ebp
+ 804a361:	89 e5                	mov    %esp,%ebp
+ 804a363:	83 ec 18             	sub    $0x18,%esp
+	if ( i >=0 && i < _PEER_VECTOR_MAX_PEER_SIZE ) {
+ 804a366:	83 7d 0c 00          	cmpl   $0x0,0xc(%ebp)
+ 804a36a:	78 24                	js     804a390 <_ZN10peerVector11GetPeerNameEi+0x30>
+ 804a36c:	81 7d 0c fe 00 00 00 	cmpl   $0xfe,0xc(%ebp)
+ 804a373:	7f 1b                	jg     804a390 <_ZN10peerVector11GetPeerNameEi+0x30>
+		return this->_pV[i].GetName();
+ 804a375:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a378:	8b 10                	mov    (%eax),%edx
+ 804a37a:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a37d:	69 c0 50 02 00 00    	imul   $0x250,%eax,%eax
+ 804a383:	8d 04 02             	lea    (%edx,%eax,1),%eax
+ 804a386:	89 04 24             	mov    %eax,(%esp)
+ 804a389:	e8 9a ef ff ff       	call   8049328 <_ZN8peerInfo7GetNameEv>
+ 804a38e:	eb 05                	jmp    804a395 <_ZN10peerVector11GetPeerNameEi+0x35>
+	}
+	return 0;
+ 804a390:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 804a395:	c9                   	leave  
+ 804a396:	c3                   	ret    
+ 804a397:	90                   	nop
+
+0804a398 <_ZN10peerVector10GetPeerNumEv>:
+
+int peerVector::GetPeerNum() {
+ 804a398:	55                   	push   %ebp
+ 804a399:	89 e5                	mov    %esp,%ebp
+ 804a39b:	83 ec 18             	sub    $0x18,%esp
+	this->RefreshCount();
+ 804a39e:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a3a1:	89 04 24             	mov    %eax,(%esp)
+ 804a3a4:	e8 9f f9 ff ff       	call   8049d48 <_ZN10peerVector12RefreshCountEv>
+	return this->peerCount;
+ 804a3a9:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a3ac:	8b 40 24             	mov    0x24(%eax),%eax
+}
+ 804a3af:	c9                   	leave  
+ 804a3b0:	c3                   	ret    
+ 804a3b1:	90                   	nop
+
+0804a3b2 <_ZN10peerVector13GetMaxPeerNumEv>:
+
+int peerVector::GetMaxPeerNum() {
+ 804a3b2:	55                   	push   %ebp
+ 804a3b3:	89 e5                	mov    %esp,%ebp
+	return _PEER_VECTOR_MAX_PEER_SIZE;
+ 804a3b5:	b8 ff 00 00 00       	mov    $0xff,%eax
+}
+ 804a3ba:	5d                   	pop    %ebp
+ 804a3bb:	c3                   	ret    
+
+0804a3bc <_ZN10peerVector13GetPeerBitmapEv>:
+int* peerVector::GetPeerBitmap() {
+ 804a3bc:	55                   	push   %ebp
+ 804a3bd:	89 e5                	mov    %esp,%ebp
+ 804a3bf:	83 ec 18             	sub    $0x18,%esp
+	this->RefreshCount();
+ 804a3c2:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a3c5:	89 04 24             	mov    %eax,(%esp)
+ 804a3c8:	e8 7b f9 ff ff       	call   8049d48 <_ZN10peerVector12RefreshCountEv>
+	return this->peerBitArray;
+ 804a3cd:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a3d0:	83 c0 28             	add    $0x28,%eax
+}
+ 804a3d3:	c9                   	leave  
+ 804a3d4:	c3                   	ret    
+ 804a3d5:	90                   	nop
+ 804a3d6:	90                   	nop
+ 804a3d7:	90                   	nop
+
+0804a3d8 <_ZN10peerVector9SetPeerIPEiPc>:
+
+namespace {
+	extern pthread_mutex_t instanceMutex;
+};
+
+int	peerVector::SetPeerIP          ( int i, char *ip ) {
+ 804a3d8:	55                   	push   %ebp
+ 804a3d9:	89 e5                	mov    %esp,%ebp
+ 804a3db:	83 ec 28             	sub    $0x28,%esp
+	int r = 0;
+ 804a3de:	c7 45 f4 00 00 00 00 	movl   $0x0,-0xc(%ebp)
+	if ( i >=0 && i < _PEER_VECTOR_MAX_PEER_SIZE ) {
+ 804a3e5:	83 7d 0c 00          	cmpl   $0x0,0xc(%ebp)
+ 804a3e9:	78 4c                	js     804a437 <_ZN10peerVector9SetPeerIPEiPc+0x5f>
+ 804a3eb:	81 7d 0c fe 00 00 00 	cmpl   $0xfe,0xc(%ebp)
+ 804a3f2:	7f 43                	jg     804a437 <_ZN10peerVector9SetPeerIPEiPc+0x5f>
+		ML.Lock();
+ 804a3f4:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a3f7:	83 c0 04             	add    $0x4,%eax
+ 804a3fa:	89 04 24             	mov    %eax,(%esp)
+ 804a3fd:	e8 d6 e7 ff ff       	call   8048bd8 <_ZN11mutexLocker4LockEv>
+		r = this->_pV[i].SetIP( ip );
+ 804a402:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a405:	8b 10                	mov    (%eax),%edx
+ 804a407:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a40a:	69 c0 50 02 00 00    	imul   $0x250,%eax,%eax
+ 804a410:	01 c2                	add    %eax,%edx
+ 804a412:	8b 45 10             	mov    0x10(%ebp),%eax
+ 804a415:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804a419:	89 14 24             	mov    %edx,(%esp)
+ 804a41c:	e8 4b ef ff ff       	call   804936c <_ZN8peerInfo5SetIPEPc>
+ 804a421:	89 45 f4             	mov    %eax,-0xc(%ebp)
+		ML.Unlock();
+ 804a424:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a427:	83 c0 04             	add    $0x4,%eax
+ 804a42a:	89 04 24             	mov    %eax,(%esp)
+ 804a42d:	e8 c8 e7 ff ff       	call   8048bfa <_ZN11mutexLocker6UnlockEv>
+		return r;
+ 804a432:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804a435:	eb 05                	jmp    804a43c <_ZN10peerVector9SetPeerIPEiPc+0x64>
+	}
+	return -1;
+ 804a437:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+}
+ 804a43c:	c9                   	leave  
+ 804a43d:	c3                   	ret    
+
+0804a43e <_ZN10peerVector16SetPeerVideoPortEiPc>:
+int peerVector::SetPeerVideoPort   ( int i, char *port ) {
+ 804a43e:	55                   	push   %ebp
+ 804a43f:	89 e5                	mov    %esp,%ebp
+ 804a441:	83 ec 28             	sub    $0x28,%esp
+	int r = 0;
+ 804a444:	c7 45 f4 00 00 00 00 	movl   $0x0,-0xc(%ebp)
+	if ( i >=0 && i < _PEER_VECTOR_MAX_PEER_SIZE ) {
+ 804a44b:	83 7d 0c 00          	cmpl   $0x0,0xc(%ebp)
+ 804a44f:	78 4c                	js     804a49d <_ZN10peerVector16SetPeerVideoPortEiPc+0x5f>
+ 804a451:	81 7d 0c fe 00 00 00 	cmpl   $0xfe,0xc(%ebp)
+ 804a458:	7f 43                	jg     804a49d <_ZN10peerVector16SetPeerVideoPortEiPc+0x5f>
+		ML.Lock();
+ 804a45a:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a45d:	83 c0 04             	add    $0x4,%eax
+ 804a460:	89 04 24             	mov    %eax,(%esp)
+ 804a463:	e8 70 e7 ff ff       	call   8048bd8 <_ZN11mutexLocker4LockEv>
+		r = this->_pV[i].SetVideoPort( port );
+ 804a468:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a46b:	8b 10                	mov    (%eax),%edx
+ 804a46d:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a470:	69 c0 50 02 00 00    	imul   $0x250,%eax,%eax
+ 804a476:	01 c2                	add    %eax,%edx
+ 804a478:	8b 45 10             	mov    0x10(%ebp),%eax
+ 804a47b:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804a47f:	89 14 24             	mov    %edx,(%esp)
+ 804a482:	e8 2d ef ff ff       	call   80493b4 <_ZN8peerInfo12SetVideoPortEPc>
+ 804a487:	89 45 f4             	mov    %eax,-0xc(%ebp)
+		ML.Unlock();
+ 804a48a:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a48d:	83 c0 04             	add    $0x4,%eax
+ 804a490:	89 04 24             	mov    %eax,(%esp)
+ 804a493:	e8 62 e7 ff ff       	call   8048bfa <_ZN11mutexLocker6UnlockEv>
+		return r;
+ 804a498:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804a49b:	eb 05                	jmp    804a4a2 <_ZN10peerVector16SetPeerVideoPortEiPc+0x64>
+	}
+	return -1;
+ 804a49d:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+}
+ 804a4a2:	c9                   	leave  
+ 804a4a3:	c3                   	ret    
+
+0804a4a4 <_ZN10peerVector16SetPeerAudioPortEiPc>:
+int peerVector::SetPeerAudioPort   ( int i, char *port ) {
+ 804a4a4:	55                   	push   %ebp
+ 804a4a5:	89 e5                	mov    %esp,%ebp
+ 804a4a7:	83 ec 28             	sub    $0x28,%esp
+	int r = 0;
+ 804a4aa:	c7 45 f4 00 00 00 00 	movl   $0x0,-0xc(%ebp)
+	if ( i >=0 && i < _PEER_VECTOR_MAX_PEER_SIZE ) {
+ 804a4b1:	83 7d 0c 00          	cmpl   $0x0,0xc(%ebp)
+ 804a4b5:	78 4c                	js     804a503 <_ZN10peerVector16SetPeerAudioPortEiPc+0x5f>
+ 804a4b7:	81 7d 0c fe 00 00 00 	cmpl   $0xfe,0xc(%ebp)
+ 804a4be:	7f 43                	jg     804a503 <_ZN10peerVector16SetPeerAudioPortEiPc+0x5f>
+		ML.Lock();
+ 804a4c0:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a4c3:	83 c0 04             	add    $0x4,%eax
+ 804a4c6:	89 04 24             	mov    %eax,(%esp)
+ 804a4c9:	e8 0a e7 ff ff       	call   8048bd8 <_ZN11mutexLocker4LockEv>
+		r = this->_pV[i].SetAudioPort( port );
+ 804a4ce:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a4d1:	8b 10                	mov    (%eax),%edx
+ 804a4d3:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a4d6:	69 c0 50 02 00 00    	imul   $0x250,%eax,%eax
+ 804a4dc:	01 c2                	add    %eax,%edx
+ 804a4de:	8b 45 10             	mov    0x10(%ebp),%eax
+ 804a4e1:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804a4e5:	89 14 24             	mov    %edx,(%esp)
+ 804a4e8:	e8 11 ef ff ff       	call   80493fe <_ZN8peerInfo12SetAudioPortEPc>
+ 804a4ed:	89 45 f4             	mov    %eax,-0xc(%ebp)
+		ML.Unlock();
+ 804a4f0:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a4f3:	83 c0 04             	add    $0x4,%eax
+ 804a4f6:	89 04 24             	mov    %eax,(%esp)
+ 804a4f9:	e8 fc e6 ff ff       	call   8048bfa <_ZN11mutexLocker6UnlockEv>
+		return r;
+ 804a4fe:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804a501:	eb 05                	jmp    804a508 <_ZN10peerVector16SetPeerAudioPortEiPc+0x64>
+	}
+	return -1;
+ 804a503:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+}
+ 804a508:	c9                   	leave  
+ 804a509:	c3                   	ret    
+
+0804a50a <_ZN10peerVector18SetPeerProbingPortEiPc>:
+int peerVector::SetPeerProbingPort ( int i, char *port ) {
+ 804a50a:	55                   	push   %ebp
+ 804a50b:	89 e5                	mov    %esp,%ebp
+ 804a50d:	83 ec 28             	sub    $0x28,%esp
+	int r = 0; 
+ 804a510:	c7 45 f4 00 00 00 00 	movl   $0x0,-0xc(%ebp)
+	if ( i >=0 && i < _PEER_VECTOR_MAX_PEER_SIZE ) {
+ 804a517:	83 7d 0c 00          	cmpl   $0x0,0xc(%ebp)
+ 804a51b:	78 4c                	js     804a569 <_ZN10peerVector18SetPeerProbingPortEiPc+0x5f>
+ 804a51d:	81 7d 0c fe 00 00 00 	cmpl   $0xfe,0xc(%ebp)
+ 804a524:	7f 43                	jg     804a569 <_ZN10peerVector18SetPeerProbingPortEiPc+0x5f>
+		ML.Lock();
+ 804a526:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a529:	83 c0 04             	add    $0x4,%eax
+ 804a52c:	89 04 24             	mov    %eax,(%esp)
+ 804a52f:	e8 a4 e6 ff ff       	call   8048bd8 <_ZN11mutexLocker4LockEv>
+		r = this->_pV[i].SetProbingPort( port );
+ 804a534:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a537:	8b 10                	mov    (%eax),%edx
+ 804a539:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a53c:	69 c0 50 02 00 00    	imul   $0x250,%eax,%eax
+ 804a542:	01 c2                	add    %eax,%edx
+ 804a544:	8b 45 10             	mov    0x10(%ebp),%eax
+ 804a547:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804a54b:	89 14 24             	mov    %edx,(%esp)
+ 804a54e:	e8 f5 ee ff ff       	call   8049448 <_ZN8peerInfo14SetProbingPortEPc>
+ 804a553:	89 45 f4             	mov    %eax,-0xc(%ebp)
+		ML.Unlock();
+ 804a556:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a559:	83 c0 04             	add    $0x4,%eax
+ 804a55c:	89 04 24             	mov    %eax,(%esp)
+ 804a55f:	e8 96 e6 ff ff       	call   8048bfa <_ZN11mutexLocker6UnlockEv>
+		return r;
+ 804a564:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804a567:	eb 05                	jmp    804a56e <_ZN10peerVector18SetPeerProbingPortEiPc+0x64>
+	}
+	return -1;
+ 804a569:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+}
+ 804a56e:	c9                   	leave  
+ 804a56f:	c3                   	ret    
+
+0804a570 <_ZN10peerVector11SetPeerUUIDEiPc>:
+int peerVector::SetPeerUUID        ( int i, char *uuid ) {
+ 804a570:	55                   	push   %ebp
+ 804a571:	89 e5                	mov    %esp,%ebp
+ 804a573:	83 ec 28             	sub    $0x28,%esp
+	int r = 0;
+ 804a576:	c7 45 f4 00 00 00 00 	movl   $0x0,-0xc(%ebp)
+	if ( i >=0 && i < _PEER_VECTOR_MAX_PEER_SIZE ) {
+ 804a57d:	83 7d 0c 00          	cmpl   $0x0,0xc(%ebp)
+ 804a581:	78 4c                	js     804a5cf <_ZN10peerVector11SetPeerUUIDEiPc+0x5f>
+ 804a583:	81 7d 0c fe 00 00 00 	cmpl   $0xfe,0xc(%ebp)
+ 804a58a:	7f 43                	jg     804a5cf <_ZN10peerVector11SetPeerUUIDEiPc+0x5f>
+		ML.Lock();
+ 804a58c:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a58f:	83 c0 04             	add    $0x4,%eax
+ 804a592:	89 04 24             	mov    %eax,(%esp)
+ 804a595:	e8 3e e6 ff ff       	call   8048bd8 <_ZN11mutexLocker4LockEv>
+		r = this->_pV[i].SetUUID( uuid );
+ 804a59a:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a59d:	8b 10                	mov    (%eax),%edx
+ 804a59f:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a5a2:	69 c0 50 02 00 00    	imul   $0x250,%eax,%eax
+ 804a5a8:	01 c2                	add    %eax,%edx
+ 804a5aa:	8b 45 10             	mov    0x10(%ebp),%eax
+ 804a5ad:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804a5b1:	89 14 24             	mov    %edx,(%esp)
+ 804a5b4:	e8 d9 ee ff ff       	call   8049492 <_ZN8peerInfo7SetUUIDEPc>
+ 804a5b9:	89 45 f4             	mov    %eax,-0xc(%ebp)
+		ML.Unlock();
+ 804a5bc:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a5bf:	83 c0 04             	add    $0x4,%eax
+ 804a5c2:	89 04 24             	mov    %eax,(%esp)
+ 804a5c5:	e8 30 e6 ff ff       	call   8048bfa <_ZN11mutexLocker6UnlockEv>
+		return r;
+ 804a5ca:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804a5cd:	eb 05                	jmp    804a5d4 <_ZN10peerVector11SetPeerUUIDEiPc+0x64>
+	}
+	return -1;
+ 804a5cf:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+}
+ 804a5d4:	c9                   	leave  
+ 804a5d5:	c3                   	ret    
+
+0804a5d6 <_ZN10peerVector11SetPeerNameEiPc>:
+int peerVector::SetPeerName	       ( int i, char *name ) {
+ 804a5d6:	55                   	push   %ebp
+ 804a5d7:	89 e5                	mov    %esp,%ebp
+ 804a5d9:	83 ec 28             	sub    $0x28,%esp
+	int r = 0;
+ 804a5dc:	c7 45 f4 00 00 00 00 	movl   $0x0,-0xc(%ebp)
+	if ( i >=0 && i < _PEER_VECTOR_MAX_PEER_SIZE ) {
+ 804a5e3:	83 7d 0c 00          	cmpl   $0x0,0xc(%ebp)
+ 804a5e7:	78 4c                	js     804a635 <_ZN10peerVector11SetPeerNameEiPc+0x5f>
+ 804a5e9:	81 7d 0c fe 00 00 00 	cmpl   $0xfe,0xc(%ebp)
+ 804a5f0:	7f 43                	jg     804a635 <_ZN10peerVector11SetPeerNameEiPc+0x5f>
+		ML.Lock();
+ 804a5f2:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a5f5:	83 c0 04             	add    $0x4,%eax
+ 804a5f8:	89 04 24             	mov    %eax,(%esp)
+ 804a5fb:	e8 d8 e5 ff ff       	call   8048bd8 <_ZN11mutexLocker4LockEv>
+		r = this->_pV[i].SetName( name );
+ 804a600:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a603:	8b 10                	mov    (%eax),%edx
+ 804a605:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a608:	69 c0 50 02 00 00    	imul   $0x250,%eax,%eax
+ 804a60e:	01 c2                	add    %eax,%edx
+ 804a610:	8b 45 10             	mov    0x10(%ebp),%eax
+ 804a613:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804a617:	89 14 24             	mov    %edx,(%esp)
+ 804a61a:	e8 bd ee ff ff       	call   80494dc <_ZN8peerInfo7SetNameEPc>
+ 804a61f:	89 45 f4             	mov    %eax,-0xc(%ebp)
+		ML.Unlock();
+ 804a622:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a625:	83 c0 04             	add    $0x4,%eax
+ 804a628:	89 04 24             	mov    %eax,(%esp)
+ 804a62b:	e8 ca e5 ff ff       	call   8048bfa <_ZN11mutexLocker6UnlockEv>
+		return r;
+ 804a630:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 804a633:	eb 05                	jmp    804a63a <_ZN10peerVector11SetPeerNameEiPc+0x64>
+	}
+	return -1;
+ 804a635:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+}
+ 804a63a:	c9                   	leave  
+ 804a63b:	c3                   	ret    
+
+0804a63c <main>:
+#include <stdio.h>
+#include <peer/peerInfo.h>
+#include <utils/fileCheckerCAPI.h>
+
+int main( int argc, char *argv[] ) {
+ 804a63c:	55                   	push   %ebp
+ 804a63d:	89 e5                	mov    %esp,%ebp
+ 804a63f:	83 e4 f0             	and    $0xfffffff0,%esp
+ 804a642:	83 ec 40             	sub    $0x40,%esp
+ 804a645:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a648:	89 44 24 1c          	mov    %eax,0x1c(%esp)
+ 804a64c:	65 a1 14 00 00 00    	mov    %gs:0x14,%eax
+ 804a652:	89 44 24 3c          	mov    %eax,0x3c(%esp)
+ 804a656:	31 c0                	xor    %eax,%eax
+	{
+		char ip[] = "127.0.0.1";
+ 804a658:	c7 44 24 32 31 32 37 	movl   $0x2e373231,0x32(%esp)
+ 804a65f:	2e 
+ 804a660:	c7 44 24 36 30 2e 30 	movl   $0x2e302e30,0x36(%esp)
+ 804a667:	2e 
+ 804a668:	66 c7 44 24 3a 31 00 	movw   $0x31,0x3a(%esp)
+		char aport[] = "5000";
+ 804a66f:	c7 44 24 2d 35 30 30 	movl   $0x30303035,0x2d(%esp)
+ 804a676:	30 
+ 804a677:	c6 44 24 31 00       	movb   $0x0,0x31(%esp)
+		char vport[] = "6000";
+ 804a67c:	c7 44 24 28 36 30 30 	movl   $0x30303036,0x28(%esp)
+ 804a683:	30 
+ 804a684:	c6 44 24 2c 00       	movb   $0x0,0x2c(%esp)
+		PI_AddPeer    (4, ip, vport, aport );
+ 804a689:	8d 44 24 2d          	lea    0x2d(%esp),%eax
+ 804a68d:	89 44 24 0c          	mov    %eax,0xc(%esp)
+ 804a691:	8d 44 24 28          	lea    0x28(%esp),%eax
+ 804a695:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 804a699:	8d 44 24 32          	lea    0x32(%esp),%eax
+ 804a69d:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804a6a1:	c7 04 24 04 00 00 00 	movl   $0x4,(%esp)
+ 804a6a8:	e8 d3 ee ff ff       	call   8049580 <PI_AddPeer>
+	}
+
+	FC_EnableDebug();
+ 804a6ad:	e8 59 e9 ff ff       	call   804900b <FC_EnableDebug>
+	{ 
+		char file[] = "/usr";
+ 804a6b2:	c7 44 24 28 2f 75 73 	movl   $0x7273752f,0x28(%esp)
+ 804a6b9:	72 
+ 804a6ba:	c6 44 24 2c 00       	movb   $0x0,0x2c(%esp)
+		FC_CheckFileExisted(file);
+ 804a6bf:	8d 44 24 28          	lea    0x28(%esp),%eax
+ 804a6c3:	89 04 24             	mov    %eax,(%esp)
+ 804a6c6:	e8 11 e9 ff ff       	call   8048fdc <FC_CheckFileExisted>
+	}
+	{ 
+		char file[] = "tttt";
+ 804a6cb:	c7 44 24 28 74 74 74 	movl   $0x74747474,0x28(%esp)
+ 804a6d2:	74 
+ 804a6d3:	c6 44 24 2c 00       	movb   $0x0,0x2c(%esp)
+		FC_CheckFileExisted(file);
+ 804a6d8:	8d 44 24 28          	lea    0x28(%esp),%eax
+ 804a6dc:	89 04 24             	mov    %eax,(%esp)
+ 804a6df:	e8 f8 e8 ff ff       	call   8048fdc <FC_CheckFileExisted>
+	}
+	FC_Destory();
+ 804a6e4:	e8 43 e9 ff ff       	call   804902c <FC_Destory>
+	PI_Destory();
+ 804a6e9:	e8 e2 f2 ff ff       	call   80499d0 <PI_Destory>
+	return 0;
+ 804a6ee:	b8 00 00 00 00       	mov    $0x0,%eax
+}
+ 804a6f3:	8b 54 24 3c          	mov    0x3c(%esp),%edx
+ 804a6f7:	65 33 15 14 00 00 00 	xor    %gs:0x14,%edx
+ 804a6fe:	74 05                	je     804a705 <main+0xc9>
+ 804a700:	e8 37 e2 ff ff       	call   804893c <__stack_chk_fail@plt>
+ 804a705:	c9                   	leave  
+ 804a706:	c3                   	ret    
+ 804a707:	90                   	nop
+ 804a708:	90                   	nop
+ 804a709:	90                   	nop
+ 804a70a:	90                   	nop
+ 804a70b:	90                   	nop
+ 804a70c:	90                   	nop
+ 804a70d:	90                   	nop
+ 804a70e:	90                   	nop
+ 804a70f:	90                   	nop
+
+0804a710 <__libc_csu_fini>:
+ 804a710:	55                   	push   %ebp
+ 804a711:	89 e5                	mov    %esp,%ebp
+ 804a713:	5d                   	pop    %ebp
+ 804a714:	c3                   	ret    
+ 804a715:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi
+ 804a719:	8d bc 27 00 00 00 00 	lea    0x0(%edi,%eiz,1),%edi
+
+0804a720 <__libc_csu_init>:
+ 804a720:	55                   	push   %ebp
+ 804a721:	89 e5                	mov    %esp,%ebp
+ 804a723:	57                   	push   %edi
+ 804a724:	56                   	push   %esi
+ 804a725:	53                   	push   %ebx
+ 804a726:	e8 4f 00 00 00       	call   804a77a <__i686.get_pc_thunk.bx>
+ 804a72b:	81 c3 c9 28 00 00    	add    $0x28c9,%ebx
+ 804a731:	83 ec 1c             	sub    $0x1c,%esp
+ 804a734:	e8 13 e1 ff ff       	call   804884c <_init>
+ 804a739:	8d bb b8 fe ff ff    	lea    -0x148(%ebx),%edi
+ 804a73f:	8d 83 b8 fe ff ff    	lea    -0x148(%ebx),%eax
+ 804a745:	29 c7                	sub    %eax,%edi
+ 804a747:	c1 ff 02             	sar    $0x2,%edi
+ 804a74a:	85 ff                	test   %edi,%edi
+ 804a74c:	74 24                	je     804a772 <__libc_csu_init+0x52>
+ 804a74e:	31 f6                	xor    %esi,%esi
+ 804a750:	8b 45 10             	mov    0x10(%ebp),%eax
+ 804a753:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 804a757:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a75a:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804a75e:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a761:	89 04 24             	mov    %eax,(%esp)
+ 804a764:	ff 94 b3 b8 fe ff ff 	call   *-0x148(%ebx,%esi,4)
+ 804a76b:	83 c6 01             	add    $0x1,%esi
+ 804a76e:	39 fe                	cmp    %edi,%esi
+ 804a770:	72 de                	jb     804a750 <__libc_csu_init+0x30>
+ 804a772:	83 c4 1c             	add    $0x1c,%esp
+ 804a775:	5b                   	pop    %ebx
+ 804a776:	5e                   	pop    %esi
+ 804a777:	5f                   	pop    %edi
+ 804a778:	5d                   	pop    %ebp
+ 804a779:	c3                   	ret    
+
+0804a77a <__i686.get_pc_thunk.bx>:
+ 804a77a:	8b 1c 24             	mov    (%esp),%ebx
+ 804a77d:	c3                   	ret    
+ 804a77e:	90                   	nop
+ 804a77f:	90                   	nop
+
+0804a780 <__stat>:
+ 804a780:	55                   	push   %ebp
+ 804a781:	89 e5                	mov    %esp,%ebp
+ 804a783:	53                   	push   %ebx
+ 804a784:	83 ec 0c             	sub    $0xc,%esp
+ 804a787:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 804a78a:	e8 eb ff ff ff       	call   804a77a <__i686.get_pc_thunk.bx>
+ 804a78f:	81 c3 65 28 00 00    	add    $0x2865,%ebx
+ 804a795:	c7 04 24 03 00 00 00 	movl   $0x3,(%esp)
+ 804a79c:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 804a7a0:	8b 45 08             	mov    0x8(%ebp),%eax
+ 804a7a3:	89 44 24 04          	mov    %eax,0x4(%esp)
+ 804a7a7:	e8 00 e1 ff ff       	call   80488ac <__xstat@plt>
+ 804a7ac:	83 c4 0c             	add    $0xc,%esp
+ 804a7af:	5b                   	pop    %ebx
+ 804a7b0:	5d                   	pop    %ebp
+ 804a7b1:	c3                   	ret    
+ 804a7b2:	90                   	nop
+ 804a7b3:	90                   	nop
+ 804a7b4:	90                   	nop
+ 804a7b5:	90                   	nop
+ 804a7b6:	90                   	nop
+ 804a7b7:	90                   	nop
+ 804a7b8:	90                   	nop
+ 804a7b9:	90                   	nop
+ 804a7ba:	90                   	nop
+ 804a7bb:	90                   	nop
+ 804a7bc:	90                   	nop
+ 804a7bd:	90                   	nop
+ 804a7be:	90                   	nop
+ 804a7bf:	90                   	nop
+
+0804a7c0 <__do_global_ctors_aux>:
+ 804a7c0:	55                   	push   %ebp
+ 804a7c1:	89 e5                	mov    %esp,%ebp
+ 804a7c3:	53                   	push   %ebx
+ 804a7c4:	83 ec 04             	sub    $0x4,%esp
+ 804a7c7:	a1 b4 ce 04 08       	mov    0x804ceb4,%eax
+ 804a7cc:	83 f8 ff             	cmp    $0xffffffff,%eax
+ 804a7cf:	74 13                	je     804a7e4 <__do_global_ctors_aux+0x24>
+ 804a7d1:	bb b4 ce 04 08       	mov    $0x804ceb4,%ebx
+ 804a7d6:	66 90                	xchg   %ax,%ax
+ 804a7d8:	83 eb 04             	sub    $0x4,%ebx
+ 804a7db:	ff d0                	call   *%eax
+ 804a7dd:	8b 03                	mov    (%ebx),%eax
+ 804a7df:	83 f8 ff             	cmp    $0xffffffff,%eax
+ 804a7e2:	75 f4                	jne    804a7d8 <__do_global_ctors_aux+0x18>
+ 804a7e4:	83 c4 04             	add    $0x4,%esp
+ 804a7e7:	5b                   	pop    %ebx
+ 804a7e8:	5d                   	pop    %ebp
+ 804a7e9:	c3                   	ret    
+ 804a7ea:	90                   	nop
+ 804a7eb:	90                   	nop
+
+Disassembly of section .fini:
+
+0804a7ec <_fini>:
+ 804a7ec:	55                   	push   %ebp
+ 804a7ed:	89 e5                	mov    %esp,%ebp
+ 804a7ef:	53                   	push   %ebx
+ 804a7f0:	83 ec 04             	sub    $0x4,%esp
+ 804a7f3:	e8 00 00 00 00       	call   804a7f8 <_fini+0xc>
+ 804a7f8:	5b                   	pop    %ebx
+ 804a7f9:	81 c3 fc 27 00 00    	add    $0x27fc,%ebx
+ 804a7ff:	e8 fc e1 ff ff       	call   8048a00 <__do_global_dtors_aux>
+ 804a804:	59                   	pop    %ecx
+ 804a805:	5b                   	pop    %ebx
+ 804a806:	c9                   	leave  
+ 804a807:	c3                   	ret    

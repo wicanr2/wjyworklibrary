@@ -1,0 +1,8 @@
+#ifndef XML_MJPEG_ELEMENT_HPP
+#define XML_MJPEG_ELEMENT_HPP
+#define XML_MJPEG_ELEMENT_NAME "MJPEGEnc"
+#define XML_MJPEG_ATTR_BITRATE "bitrate"
+#define XML_MJPEG_ATTR_GOPSIZE "gop_size"
+#define XML_MJPEG_ATTR_MOTION_ESTIMATION "me"
+#define XML_MJPEG_ATTR_RTP_PAYLOAD_SIZE "rtp_payload_size"
+#endif

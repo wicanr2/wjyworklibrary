@@ -1,0 +1,14 @@
+#define module name
+BASE_STREAM_MODULE      := base_stream_module
+BASE_STREAM_MODULE_OBJS :=
+MODULES_POOL            += $(BASE_STREAM_MODULE)
+
+# base stream 
+BASE_STREAM_PREFIX  := baseStream
+BASE_STREAM_SRC_CPP := $(wildcard $(BASE_STREAM_PREFIX)/*.cpp)
+BASE_STREAM_OBJ_CPP := $(notdir $(patsubst %.cpp,%.o,$(BASE_STREAM_SRC_CPP)))	
+BASE_STREAM_OBJ_CPP_OUT := $(addprefix $(OUT_DIRS)/,$(BASE_STREAM_OBJ_CPP))	
+
+BASE_STREAM_MODULE_OBJS += $(BASE_STREAM_OBJ_CPP_OUT)
+
+MODULES_OBJS += $(BASE_STREAM_MODULE_OBJS) 

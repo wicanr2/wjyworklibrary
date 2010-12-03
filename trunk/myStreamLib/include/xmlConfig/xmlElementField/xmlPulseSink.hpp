@@ -1,0 +1,22 @@
+#ifndef XML_PULSESINK_ELEMENT_HPP
+#define XML_PULSESINK_ELEMENT_HPP
+#define XML_PULSESINK_ELEMENT_NAME               "pulsesink"
+#define XML_PULSESINK_ATTR_IS_VERSION_ITRI       "is_version_itri"
+#define XML_PULSESINK_ATTR_PREROLL_QUEUE_LEN     "preroll_queue_len"
+#define XML_PULSESINK_ATTR_SYNC                  "sync"
+#define XML_PULSESINK_ATTR_MAX_LATENESS          "max_lateness"
+#define XML_PULSESINK_ATTR_ASYNC                 "async"
+#define XML_PULSESINK_ATTR_ENABLELASTBUFFER      "enable_last_buffer"
+#define XML_PULSESINK_ATTR_RENDER_DELAY          "render_delay"
+#define XML_PULSESINK_ATTR_BUFFER_TIME           "buffer_time"
+#define XML_PULSESINK_ATTR_LATENCY_TIME          "latency_time"
+#define XML_PULSESINK_ATTR_PROVIDE_CLOCK         "provide_clock"
+#define XML_PULSESINK_ATTR_SLAVE_METHOD          "slave-method"
+#define XML_PULSESINK_ATTR_CAN_ACTIVATE_PULL     "can_activate_pull"
+#define XML_PULSESINK_ATTR_DRIFT_TOLERANCE       "drift_tolerance"
+#define XML_PULSESINK_ATTR_VOLUMEN               "volume"
+#define XML_PULSESINK_ATTR_MUTE                  "mute"
+#define XML_PULSESINK_ATTR_DETECT_DTMF           "detect_dtmf"
+#define XML_PULSESINK_ATTR_DTMF_DELAY_EQUIVALENT "delay_equivalent"
+#define XML_PULSESINK_ATTR_DTMF_DEBUG_LEVEL      "debug_message_level"
+#endif

@@ -1,0 +1,10 @@
+<XML_Summary>
+	<Profile name="TranscodeMJPEGToH264Stream" category="stream" location="transcode.xml" /> 
+	<Profile name="CaptureMJPEGStream"         category="stream" location="capture.xml" /> 
+	<!--
+	<Profile name="profile2" category="normal" location="p2.xml" /> 
+	<Profile name="profile3" category="normal" location="p3.xml" /> 
+	<Profile name="profile4" category="normal" location="p4.xml" /> 
+	<Profile name="profile5" category="normal" location="p5.xml" /> 
+	-->
+</XML_Summary>
