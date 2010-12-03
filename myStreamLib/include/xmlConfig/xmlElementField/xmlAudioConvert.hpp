@@ -1,0 +1,6 @@
+#ifndef XML_AUDIOCONVERT_ELEMENT_HPP
+#define XML_AUDIOCONVERT_ELEMENT_HPP
+#define XML_AUDIOCONVERT_ELEMENT_NAME       "audioconvert"
+#define XML_AUDIOCONVERT_ATTR_DITHERING     "dithering"
+#define XML_AUDIOCONVERT_ATTR_NOISE_SHAPING "noise_shaping"
+#endif

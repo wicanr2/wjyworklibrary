@@ -1,0 +1,15 @@
+<TranscodeStream
+	Role="Transmitter"
+    Name="TranscodeMJPEGToH264Stream"	
+>
+<videorate 
+	media="video"
+	media_type="application/x-rtp"
+	width="120"
+	height="100"
+	framerate="15"
+	signed="TRUE"
+	encoding_name="hello world"
+/>
+</TranscodeStream>
+
