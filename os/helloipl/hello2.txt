@@ -1,0 +1,85 @@
+
+hello2.o:     file format pe-i386
+
+Disassembly of section .text:
+
+00000000 <main>:
+       0:	eb 4e                	jmp    50 <start_prog>
+       2:	90                   	nop    
+       3:	48                   	dec    %eax
+       4:	45                   	inc    %ebp
+       5:	4c                   	dec    %esp
+       6:	4c                   	dec    %esp
+       7:	4f                   	dec    %edi
+       8:	49                   	dec    %ecx
+       9:	50                   	push   %eax
+       a:	4c                   	dec    %esp
+       b:	00 02                	add    %al,(%edx)
+       d:	01 01                	add    %eax,(%ecx)
+       f:	00 02                	add    %al,(%edx)
+      11:	e0 00                	loopne 13 <main+0x13>
+      13:	40                   	inc    %eax
+      14:	0b f0                	or     %eax,%esi
+      16:	09 00                	or     %eax,(%eax)
+      18:	12 00                	adc    (%eax),%al
+      1a:	02 00                	add    (%eax),%al
+      1c:	00 00                	add    %al,(%eax)
+      1e:	00 00                	add    %al,(%eax)
+      20:	40                   	inc    %eax
+      21:	0b 00                	or     (%eax),%eax
+      23:	00 00                	add    %al,(%eax)
+      25:	00 29                	add    %ch,(%ecx)
+      27:	ff                   	(bad)  
+      28:	ff                   	(bad)  
+      29:	ff                   	(bad)  
+      2a:	ff 48 65             	decl   0x65(%eax)
+      2d:	6c                   	insb   (%dx),%es:(%edi)
+      2e:	6c                   	insb   (%dx),%es:(%edi)
+      2f:	6f                   	outsl  %ds:(%esi),(%dx)
+      30:	2d 6f 73 20 20       	sub    $0x2020736f,%eax
+      35:	20 46 41             	and    %al,0x41(%esi)
+      38:	54                   	push   %esp
+      39:	31 32                	xor    %esi,(%edx)
+      3b:	20 20                	and    %ah,(%eax)
+      3d:	20 00                	and    %al,(%eax)
+	...
+
+00000050 <start_prog>:
+      50:	66 31 c0             	xor    %ax,%ax
+      53:	8e d0                	mov    %eax,%ss
+      55:	8e d8                	mov    %eax,%ds
+      57:	8e c0                	mov    %eax,%es
+      59:	be 72 00 81 c6       	mov    $0xc6810072,%esi
+      5e:	00 7c b4 0e          	add    %bh,0xe(%esp,%esi,4)
+
+00000060 <loop>:
+      60:	b4 0e                	mov    $0xe,%ah
+      62:	8a 04 3c             	mov    (%esp,%edi,1),%al
+      65:	00 74 07 cd          	add    %dh,0xffffffcd(%edi,%eax,1)
+      69:	10 83 c6 01 eb f1    	adc    %al,0xf1eb01c6(%ebx)
+
+0000006f <fin>:
+      6f:	90                   	nop    
+      70:	eb fd                	jmp    6f <fin>
+
+00000072 <msg>:
+      72:	0a 0a                	or     (%edx),%cl
+      74:	48                   	dec    %eax
+      75:	65                   	gs
+      76:	6c                   	insb   (%dx),%es:(%edi)
+      77:	6c                   	insb   (%dx),%es:(%edi)
+      78:	6f                   	outsl  %ds:(%esi),(%dx)
+      79:	2c 20                	sub    $0x20,%al
+      7b:	57                   	push   %edi
+      7c:	6f                   	outsl  %ds:(%esi),(%dx)
+      7d:	72 6c                	jb     eb <msg+0x79>
+      7f:	64 0a 00             	or     %fs:(%eax),%al
+	...
+     1fe:	55                   	push   %ebp
+     1ff:	aa                   	stos   %al,%es:(%edi)
+     200:	f0 ff                	lock (bad) 
+     202:	ff 00                	incl   (%eax)
+	...
+    1400:	f0 ff                	lock (bad) 
+    1402:	ff 00                	incl   (%eax)
+	...
